@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Lead Front-end / Web Developer",
+    "company": "Maliksi Creative Technologies",
+    "period": "Nov 2020 - Nov 2024",
+    "description": "Spearheaded the development of the company's flagship product, a web-based content management system for digital signage."
+  },
+  {
+    "title": "Front-end / Web Developer (contractor)",
+    "company": "GradGuru",
+    "period": "Nov 2017 - Nov 2020",
+    "description": "Agile development of front-end side of multi-app system with continuous delivery. Did overhaul of the web console in it's V2. Integrate & modify 3rd party apps & libraries."
+  },
+  {
+    "title": "UI/UX Front-end Developer",
+    "company": "[24]7.ai",
+    "period": "Jul 2015 - Dec 2017",
+    "description": "focused on developing web apps from client products, internal tools, web based interactions, mobile demos, nodejs APIs & concept prototypes; implementing specs & requirements including, but not limited to UI/UX mobile first designs, algorithms, visual interactions."
+  },
+  {
+    "title": "Freelance Interactive Developer",
+    "company": "jaycsantos.com",
+    "period": "Mar 2007 - May 2014",
+    "description": "designed & developed interaction media through casual games and web applications; which includes robust programming, accessibility designs, visual graphics and overall user experience."
+  }
+]

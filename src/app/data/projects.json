@@ -1,0 +1,163 @@
+[
+  {
+    "title": "Colaboration App",
+    "year": "2024",
+    "description": "A white label mobile app for collaboration and information sharing.",
+    "tech": ["flutter", "android", "ios", "web", "UI/UX", "firestore", "firebase auth", "bigquery", "cloud functions", "gcp", "giftbit api", "html", "javascript", "wcag"]
+  },
+  {
+    "title": "Photo Sharing App (unpublished)",
+    "year": "2023",
+    "description": "R&D on a photo sharing app and web interface with realtime sync.",
+    "tech": ["flutter", "android", "ios", "web", "reactjs", "nextjs", "UI/UX", "couchbase", "s3", "nginx", "google maps"]
+  },
+  {
+    "title": "Inventory App (unpublished)",
+    "year": "2022",
+    "description": "R&D on an inventory app with realtime sync.",
+    "tech": ["flutter", "android", "ios", "couchbase"]
+  },
+  {
+    "title": "GradGuru/Beyond12 Mobile App",
+    "year": "2022",
+    "description": "Did some feature maintenance and bug fixes.",
+    "tech": ["flutter", "android", "ios", "restful API", "wcag", "jenkins"]
+  },
+  {
+    "title": "GradGuru/Beyond12 Console V3",
+    "year": "2022",
+    "description": "Redesigned and maintained the console app. Added new features, functions and integrations.",
+    "tech": ["web", "angularjs", "boostrap", "UI/UX", "scss", "jenkins", "restful API", "mxGraph", "salesforce API", "okta 2fa", "wcag"]
+  },
+  {
+    "title": "GradGuru Console V2",
+    "year": "2019",
+    "description": "Rewrote and maintained the console app in AngularJs from PHP. Added new features, functions and integrations.",
+    "tech": ["web", "angularjs", "boostrap", "less", "jenkins", "restful API", "mxGraph"]
+  },
+  {
+    "title": "The H Hub (freelance)",
+    "year": "2017",
+    "description": "Added new features, functions and api integrations.",
+    "tech": ["web", "angularjs", "scss", "restful API", "nginx"]
+  },
+  {
+    "title": "Omnifi-Modeler",
+    "year": "2017",
+    "description": "Part of a collection of tools: a web based editor for state machine flow w/c includes a synced interactive visual diagram.",
+    "tech": ["web tool", "javascript", "prototypejs", "gojs", "HTML/CSS"]
+  },
+  {
+    "title": "Pumba", 
+    "year": "2017",
+    "description": "Internal web tool that queries redmine tickets via restful API & displays a dynamic data table & visual trend graph.",
+    "tech": ["web", "redmine API", "VueJs", "HTML/CSS", "d3", "nodejs"]
+  },
+  {
+    "title": "Prudle",
+    "year": "2016", 
+    "description": "Internal web tool that parses possible grammars from a GRXML/VGSL value set.",
+    "tech": ["web", "VueJs", "HTML/CSS"]
+  },
+  {
+    "title": "ScoutJS",
+    "year": "2016",
+    "description": "Internal online app that enables to capture front-end logs & able to notify & display history, trends, pattern flow, errors & data object parsing.",
+    "tech": ["web", "service", "mongoDB", "express", "AngularJS", "expressJs", "d3"]
+  },
+  {
+    "title": "Vivid Speech Apps",
+    "year": "2016",
+    "description": "Developed the visual web of IVR.",
+    "tech": ["web", "jquery", "AngularJS", "HTML/CSS", "perforce"]
+  },
+  {
+    "title": "24HourAsnwers (freelance)",
+    "year": "2016",
+    "description": "Co-Developed a mobile app using phonegap.",
+    "tech": ["mobile app", "AngularJS", "HTML/CSS", "phonegap"]
+  },
+  {
+    "title": "Flowmulate",
+    "year": "2015",
+    "description": "[Best Thesis, IT 2015] Flowchart algorithm design, simulation and code generation.",
+    "tech": ["web", "admin tools", "UX/UI", "HTML", "CSS/LESS", "PHP/Laravel", "MYSQL", "typescript", "AngularJS", "jsep", "bootstrap"]
+  },
+  {
+    "title": "Generic Service Mgmt System",
+    "year": "2015",
+    "description": "A general use management system for most kinds of service provider.",
+    "tech": ["windows app", "UI/UX", "crystal report", "mysql", "vb.net"]
+  },
+  {
+    "title": "Putt More Base",
+    "year": "2012",
+    "description": "Puzzle physics mini-golf game sequel. Clients include TurboNuke.com, Andkon.com, IPC Media (mousebreaker.com).",
+    "url": "https://www.kongregate.com/games/jaycsantos/putt-more-base",
+    "tech": ["game dev/design", "UI/UX", "AS3", "box2d", "flash", "gamersafe api"]
+  },
+  {
+    "title": "Chris Jeff v2",
+    "year": "2010",
+    "description": "chris-jeff.com - personal website",
+    "tech": ["web redesign", "UI/UX", "HTML", "CSS", "PHP"]
+  },
+  {
+    "title": "Chris Jeff v1",
+    "year": "2009",
+    "description": "chris-jeff.com - personal website",
+    "tech": ["logo", "web design", "UI/UX", "HTML", "CSS", "PHP", "MYSQL"]
+  },
+  {
+    "title": "Clock Work Monster",
+    "year": "2009",
+    "description": "clockworkmonster.com - arcade portal",
+    "tech": ["web", "admin tools", "web design", "UI/UX", "HTML", "CSS", "PHP", "MYSQL"]
+  },
+  {
+    "title": "Hidden Ninja Games",
+    "year": "2009",
+    "description": "hiddenninjagames.com - arcade portal",
+    "tech": ["web", "admin tools", "logo", "web design", "DB mgmt.", "UI/UX", "HTML", "CSS", "PHP", "MYSQL"]
+  },
+  {
+    "title": "Stomp Tomato",
+    "year": "2008",
+    "description": "Jumping reflex mini-game. Clients include Donnewood Media (meez.com), ItsNotBadAtAll.com",
+    "url": "https://www.kongregate.com/games/jaycsantos/stomp-tomato",
+    "tech": ["game dev/design", "meez api", "UI/UX", "AS2", "flash"]
+  },
+  {
+    "title": "Putt Base",
+    "year": "2008",
+    "description": "Puzzle physics mini-golf game. Clients include UGO Ent. Inc., Walt Disney Internet Group, BigFishGames, Armor Games Inc, Sega Europe, Atom Ent. Inc (addictinggames.com), Andkon.com",
+    "url": "https://www.kongregate.com/games/UGOP/putt-base",
+    "tech": ["game dev/design", "UI/UX", "AS2", "flash"]
+  },
+  {
+    "title": "All Games All Free",
+    "year": "2008",
+    "description": "allgamesallfree.com - arcade portal",
+    "tech": ["web", "admin tools", "logo", "web design", "DB mgmt", "UI/UX", "HTML", "CSS", "PHP", "MYSQL"]
+  },
+  {
+    "title": "Loboloon",
+    "year": "2007",
+    "description": "Puzzle maze game. Client Mofunzone.com",
+    "url": "https://www.newgrounds.com/portal/view/427327",
+    "tech": ["game dev/design", "UI/UX", "AS2", "flash"]
+  },
+  {
+    "title": "Hard Court",
+    "year": "2007",
+    "description": "Fighting basketball game. Client Westech Media LLC (crazymonkeygames.com)",
+    "url": "https://www.crazymonkeygames.com/Hardcourt.html",
+    "tech": ["game dev/design", "AS2", "flash"]
+  },
+  {
+    "title": "MTICS Inventory System",
+    "year": "2006",
+    "description": "Group thesis lead programmer for inventory system development.",
+    "tech": ["win app", "data flow", "msAccess", "SQL", "UI/UX", "VB6"]
+  }
+]
