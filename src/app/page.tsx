@@ -1,27 +1,42 @@
 'use client';
 
 import React from "react";
-import WorkHistory from "./components/work_history";
-import Projects from "./components/projects";
 import Intro from "./components/intro";
-import { motion, MotionConfig } from "motion/react";
+import { motion } from "motion/react";
+import Timeline from "./components/timeline";
+import Header from "./components/header";
+import { ClientOnly } from "./components/client-only";
+import Footer from "./components/footer";
 
 export default function Home(): JSX.Element {
   return (
-    <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <motion.main 
-        className="container max-w-screen-lg flex flex-col gap-12"
-        initial="hidden"
-        whileInView="whileInView"
-        viewport={{once: true}}
-        variants={{
-          whileInView: {transition: {delay: 0.5, duration: 0.5, staggerChildren: 0.05}}
-        }}
-      >
-        <Intro />
-        <WorkHistory />
-        <Projects />
-      </motion.main>
+    <div className="items-center min-h-screen p-6 pb-20 print:p-4 print:pb-10 justify-items-center sm:p-8 md:p-12 lg:p-20">
+      <ClientOnly>
+        <motion.main
+          className="container flex flex-col max-w-screen-lg gap-8 print:max-w-none"
+          initial="hidden"
+          whileInView="whileInView"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { y: 20, opacity: 0 },
+            whileInView: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: 1,
+                staggerChildren: 0.1
+              }
+            }
+          }}
+        >
+          <Header />
+          <Intro />
+          <Timeline />
+        </motion.main>
+        <Footer />
+      </ClientOnly>
     </div>
   );
 }

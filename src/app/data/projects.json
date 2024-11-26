@@ -1,162 +1,303 @@
 [
   {
+    "title": "jaycsantos.com",
+    "year_end": "2024",
+    "month_end": "11",
+    "description": "V4 of personal website",
+    "tech": [
+      "reactjs",
+      "nextjs",
+      "tailwindcss",
+      "typescript",
+      "framer-motion"
+    ]
+  },
+  {
     "title": "Colaboration App",
-    "year": "2024",
+    "year_end": "2024",
+    "month_end": "11",
+    "ref_id": "maliksi",
     "description": "A white label mobile app for collaboration and information sharing.",
-    "tech": ["flutter", "android", "ios", "web", "UI/UX", "firestore", "firebase auth", "bigquery", "cloud functions", "gcp", "giftbit api", "html", "javascript", "wcag"]
+    "tech": [
+      "flutter",
+      "android",
+      "ios",
+      "web",
+      "UI/UX",
+      "firestore",
+      "firebase auth",
+      "bigquery",
+      "cloud functions",
+      "gcp",
+      "giftbit api",
+      "html",
+      "js",
+      "wcag"
+    ]
   },
   {
     "title": "Photo Sharing App (unpublished)",
-    "year": "2023",
+    "year_end": "2023",
+    "month_end": "07",
+    "ref_id": "maliksi",
     "description": "R&D on a photo sharing app and web interface with realtime sync.",
     "tech": ["flutter", "android", "ios", "web", "reactjs", "nextjs", "UI/UX", "couchbase", "s3", "nginx", "google maps"]
   },
   {
     "title": "Inventory App (unpublished)",
-    "year": "2022",
+    "year_end": "2022",
+    "month_end": "04",
+    "ref_id": "maliksi",
     "description": "R&D on an inventory app with realtime sync.",
     "tech": ["flutter", "android", "ios", "couchbase"]
   },
   {
     "title": "GradGuru/Beyond12 Mobile App",
-    "year": "2022",
-    "description": "Did some feature maintenance and bug fixes.",
+    "year_end": "2022",
+    "month_end": "09",
+    "ref_id": "maliksi",
+    "description": "Feature maintenance and bug fixes.",
     "tech": ["flutter", "android", "ios", "restful API", "wcag", "jenkins"]
   },
   {
     "title": "GradGuru/Beyond12 Console V3",
-    "year": "2022",
+    "year_end": "2022",
+    "month_end": "09",
+    "ref_id": "maliksi",
     "description": "Redesigned and maintained the console app. Added new features, functions and integrations.",
     "tech": ["web", "angularjs", "boostrap", "UI/UX", "scss", "jenkins", "restful API", "mxGraph", "salesforce API", "okta 2fa", "wcag"]
   },
   {
     "title": "GradGuru Console V2",
-    "year": "2019",
+    "year_end": "2020",
+    "month_end": "10",
+    "ref_id": "gradguru",
     "description": "Rewrote and maintained the console app in AngularJs from PHP. Added new features, functions and integrations.",
     "tech": ["web", "angularjs", "boostrap", "less", "jenkins", "restful API", "mxGraph"]
   },
   {
-    "title": "The H Hub (freelance)",
-    "year": "2017",
+    "title": "The H Hub (contract work)",
+    "year_end": "2017",
+    "month_end": "11",
     "description": "Added new features, functions and api integrations.",
-    "tech": ["web", "angularjs", "scss", "restful API", "nginx"]
+    "tech": [
+      "web",
+      "angular",
+      "scss",
+      "restful API",
+      "nginx"
+    ]
   },
   {
     "title": "Omnifi-Modeler",
-    "year": "2017",
+    "year_end": "2017",
+    "month_end": "10",
+    "ref_id": "247ai",
     "description": "Part of a collection of tools: a web based editor for state machine flow w/c includes a synced interactive visual diagram.",
-    "tech": ["web tool", "javascript", "prototypejs", "gojs", "HTML/CSS"]
+    "tech": [
+      "web",
+      "js",
+      "prototypejs",
+      "gojs",
+      "HTML/CSS"
+    ]
   },
   {
     "title": "Pumba", 
-    "year": "2017",
+    "year_end": "2017",
+    "month_end": "04",
+    "ref_id": "247ai",
     "description": "Internal web tool that queries redmine tickets via restful API & displays a dynamic data table & visual trend graph.",
     "tech": ["web", "redmine API", "VueJs", "HTML/CSS", "d3", "nodejs"]
   },
   {
+    "title": "Vivid Speech Apps",
+    "year_end": "2017",
+    "month_end": "06",
+    "ref_id": "247ai",
+    "description": "Developed the visual web of IVR.",
+    "tech": [
+      "web",
+      "jquery",
+      "AngularJS",
+      "HTML/CSS",
+      "perforce"
+    ]
+  },
+  {
+    "title": "Web Soundboard",
+    "year_end": "2017",
+    "month_end": "11",
+    "ref_id": "247ai",
+    "description": "A soundboard UI. Used in a live presentation that needed on-the-fly sound effects and background music.",
+    "tech": [
+      "web",
+      "VueJs"
+    ]
+  },
+  {
     "title": "Prudle",
-    "year": "2016", 
+    "year_end": "2016",
+    "month_end": "11",
+    "ref_id": "247ai",
     "description": "Internal web tool that parses possible grammars from a GRXML/VGSL value set.",
-    "tech": ["web", "VueJs", "HTML/CSS"]
+    "tech": [
+      "web",
+      "VueJs",
+      "js"
+    ]
+  },
+  {
+    "title": "24HourAsnwers (contract work)",
+    "year_end": "2016",
+    "month_end": "01",
+    "description": "Co-Developed a mobile app using phonegap.",
+    "tech": [
+      "mobile app",
+      "AngularJS",
+      "HTML/CSS",
+      "phonegap",
+      "restful API"
+    ]
   },
   {
     "title": "ScoutJS",
-    "year": "2016",
+    "year_end": "2015",
+    "month_end": "11",
+    "ref_id": "247ai",
     "description": "Internal online app that enables to capture front-end logs & able to notify & display history, trends, pattern flow, errors & data object parsing.",
     "tech": ["web", "service", "mongoDB", "express", "AngularJS", "expressJs", "d3"]
   },
   {
-    "title": "Vivid Speech Apps",
-    "year": "2016",
-    "description": "Developed the visual web of IVR.",
-    "tech": ["web", "jquery", "AngularJS", "HTML/CSS", "perforce"]
-  },
-  {
-    "title": "24HourAsnwers (freelance)",
-    "year": "2016",
-    "description": "Co-Developed a mobile app using phonegap.",
-    "tech": ["mobile app", "AngularJS", "HTML/CSS", "phonegap"]
+    "title": "Wack-a-Mole Game",
+    "year_end": "2015",
+    "month_end": "09",
+    "ref_id": "247ai",
+    "description": "A multiplayer wack-a-mole game. Used as a proof of concept using web sockets in node.",
+    "tech": [
+      "web",
+      "nodejs",
+      "socket.io"
+    ]
   },
   {
     "title": "Flowmulate",
-    "year": "2015",
+    "year_end": "2015",
+    "month_end": "05",
+    "ref_id": "btit",
     "description": "[Best Thesis, IT 2015] Flowchart algorithm design, simulation and code generation.",
     "tech": ["web", "admin tools", "UX/UI", "HTML", "CSS/LESS", "PHP/Laravel", "MYSQL", "typescript", "AngularJS", "jsep", "bootstrap"]
   },
   {
     "title": "Generic Service Mgmt System",
-    "year": "2015",
+    "year_end": "2014",
+    "month_end": "12",
+    "ref_id": "btit",
     "description": "A general use management system for most kinds of service provider.",
     "tech": ["windows app", "UI/UX", "crystal report", "mysql", "vb.net"]
   },
   {
+    "title": "Tic Tac Toe vs AI",
+    "year_end": "2014",
+    "month_end": "12",
+    "ref_id": "btit",
+    "description": "A small tic tac toe game project using Java which can be played against the computer AI.",
+    "tech": [
+      "java",
+      "decision tree"
+    ]
+  },
+  {
     "title": "Putt More Base",
-    "year": "2012",
+    "year_end": "2012",
+    "month_end": "01",
+    "ref_id": "jaycsantos",
     "description": "Puzzle physics mini-golf game sequel. Clients include TurboNuke.com, Andkon.com, IPC Media (mousebreaker.com).",
     "url": "https://www.kongregate.com/games/jaycsantos/putt-more-base",
     "tech": ["game dev/design", "UI/UX", "AS3", "box2d", "flash", "gamersafe api"]
   },
   {
     "title": "Chris Jeff v2",
-    "year": "2010",
+    "year_end": "2010",
+    "month_end": "01",
+    "ref_id": "jaycsantos",
     "description": "chris-jeff.com - personal website",
     "tech": ["web redesign", "UI/UX", "HTML", "CSS", "PHP"]
   },
   {
     "title": "Chris Jeff v1",
-    "year": "2009",
+    "year_end": "2009",
+    "month_end": "01",
+    "ref_id": "jaycsantos",
     "description": "chris-jeff.com - personal website",
     "tech": ["logo", "web design", "UI/UX", "HTML", "CSS", "PHP", "MYSQL"]
   },
   {
     "title": "Clock Work Monster",
-    "year": "2009",
+    "year_end": "2009",
+    "month_end": "01",
+    "ref_id": "jaycsantos",
     "description": "clockworkmonster.com - arcade portal",
     "tech": ["web", "admin tools", "web design", "UI/UX", "HTML", "CSS", "PHP", "MYSQL"]
   },
   {
     "title": "Hidden Ninja Games",
-    "year": "2009",
+    "year_end": "2009",
+    "month_end": "01",
+    "ref_id": "jaycsantos",
     "description": "hiddenninjagames.com - arcade portal",
     "tech": ["web", "admin tools", "logo", "web design", "DB mgmt.", "UI/UX", "HTML", "CSS", "PHP", "MYSQL"]
   },
   {
     "title": "Stomp Tomato",
-    "year": "2008",
+    "year_end": "2008",
+    "month_end": "09",
+    "ref_id": "jaycsantos",
     "description": "Jumping reflex mini-game. Clients include Donnewood Media (meez.com), ItsNotBadAtAll.com",
     "url": "https://www.kongregate.com/games/jaycsantos/stomp-tomato",
     "tech": ["game dev/design", "meez api", "UI/UX", "AS2", "flash"]
   },
   {
     "title": "Putt Base",
-    "year": "2008",
+    "year_end": "2008",
+    "month_end": "01",
+    "ref_id": "jaycsantos",
     "description": "Puzzle physics mini-golf game. Clients include UGO Ent. Inc., Walt Disney Internet Group, BigFishGames, Armor Games Inc, Sega Europe, Atom Ent. Inc (addictinggames.com), Andkon.com",
     "url": "https://www.kongregate.com/games/UGOP/putt-base",
     "tech": ["game dev/design", "UI/UX", "AS2", "flash"]
   },
   {
     "title": "All Games All Free",
-    "year": "2008",
+    "year_end": "2008",
+    "month_end": "01",
+    "ref_id": "jaycsantos",
     "description": "allgamesallfree.com - arcade portal",
+    "url": "http://allgamesallfree.com/",
     "tech": ["web", "admin tools", "logo", "web design", "DB mgmt", "UI/UX", "HTML", "CSS", "PHP", "MYSQL"]
   },
   {
     "title": "Loboloon",
-    "year": "2007",
+    "year_end": "2007",
+    "month_end": "12",
+    "ref_id": "jaycsantos",
     "description": "Puzzle maze game. Client Mofunzone.com",
     "url": "https://www.newgrounds.com/portal/view/427327",
     "tech": ["game dev/design", "UI/UX", "AS2", "flash"]
   },
   {
     "title": "Hard Court",
-    "year": "2007",
+    "year_end": "2007",
+    "month_end": "07",
+    "ref_id": "jaycsantos",
     "description": "Fighting basketball game. Client Westech Media LLC (crazymonkeygames.com)",
     "url": "https://www.crazymonkeygames.com/Hardcourt.html",
     "tech": ["game dev/design", "AS2", "flash"]
   },
   {
     "title": "MTICS Inventory System",
-    "year": "2006",
+    "year_end": "2006",
+    "month_end": "03",
+    "ref_id": "comtec",
     "description": "Group thesis lead programmer for inventory system development.",
     "tech": ["win app", "data flow", "msAccess", "SQL", "UI/UX", "VB6"]
   }

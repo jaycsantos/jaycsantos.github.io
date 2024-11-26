@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Bachelor of Technology in Information Technology",
+    "entity": "Technological University of the Philippines Taguig",
+    "id": "btit",
+    "year_start": "2014",
+    "year_end": "2015",
+    "month_start": "05",
+    "month_end": "07"
+  },
+  {
+    "title": "Computer Engineering Technology",
+    "entity": "Technological University of the Philippines Taguig",
+    "id": "comtec",
+    "year_start": "2004",
+    "year_end": "2007",
+    "month_start": "05",
+    "month_end": "07",
+    "description": "Developed front-end components for a multi-app system for its V2 release. Integrated and customized third-party apps and libraries."
+  }
+]

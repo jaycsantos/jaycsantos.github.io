@@ -4,21 +4,23 @@
 
 :root {
   --font-fallback: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --background: #343434;
-  --foreground: #ededed;
+  --background: #ededed;
+  --foreground: #343434;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1b1b1b;
-    --foreground: #efefef;
-  }
+[data-mode='dark'] {
+  --background: #1b1b1b;
+  --foreground: #efefef;
 }
 
 @media print {
   :root {
     --background: white;
-    --foreground: black;
+    --foreground: #343434;
+  }
+  html {
+    background: transparent !important;
+    opacity: 1 !important;
   }
 }
 
@@ -26,4 +28,13 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-fallback);
+}
+
+.dot-blur {
+  background-color: transparent;
+  background-image: radial-gradient(transparent 1px, var(--background) 1px);
+  background-size: 4px 4px;
+  backdrop-filter: blur(4px);
+  mask: linear-gradient(rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+  opacity: 1;
 }
