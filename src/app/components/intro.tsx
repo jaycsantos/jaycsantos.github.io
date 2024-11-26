@@ -14,7 +14,7 @@ export default function Intro() {
         Well seasoned software engineer since 2007, specializing in JavaScript and its ecosystem. Adding a touch of enchantment to user experiences.
       </p>
       <p className="hidden print:block">
-        With almost 2 decades of development experience, I've honed my skills as a software engineer, now focusing on JavaScript and its rich ecosystem. From my early days in indie game development to today's sophisticated web applications, I've consistently delivered innovative solutions. I'm committed to creating user-centric experiences, employing best practices, and leveraging modern development tools and techniques.
+        With almost 2 decades of development experience, I&apos;ve honed my skills as a software engineer, now focusing on JavaScript and its rich ecosystem. From my early days in indie game development to today&apos;s sophisticated web applications, I&apos;ve consistently delivered innovative solutions. I&apos;m committed to creating user-centric experiences, employing best practices, and leveraging modern development tools and techniques.
       </p>
     </motion.section>
   );
