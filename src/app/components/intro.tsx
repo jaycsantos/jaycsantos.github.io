@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function Intro() {
   return (
-    <motion.section className="flex flex-col gap-4 text-md"
+    <motion.section className="flex flex-col gap-4 px-8 text-md"
       variants={{
         hidden: { opacity: 0, y: 20 },
         whileInView: { opacity: 1, y: 0 }

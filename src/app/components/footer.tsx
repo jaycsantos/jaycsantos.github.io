@@ -15,7 +15,7 @@ export default function Footer(): JSX.Element {
         className="text-sm text-green-500 transition-colors hover:text-green-600 "
         aria-label="Print Résumé"
       >
-        <PrinterIcon className="inline w-4 h-4" /> Résumé
+        <PrinterIcon className="inline w-4 h-4" /> cv
       </button>
 
     </div>

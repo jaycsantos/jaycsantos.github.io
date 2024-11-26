@@ -41,7 +41,19 @@
     "month_end": "07",
     "ref_id": "maliksi",
     "description": "R&D on a photo sharing app and web interface with realtime sync.",
-    "tech": ["flutter", "android", "ios", "web", "reactjs", "nextjs", "UI/UX", "couchbase", "s3", "nginx", "google maps"]
+    "tech": [
+      "flutter",
+      "android",
+      "ios",
+      "web",
+      "reactjs",
+      "nextjs",
+      "UI/UX",
+      "couchDB",
+      "s3",
+      "nginx",
+      "google maps"
+    ]
   },
   {
     "title": "Inventory App (unpublished)",
@@ -49,7 +61,12 @@
     "month_end": "04",
     "ref_id": "maliksi",
     "description": "R&D on an inventory app with realtime sync.",
-    "tech": ["flutter", "android", "ios", "couchbase"]
+    "tech": [
+      "flutter",
+      "android",
+      "ios",
+      "couchDB"
+    ]
   },
   {
     "title": "GradGuru/Beyond12 Mobile App",
@@ -273,7 +290,17 @@
     "ref_id": "jaycsantos",
     "description": "allgamesallfree.com - arcade portal",
     "url": "http://allgamesallfree.com/",
-    "tech": ["web", "admin tools", "logo", "web design", "DB mgmt", "UI/UX", "HTML", "CSS", "PHP", "MYSQL"]
+    "tech": [
+      "web",
+      "admin tools",
+      "logo",
+      "web design",
+      "UI/UX",
+      "HTML",
+      "CSS",
+      "PHP",
+      "MYSQL"
+    ]
   },
   {
     "title": "Loboloon",

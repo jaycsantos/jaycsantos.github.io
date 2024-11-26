@@ -50,36 +50,14 @@ export default function Timeline() {
   let lastYear: string | undefined;
 
   return (
-    <MotionConfig reducedMotion={'user'}>
-      <motion.section className="relative print:block print:opacity-100"
-        initial={isPrint ? 'whileInView' : 'hidden'}
-        whileInView="whileInView"
-        viewport={{ once: true }}
-        variants={{
-          hidden: { y: 20, opacity: 0 },
-          whileInView: {
-            y: 0,
-            opacity: 1,
-            transition: {
-              type: "spring",
-              bounce: 0.4,
-              duration: 1,
-              delayChildren: 0.3,
-              staggerChildren: 0.2
-            }
-          }
-        }}
-      >
-        {/* <motion.h2
-        className="mb-8 text-xl font-bold text-yellow-400"
-        variants={{
-          hidden: { opacity: 0, y: 10 },
-          whileInView: { opacity: 1, y: 0 }
-        }}
-      >
-        timeline
-      </motion.h2> */}
-
+    <MotionConfig reducedMotion={'user'} transition={{
+      duration: 1,
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+      type: 'spring',
+      bounce: 0.4,
+    }}>
+      <section className="relative print:block print:opacity-100">
         <ul key="timeline" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 print:sm:grid-cols-3">
           {coloredData.map((item, index) => (
             <React.Fragment key={'row-' + index}>
@@ -88,7 +66,9 @@ export default function Timeline() {
                 style={isPrint ? {} : { background: `linear-gradient(to bottom, ${item.color ?? '#808080'} 90%, ${coloredData[index + 1]?.color ?? '#808080'})` }}
               >
                 <div className="relative h-full col-span-1 px-4 py-8 sm:pl-4 sm:pt-0 sm:pb-12 sm:pr-12 sm:text-right print:pr-2 print:sm:py-0 bg-background">
-                  {'id' in item && <TimelineItem item={item} className="sticky pt-8 pb-4 print:static top-24 print:pt-0 print:pb-2" />}
+                  {'id' in item &&
+                    <TimelineItem item={item} className="sticky pt-8 pb-4 print:static top-24 print:pt-0 print:pb-2" />
+                  }
                 </div>
               </li>
               <li key={'work-' + index + '-projects'}
@@ -99,7 +79,7 @@ export default function Timeline() {
                   {item.projects?.map((project, projectIndex) => (
                     <React.Fragment key={'project-' + projectIndex}>
                       {project.year_end != lastYear && (lastYear = project.year_end) &&
-                        <li key={lastYear} className="print:hidden">
+                        <li key={lastYear} className="print:hidden min-h-7">
                           <span
                             className="absolute left-0 flex items-center justify-center px-1 font-bold -translate-x-1/2 border-2 rounded-full bg-background"
                             style={{ borderColor: item.color }}
@@ -121,7 +101,7 @@ export default function Timeline() {
             </React.Fragment>
           ))}
         </ul>
-      </motion.section>
+      </section>
     </MotionConfig>
   );
 }
@@ -175,10 +155,11 @@ function TimelineItem({ item, className }: { item: TimelineProps, className?: st
 
   return (
     <motion.div className={`print:block print:opacity-100 ${className}`}
-      variants={{
-        hidden: { opacity: 0, x: -10 },
-        whileInView: { opacity: 1, x: 0 }
-      }}
+      initial={{ x: -10 }}
+      whileInView={{ x: 0 }}
+      viewport={{ once: true }}
+      whileHover={{ x: 4 }}
+      whileFocus={{ x: 4 }}
     >
       <h3>
         <span
@@ -203,10 +184,11 @@ function ProjectItem({ project, className }: { project: ProjectProps, className?
   return (
     <motion.div
       className={`flex flex-col gap-1 print:gap-0 print:block print:opacity-100 ${className} ${!project.ref_id && 'md:-translate-x-4 print:translate-x-0'}`}
-      variants={{
-        hidden: { opacity: 0, x: 10 },
-        whileInView: { opacity: 1, x: 0 }
-      }}
+      initial={{ x: 10 }}
+      whileInView={{ x: 0 }}
+      viewport={{ once: true }}
+      whileHover={{ x: -4 }}
+      whileFocus={{ x: -4 }}
     >
       <h3 className={`font-bold ${!project.ref_id && 'italic'}`}>
         {project.title}
