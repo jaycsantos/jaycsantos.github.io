@@ -1,6 +1,6 @@
-Jayc Santos Website
+# [jaycsantos.com](https://jaycsantos.com)
 
-[screenshot](https://github.com/jaycsantos/jaycsantos.github.io/blob/master/public/jaycsantos.com.jpg?raw=true)
+<img src="./public/jaycsantos.com.jpg?raw=true" />
 
 ## Dev
 
