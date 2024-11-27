@@ -21,7 +21,7 @@ export default function Intro() {
         hidden: { opacity: 0, y: 20 },
         whileInView: { opacity: 1, y: 0 }
       }}>
-      <p className="italic">&quot;{texts.intro}&quot;</p>
+      <p className="px-4 italic">&quot;{texts.intro}&quot;</p>
       <p className="hidden print:block">{texts.print}</p>
       <ul className="mx-12 list-disc">
         {Object.entries(texts.tech).map(([key, value]) => (

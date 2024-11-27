@@ -15,7 +15,6 @@
     "year_start": "2004",
     "year_end": "2007",
     "month_start": "05",
-    "month_end": "07",
-    "description": "Developed front-end components for a multi-app system for its V2 release. Integrated and customized third-party apps and libraries."
+    "month_end": "07"
   }
 ]

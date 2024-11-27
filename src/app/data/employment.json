@@ -7,7 +7,12 @@
     "year_end": "2024",
     "month_start": "11",
     "month_end": "11",
-    "description": "Architected, designed, and prototyped research, development, and proof-of-concept applications while ensuring the highest quality of code through code reviews and user experience with accessibility in mind. Performed maintenance and optimization of existing applications. Led the technical vision and development of our flagship product."
+    "description": [
+      "Architected, designed, and prototyped research, development, and proof-of-concept applications while ensuring the highest quality of code and user experience with accessibility in mind.",
+      "Guide and mentor junior developers in technical skills and best practices through code reviews.",
+      "Participated in decision-making processes related to product roadmap, feature prioritization, and design guidelines.",
+      "Drove the technical vision and development of our flagship product."
+    ]
   },
   {
     "title": "Senior Front-end / Web Developer",
@@ -17,7 +22,10 @@
     "year_end": "2020",
     "month_start": "11",
     "month_end": "11",
-    "description": "Developed front-end components for a multi-app system for its V2 release. Integrated and customized third-party apps and libraries."
+    "description": [
+      "Developed and maintained front-end components for a multi-app system for its V2 release.",
+      "Integrated and customized third-party apps and libraries."
+    ]
   },
   {
     "title": "UI/UX Front-end Developer",
@@ -27,7 +35,10 @@
     "year_end": "2017",
     "month_start": "07",
     "month_end": "12",
-    "description": "focused on developing web apps from client products, internal tools, web based interactions, mobile demos, nodejs APIs & concept prototypes; implementing specs & requirements including, but not limited to UI/UX mobile first designs, algorithms, visual interactions."
+    "description": [
+      "Specialized in developing web applications, ranging from client-facing products, internal tools to demos and concept prototypes.",
+      "This involved translating design specifications and technical requirements into functional solutions, including UI/UX design, algorithm implementation, and visual interaction."
+    ]
   },
   {
     "title": "Freelance Interactive Developer",
@@ -37,6 +48,9 @@
     "year_end": "2014",
     "month_start": "03",
     "month_end": "05",
-    "description": "designed & developed interaction media through casual games and web applications; which includes robust programming, accessibility designs, visual graphics and overall user experience."
+    "description": [
+      "Designed and developed interactive media, including casual games and web applications, focusing on accessibility, user experience, and visual design.",
+      "Created engaging digital experiences through casual games and web applications, emphasizing accessibility, user experience, and robust programming."
+    ]
   }
 ]

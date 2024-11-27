@@ -3,16 +3,17 @@
 import { useMediaQuery } from '@uidotdev/usehooks'
 import { motion, MotionConfig } from 'framer-motion'
 import { useTheme } from 'next-themes'
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import Moment from 'react-moment'
 import { generateColors } from '../utils/color-generator'
 import Tags from './tags'
 import { BoltIcon, LinkIcon } from '@heroicons/react/24/outline'
+import { animate, inView, stagger } from 'motion'
 
 interface TimelineProps {
   id?: string;
   title?: string;
-  description?: string;
+  description?: string[];
   entity?: string;
   year_start: string;
   year_end: string;
@@ -52,10 +53,8 @@ export default function Timeline() {
   return (
     <MotionConfig reducedMotion={'user'} transition={{
       duration: 1,
-      staggerChildren: 0.2,
-      delayChildren: 0.3,
+      delay: 0.1,
       type: 'spring',
-      bounce: 0.4,
     }}>
       <section className="relative print:block print:opacity-100">
         <ul key="timeline" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 print:sm:grid-cols-3">
@@ -155,7 +154,7 @@ function TimelineItem({ item, className }: { item: TimelineProps, className?: st
 
   return (
     <motion.div className={`print:block print:opacity-100 ${className}`}
-      initial={{ x: -10 }}
+      initial={{ x: -8 }}
       whileInView={{ x: 0 }}
       viewport={{ once: true }}
       whileHover={{ x: 4 }}
@@ -174,19 +173,21 @@ function TimelineItem({ item, className }: { item: TimelineProps, className?: st
         <Moment parse="YYYYMM" format="MMM YYYY" date={item.year_start + item.month_start} />
         &nbsp;-&nbsp;<Moment parse="YYYYMM" format="MMM YYYY" date={item.year_end + item.month_end} />
       </span>
-      <p className="mt-2 opacity-75">{item.description}</p>
+      <ul className="flex flex-col gap-2 mt-2 opacity-75">
+        {item.description?.map((v, i) => <li key={i}>{v}</li>)}
+      </ul>
       {item.tech && <Tags tags={item.tech} />}
     </motion.div>
   );
 }
 
 function ProjectItem({ project, className, index }: { project: ProjectProps, className?: string, index: number }) {
+  const startX = 8 * (1 - (index % 2) * 2);
   return (
-    <motion.div
-      className={`flex flex-col gap-1 print:gap-0 print:block print:opacity-100 ${className} ${!project.ref_id && 'md:-translate-x-4 print:translate-x-0'}`}
-      initial={{ x: 10 * (1 - (index % 2) * 2) }}
+    <motion.div className={`flex flex-col gap-1 print:gap-0 print:block print:opacity-100 ${className} ${!project.ref_id && 'md:-translate-x-4 print:translate-x-0'}`}
+      initial={{ x: startX }}
       whileInView={{ x: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       whileHover={{ x: -4 }}
       whileFocus={{ x: -4 }}
     >
