@@ -1,8 +1,9 @@
 import {Quicksand} from "next/font/google";
 import "./globals.css";
 import {Metadata} from "next";
-import React, { Component } from "react";
+import React from "react";
 import ThemeClient from "./components/theme-client";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const fontFamily = Quicksand({
   weight: "300",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
         </ThemeClient>
       </body>
+      <GoogleAnalytics gaId="G-R2N300KGRV" />
     </html>
   );
 }
