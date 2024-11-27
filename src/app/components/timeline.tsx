@@ -92,7 +92,7 @@ export default function Timeline() {
                         {!project.ref_id &&
                           <BoltIcon fill={item.color} className="absolute left-0 w-8 h-8 translate-x-[calc(1px-50%)] -rotate-12 print:hidden"
                             style={{ color: item.color }} />}
-                        <ProjectItem project={project} />
+                        <ProjectItem project={project} index={projectIndex} />
                       </li>
                     </React.Fragment>
                   ))}
@@ -180,11 +180,11 @@ function TimelineItem({ item, className }: { item: TimelineProps, className?: st
   );
 }
 
-function ProjectItem({ project, className }: { project: ProjectProps, className?: string }) {
+function ProjectItem({ project, className, index }: { project: ProjectProps, className?: string, index: number }) {
   return (
     <motion.div
       className={`flex flex-col gap-1 print:gap-0 print:block print:opacity-100 ${className} ${!project.ref_id && 'md:-translate-x-4 print:translate-x-0'}`}
-      initial={{ x: 10 }}
+      initial={{ x: 10 * (1 - (index % 2) * 2) }}
       whileInView={{ x: 0 }}
       viewport={{ once: true }}
       whileHover={{ x: -4 }}
