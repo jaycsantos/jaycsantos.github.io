@@ -41,7 +41,7 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
 
   return (
     <>
-      <motion.div className="relative flex flex-col items-stretch gap-4 p-3 transition-all duration-300 border rounded-md group print:border-0 border-gray-600/10 dark:border-gray-400/10 hover:border-gray-400 dark:hover:border-gray-400 print:gap-0 print:p-0 print:break-inside-avoid sm:h-full"
+      <motion.div className="relative flex flex-col items-stretch gap-4 p-3 transition-all duration-300 bg-gray-200 border rounded-md dark:bg-gray-800/20 group print:border-0 border-gray-600/10 dark:border-gray-400/10 hover:border-gray-400 dark:hover:border-gray-400 print:gap-0 print:p-0 print:break-inside-avoid sm:h-full"
         tabIndex={0}
         role="button"
         aria-label={`More details about ${project.title}`}
@@ -49,7 +49,7 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
         onClick={() => setShow(true)}
       >
         {project.img &&
-          <div className="absolute inset-0 w-full h-full -z-10 bg-cover bg-center grayscale opacity-15 blur-[2px] group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+          <div className="absolute inset-0 w-full h-full z-0 bg-cover bg-center grayscale opacity-15 blur-[2px] group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
             style={{ backgroundImage: `url(${project.img})` }}
           />}
         <motion.h4 className={`text-center font-medium underline transition-opacity duration-500 ease-in-out underline-offset-4 print:text-left ${project.img && 'group-hover:opacity-0'}`}

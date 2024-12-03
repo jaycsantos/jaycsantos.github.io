@@ -20,17 +20,17 @@ export default function Tags({ tags, className, children }: { tags: string[], cl
         >
           <div className="flex flex-none w-0 h-0 print:hidden
             border-t-[.75rem] border-t-transparent
-            border-r-[.25rem] border-r-white/40 dark:border-r-gray-800/40
+            border-r-[.25rem] border-r-gray-100/70 dark:border-r-gray-800/70
             border-b-[.75rem] border-b-transparent">
           </div>
-          <code className="flex-1 px-1 py-1 lowercase bg-white/40 dark:bg-gray-800/40 print:px-0 print:py-0 print:bg-transparent print:inline-block">
+          <code className="flex-1 px-1 py-1 lowercase bg-gray-100/70 dark:bg-gray-800/70 print:px-0 print:py-0 print:bg-transparent print:inline-block">
             <span className="opacity-75">{tag}</span>
             <span className="hidden print:inline">,&nbsp;</span>
           </code>
           <div className="absolute -right-[0.25rem] w-0 h-0 print:hidden 
-            border-t-[.75rem] border-t-white/40 dark:border-t-gray-800/40
+            border-t-[.75rem] border-t-gray-100/70 dark:border-t-gray-800/70
             border-r-[.25rem] border-transparent
-            border-b-[.75rem] border-b-white/40 dark:border-b-gray-800/40">
+            border-b-[.75rem] border-b-gray-100/70 dark:border-b-gray-800/70">
           </div>
         </motion.li>
       ))}
