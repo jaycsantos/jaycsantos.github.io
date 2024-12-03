@@ -1,12 +1,12 @@
 [
   {
-    "title": "jaycsantos.com",
+    "title": "jaycsantos.com v4 (self)",
     "year_end": "2024",
     "month_end": "11",
     "description": "V4 of personal website",
     "tech": [
       "typescript",
-      "reactjs",
+      "react",
       "nextjs",
       "tailwindcss",
       "framer-motion",
@@ -14,22 +14,22 @@
     ]
   },
   {
-    "title": "Colaboration App",
+    "title": "\"Colaboration App\"",
     "year_end": "2024",
     "month_end": "11",
     "ref_id": "maliksi",
-    "description": "A white label mobile app for collaboration and information sharing in realtime and offline.",
+    "description": "Spearheaded fullstack development on a white label mobile app for collaboration and information sharing in realtime and offline. Wrote and maintained the firestore rules. Also co-designed the json schema.",
     "tech": [
-      "flutter",
-      "android/ios",
+      "mobile",
       "web",
-      "UI/UX",
-      "bloc",
+      "UIUX",
+      "flutter",
       "gorouter → autorouter",
+      "bloc",
       "firestore",
       "firebase auth",
-      "bigquery",
       "cloud functions",
+      "json schema",
       "typescript",
       "gcp",
       "docker",
@@ -41,53 +41,59 @@
     ]
   },
   {
-    "title": "Photo Sharing App (unpublished)",
+    "title": "\"Photo Sharing App\" (unpublished)",
     "year_end": "2022",
     "month_end": "11",
     "ref_id": "maliksi",
-    "description": "R&D on a photo sharing app and web interface with realtime sync.  Spearheaded the project then later supervised for junior devs.",
+    "description": "Fullstack research and development on a photo sharing app and separate web interface both with realtime sync. Spearheaded the project then later supervised migration to new stack with junior devs.",
     "tech": [
-      "flutter",
-      "android/ios",
+      "mobile",
       "web",
-      "reactjs/nextjs",
-      "redux",
-      "UI/UX",
+      "flutter",
       "bloc",
-      "couchDB/pouchDB → firestore",
+      "react",
+      "nextjs",
+      "UIUX",
+      "json schema",
+      "couchbase/pouchDB → firestore",
       "s3 → firebase storage",
       "docker",
-      "nginx",
+      "nginx → firebase",
       "google maps",
       "github",
-      "jira"
+      "jira",
+      "wcag"
     ]
   },
   {
-    "title": "Inventory App (unpublished)",
+    "title": "\"Inventory App\" (unpublished)",
     "year_end": "2022",
     "month_end": "04",
     "ref_id": "maliksi",
-    "description": "R&D on an inventory app with realtime sync. Spearheaded the project then later supervised for junior devs.",
+    "description": "Spearheaded research and development on an inventory app with offline and realtime sync capabilities. Later supervised for junior devs.",
     "tech": [
+      "mobile",
       "flutter",
-      "android/ios",
       "bloc",
-      "couchDB",
+      "couchbase/pouchDB",
+      "json schema",
       "github",
-      "jira"
+      "jira",
+      "wcag"
     ]
   },
   {
-    "title": "GradGuru/Beyond12 Mobile App",
+    "title": "GradGuru/MyCoach App",
     "year_end": "2022",
     "month_end": "09",
     "ref_id": "maliksi",
     "description": "Feature maintenance and bug fixes.",
+    "url": "https://play.google.com/store/apps/details?id=com.expansionbridge.gradguru",
+    "img": "img/mycoach.app.jpg",
     "tech": [
       "flutter",
-      "android/ios",
-      "restful API",
+      "mobile",
+      "rest API",
       "wcag",
       "jenkins",
       "github",
@@ -95,19 +101,21 @@
     ]
   },
   {
-    "title": "GradGuru/Beyond12 Console V3",
+    "title": "GradGuru/MyCoach Console V3",
     "year_end": "2022",
     "month_end": "09",
     "ref_id": "maliksi",
     "description": "Redesigned and maintained the console app. Added new features, functions and integrations.",
+    "url": "javascript:void(0)",
+    "img": "img/mycoach.console.jpg",
     "tech": [
       "web",
       "angularjs",
       "bootstrap",
-      "UI/UX design",
+      "UIUX design",
       "scss",
       "jenkins",
-      "restful API",
+      "rest API",
       "mxGraph",
       "highchart",
       "salesforce API",
@@ -124,13 +132,15 @@
     "month_end": "10",
     "ref_id": "gradguru",
     "description": "Rewrote and maintained the console app in AngularJs from PHP. Added new features, functions and integrations.",
+    "url": "javascript:void(0)",
+    "img": "img/gradguru.console.jpg",
     "tech": [
       "web",
       "angularjs",
       "bootstrap",
       "less/sass",
       "jenkins",
-      "restful API",
+      "rest API",
       "mxGraph",
       "docker",
       "gitlab",
@@ -138,18 +148,21 @@
     ]
   },
   {
-    "title": "The H Hub (contract work)",
+    "title": "The H Hub (contract)",
     "year_end": "2017",
     "month_end": "11",
-    "description": "Added new features, functions and api integrations.",
+    "description": "Commision work to add new features, functions and api integrations.",
+    "url": "javascript:void(0)",
+    "img": "img/thehhub.jpg",
     "tech": [
       "web",
       "angular",
       "scss",
-      "restful API",
-      "nginx",
+      "rest API",
+      "php",
       "github",
-      "pivotal tracker"
+      "pivotal",
+      "docker"
     ]
   },
   {
@@ -171,7 +184,7 @@
     "year_end": "2017",
     "month_end": "04",
     "ref_id": "247ai",
-    "description": "Internal web tool that queries redmine tickets via restful API & displays a dynamic data table & visual trend graph.",
+    "description": "Internal web tool that queries redmine tickets via rest API & displays a dynamic data table & visual trend graph.",
     "tech": [
       "web",
       "redmine API",
@@ -223,10 +236,10 @@
     ]
   },
   {
-    "title": "24HourAsnwers (contract work)",
+    "title": "24HourAsnwers (contract)",
     "year_end": "2016",
     "month_end": "07",
-    "description": "Co-Developed a mobile app using phonegap.",
+    "description": "Comissioned to co-develop a mobile app using phonegap.",
     "tech": [
       "mobile",
       "android",
@@ -236,7 +249,7 @@
       "cordova",
       "phonegap",
       "paypal api",
-      "restful API"
+      "rest API"
     ]
   },
   {
@@ -262,7 +275,7 @@
     "year_end": "2015",
     "month_end": "09",
     "ref_id": "247ai",
-    "description": "A multiplayer wack-a-mole game. Used as a proof of concept using web sockets in node.",
+    "description": "A multiplayer wack-a-mole game. Used as a proof of concept using web sockets in node. Tested with coworkers over WIFI.",
     "tech": [
       "web",
       "nodejs",
@@ -296,7 +309,7 @@
     "description": "A general use management system for most kinds of service provider.",
     "tech": [
       "windows",
-      "UI/UX",
+      "UIUX",
       "crystal report",
       "mysql",
       "vb.net"
@@ -314,15 +327,17 @@
     ]
   },
   {
-    "title": "jaycsantos.com",
+    "title": "jaycsantos.com v3 (self)",
     "year_end": "2013",
     "month_end": "11",
     "description": "V3 of personal website and blog archive",
+    "url": "javascript:void(0)",
+    "img": "img/jaycsantos.v3.jpg",
     "tech": [
       "web",
       "design",
-      "UI/UX",
-      "php/wordpress"
+      "UIUX",
+      "php/wp"
     ]
   },
   {
@@ -332,10 +347,11 @@
     "ref_id": "jaycsantos",
     "description": "Puzzle physics mini-golf game sequel. Clients include TurboNuke.com, Andkon.com, IPC Media (mousebreaker.com).",
     "url": "https://www.kongregate.com/games/jaycsantos/putt-more-base",
+    "img": "img/puttmorebase.jpg",
     "tech": [
       "game",
       "design",
-      "UI/UX",
+      "UIUX",
       "AS3",
       "box2d",
       "flash",
@@ -343,15 +359,17 @@
     ]
   },
   {
-    "title": "jaycsantos.com",
+    "title": "jaycsantos.com v2 (self)",
     "year_end": "2009",
     "month_end": "03",
     "description": "V2 of personal website and blog",
+    "url": "javascript:void(0)",
+    "img": "img/jaycsantos.v2.jpg",
     "tech": [
       "web",
       "design",
-      "UI/UX",
-      "php/wordpress"
+      "UIUX",
+      "php/wp"
     ]
   },
   {
@@ -360,11 +378,13 @@
     "month_end": "10",
     "ref_id": "jaycsantos",
     "description": "chris-jeff.com - personal website",
+    "url": "javascript:void(0)",
+    "img": "img/chrisjeff.v2.jpg",
     "tech": [
       "web",
       "design",
-      "UI/UX",
-      "PHP/wordpress"
+      "UIUX",
+      "PHP/wp"
     ]
   },
   {
@@ -373,12 +393,14 @@
     "month_end": "01",
     "ref_id": "jaycsantos",
     "description": "chris-jeff.com - personal website",
+    "url": "javascript:void(0)",
+    "img": "img/chrisjeff.v1.jpg",
     "tech": [
       "web",
       "logo",
       "design",
-      "UI/UX",
-      "PHP/wordpress",
+      "UIUX",
+      "PHP/wp",
       "MYSQL"
     ]
   },
@@ -387,12 +409,14 @@
     "year_end": "2009",
     "month_end": "01",
     "ref_id": "jaycsantos",
-    "description": "clockworkmonster.com - arcade portal",
+    "description": "clockworkmonster.com - arcade portal running arcadem pro. I applied client's requested design. Mostly did additional features and maintenance on and off within 4 years.",
+    "url": "javascript:void(0)",
+    "img": "img/cwm.jpg",
     "tech": [
       "web",
       "admin",
       "design",
-      "UI/UX",
+      "UIUX",
       "PHP",
       "MYSQL"
     ]
@@ -402,28 +426,30 @@
     "year_end": "2009",
     "month_end": "01",
     "ref_id": "jaycsantos",
-    "description": "hiddenninjagames.com - arcade portal",
+    "description": "hiddenninjagames.com - arcade portal running arcadem pro. I redesigned the site and added additional features using JCustom Mod.",
+    "url": "javascript:void(0)",
+    "img": "img/hng.jpg",
     "tech": [
       "web",
       "admin",
       "logo",
       "design",
-      "UI/UX",
+      "UIUX",
       "PHP",
       "DB mgmt",
       "MYSQL"
     ]
   },
   {
-    "title": "jaycsantos.com",
+    "title": "jaycsantos.com (self)",
     "year_end": "2008",
     "month_end": "10",
     "description": "personal website and blog",
     "tech": [
       "web",
       "design",
-      "UI/UX",
-      "php/wordpress"
+      "UIUX",
+      "php/wp"
     ]
   },
   {
@@ -433,11 +459,12 @@
     "ref_id": "jaycsantos",
     "description": "Jumping reflex mini-game. Clients include Donnewood Media (meez.com), ItsNotBadAtAll.com",
     "url": "https://www.kongregate.com/games/jaycsantos/stomp-tomato",
+    "img": "img/stomptomato.png",
     "tech": [
       "game",
       "design",
       "meez api",
-      "UI/UX",
+      "UIUX",
       "AS2",
       "flash"
     ]
@@ -449,10 +476,11 @@
     "ref_id": "jaycsantos",
     "description": "Puzzle physics mini-golf game. Clients include UGO Ent. Inc., Walt Disney Internet Group, BigFishGames, Armor Games Inc, Sega Europe, Atom Ent. Inc (addictinggames.com), Andkon.com",
     "url": "https://www.kongregate.com/games/UGOP/putt-base",
+    "img": "img/puttbase.png",
     "tech": [
       "game",
       "design",
-      "UI/UX",
+      "UIUX",
       "AS2",
       "flash"
     ]
@@ -462,14 +490,15 @@
     "year_end": "2008",
     "month_end": "01",
     "ref_id": "jaycsantos",
-    "description": "allgamesallfree.com - arcade portal",
+    "description": "allgamesallfree.com - arcade portal. Redesigned and added features to existing arcade script. Also added features like ratings, comments, online presence, achievements, scoring and seasonal leaderboards.",
     "url": "http://allgamesallfree.com/",
+    "img": "img/agaf.jpg",
     "tech": [
       "web",
       "admin",
       "logo",
       "design",
-      "UI/UX",
+      "UIUX",
       "PHP",
       "MYSQL"
     ]
@@ -481,10 +510,11 @@
     "ref_id": "jaycsantos",
     "description": "Puzzle maze game. Client Mofunzone.com",
     "url": "https://www.newgrounds.com/portal/view/427327",
+    "img": "img/loboloon.png",
     "tech": [
       "game",
       "design",
-      "UI/UX",
+      "UIUX",
       "AS2",
       "flash"
     ]
@@ -496,6 +526,7 @@
     "ref_id": "jaycsantos",
     "description": "Fighting basketball game. Client Westech Media LLC (crazymonkeygames.com)",
     "url": "https://www.crazymonkeygames.com/Hardcourt.html",
+    "img": "img/hardcourt.png",
     "tech": [
       "game",
       "design",
@@ -514,7 +545,7 @@
       "data flow",
       "msAccess",
       "SQL",
-      "UI/UX",
+      "UIUX",
       "VB6"
     ]
   }

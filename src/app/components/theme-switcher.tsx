@@ -2,7 +2,7 @@
 
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
-import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/outline';
+import { HiSun, HiMoon, HiDesktopComputer } from 'react-icons/hi';
 
 export default function ThemeSwitcher({ className }: { className?: string }) {
   const [mounted, setMounted] = useState(false);
@@ -49,32 +49,32 @@ export default function ThemeSwitcher({ className }: { className?: string }) {
         className="flex items-center justify-center w-10 h-10 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
         aria-label="Switch theme"
       >
-        <MoonIcon className="hidden w-5 h-5 dark:block" />
-        <SunIcon className="w-5 h-5 dark:hidden" />
+        <HiMoon className="hidden w-5 h-5 dark:block" />
+        <HiSun className="w-5 h-5 dark:hidden" />
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 z-30 w-48 mt-2 origin-top-right bg-white rounded-md shadow-lg dark:bg-gray-800 ring-1 ring-black ring-opacity-5">
+        <div className="absolute right-0 z-30 w-48 mt-2 origin-top-right bg-white rounded-md shadow-lg dark:bg-gray-900 ring-1 ring-black ring-opacity-5">
           <div className="py-1" role="menu">
             <button
               onClick={() => changeTheme('light')}
               className="flex items-center w-full px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700"
             >
-              <SunIcon className="w-4 h-4 mr-2" />
+              <HiSun className="w-4 h-4 mr-2" />
               Light
             </button>
             <button
               onClick={() => changeTheme('dark')}
               className="flex items-center w-full px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700"
             >
-              <MoonIcon className="w-4 h-4 mr-2" />
+              <HiMoon className="w-4 h-4 mr-2" />
               Dark
             </button>
             <button
               onClick={() => changeTheme('system')}
               className="flex items-center w-full px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700"
             >
-              <ComputerDesktopIcon className="w-4 h-4 mr-2" />
+              <HiDesktopComputer className="w-4 h-4 mr-2" />
               System
             </button>
           </div>

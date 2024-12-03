@@ -3,15 +3,74 @@
 @tailwind utilities;
 
 :root {
-  --font-fallback: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --background: #ededed;
-  --foreground: #343434;
+  --background: #dedef0;
+  --background-sky: #b9b9ff;
+  --foreground: #101010;
 }
 
 [data-mode='dark'] {
-  --background: #1b1b1b;
+  --background: #101010;
+  --background-sky: #1f1f26;
   --foreground: #efefef;
 }
+
+html {
+  font-size: 16px;
+}
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+main {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: var(--font-title);
+}
+
+@layer components {
+  .timeline-grid {
+    @apply flex flex-col sm:grid sm:grid-cols-3 md:grid-cols-4 print:grid-cols-5;
+  }
+}
+
+.timeline-grid > :nth-child(odd) {
+  @apply border-0 sm:pl-0 sm:pr-6 sm:border-r-2 print:border-none print:col-span-2 print:pr-0;
+  border-image: linear-gradient(to bottom, var(--border-start) 90%, var(--border-end)) 1;
+}
+.timeline-grid > :nth-child(even) {
+  @apply sm:col-span-2 md:col-span-3 mx-2 sm:mx-0 print:col-span-3 print:pl-1;
+}
+
+
+.dot-blur {
+  background-color: transparent;
+  background-image: radial-gradient(transparent 1px, var(--background) 1px);
+  background-size: 4px 4px;
+  backdrop-filter: blur(4px);
+  opacity: 1;
+  text-shadow: 
+    3px 3px 2px var(--background),
+    -3px 3px 2px var(--background),
+    -3px -3px 0 var(--background),
+    3px -3px 0 var(--background);
+}
+.dot-blur > :not(h1, h2, h3, h4, h5, h6) {
+  text-shadow: none;
+}
+.dot-blur.dot-blur-fade-t {
+  mask: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 1.5rem);
+}
+.dot-blur.dot-blur-fade-b {
+  mask: linear-gradient(rgb(0, 0, 0) calc(100% - 1.5rem), rgba(0, 0, 0, 0) 100%);
+}
+
+
+[tabindex]:focus {
+  outline: orange solid 2px;
+}
+
 
 @media print {
   :root {
@@ -19,22 +78,18 @@
     --foreground: #343434;
   }
   html {
+    color-scheme: light !important;
+    font-size: 13px;
+  }
+  * {
     background: transparent !important;
     opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    box-shadow: none !important;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-fallback);
-}
-
-.dot-blur {
-  background-color: transparent;
-  background-image: radial-gradient(transparent 1px, var(--background) 1px);
-  background-size: 4px 4px;
-  backdrop-filter: blur(4px);
-  mask: linear-gradient(rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
-  opacity: 1;
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground) !important;
+  }
 }

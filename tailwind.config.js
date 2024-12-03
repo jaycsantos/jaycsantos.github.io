@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         background: "var(--background)",
+        backgroundSky: "var(--background-sky)",
         foreground: "var(--foreground)",
       },
     },

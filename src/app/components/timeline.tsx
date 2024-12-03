@@ -1,16 +1,16 @@
 'use client'
 
 import { useMediaQuery } from '@uidotdev/usehooks'
-import { motion, MotionConfig } from 'framer-motion'
 import { useTheme } from 'next-themes'
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import Moment from 'react-moment'
 import { generateColors } from '../utils/color-generator'
 import Tags from './tags'
-import { BoltIcon, LinkIcon } from '@heroicons/react/24/outline'
-import { animate, inView, stagger } from 'motion'
+import { BsChevronDown } from "react-icons/bs";
+import { AnimatePresence, motion, useAnimate } from 'motion/react'
+import ProjectItem, { ProjectProps } from './project_item'
 
-interface TimelineProps {
+export interface TimelineProps {
   id?: string;
   title?: string;
   description?: string[];
@@ -19,19 +19,9 @@ interface TimelineProps {
   year_end: string;
   month_start: string;
   month_end: string;
-  projects?: ProjectProps[];
+  projects?: { [key: string]: ProjectProps[] };
   color?: string;
   tech?: string[];
-}
-
-interface ProjectProps {
-  title: string;
-  year_end: string;
-  month_end: string;
-  description: string;
-  ref_id: string;
-  tech?: string[];
-  url?: string;
 }
 
 export default function Timeline() {
@@ -51,58 +41,43 @@ export default function Timeline() {
   let lastYear: string | undefined;
 
   return (
-    <MotionConfig reducedMotion={'user'} transition={{
-      duration: 1,
-      delay: 0.1,
-      type: 'spring',
-    }}>
-      <section className="relative print:block print:opacity-100">
-        <ul key="timeline" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 print:sm:grid-cols-3">
-          {coloredData.map((item, index) => (
-            <React.Fragment key={'row-' + index}>
-              <li key={'item-' + index}
-                className="ml-8 pl-[4px] sm:ml-0 sm:pl-0 print:m-0 print:p-0"
-                style={isPrint ? {} : { background: `linear-gradient(to bottom, ${item.color ?? '#808080'} 90%, ${coloredData[index + 1]?.color ?? '#808080'})` }}
-              >
-                <div className="relative h-full col-span-1 px-4 py-8 sm:pl-4 sm:pt-0 sm:pb-12 sm:pr-12 sm:text-right print:pr-2 print:sm:py-0 bg-background">
-                  {'id' in item &&
-                    <TimelineItem item={item} className="sticky pt-8 pb-4 print:static top-24 print:pt-0 print:pb-2" />
-                  }
-                </div>
-              </li>
-              <li key={'work-' + index + '-projects'}
-                className="relative flex flex-col ml-8 sm:ml-0 pl-[4px] print:bg-none print:pl-0 print:ml-0 print:sm:col-span-2 lg:col-span-2"
-                style={isPrint ? {} : { background: `linear-gradient(to bottom, ${item.color ?? '#808080'} 90%, ${coloredData[index + 1]?.color ?? '#808080'})` }}
-              >
-                <ul className="flex flex-col h-full gap-2 pb-2 pl-10 sm:gap-8 sm:pb-12 sm:pl-12 print:pl-2 print:sm:gap-2 print:sm:pb-2 bg-background">
-                  {item.projects?.map((project, projectIndex) => (
-                    <React.Fragment key={'project-' + projectIndex}>
+    <ul className="flex-grow-0 timeline-grid">
+      {coloredData.map((item, index) => (
+        <React.Fragment key={'d' + index}>
+          <li key={'item' + index}
+            className="relative pb-4 sm:pr-8 bg-clip-border sm:border-r print:px-0"
+            style={{
+              '--border-start': item.color ?? '#808080',
+              '--border-end': coloredData[index + 1]?.color ?? '#808080'
+            }}
+          >
+            <TimelineItem key={item.id} item={item} className="sticky pb-4 print:static top-24 print:pt-0 print:pb-2" />
+          </li>
+          <li className="relative flex flex-col gap-2 pb-4 pl-4 sm:px-8 print:px-4">
+            {Object.keys(item.projects ?? {}).toReversed().map((year) => {
+              return (
+                <ul key={year} className="grid grid-cols-1 gap-2 md:grid-cols-2 print:flex print:flex-col print:gap-3" >
+                  {item.projects[year].map((project, pid) => (
+                    <li key={'project' + pid}>
                       {project.year_end != lastYear && (lastYear = project.year_end) &&
-                        <li key={lastYear} className="print:hidden min-h-7">
-                          <span
-                            className="absolute left-0 flex items-center justify-center px-1 font-bold -translate-x-1/2 border-2 rounded-full bg-background"
-                            style={{ borderColor: item.color }}
-                          >
-                            {project.year_end}
-                          </span>
-                        </li>
+                        <h5 className="px-2 inline-block font-bold border mb-2 text-sm sm:pb-0 rounded-full sm:absolute sm:left-0 -translate-x-4 sm:translate-x-[-50%] bg-background print:static print:border-none print:translate-x-0"
+                          style={{ borderColor: item.color }}
+                        >
+                          {project.year_end}
+                        </h5>
                       }
-                      <li key={'work-' + index + '-project-' + projectIndex}>
-                        {!project.ref_id &&
-                          <BoltIcon fill={item.color} className="absolute left-0 w-8 h-8 translate-x-[calc(1px-50%)] -rotate-12 print:hidden"
-                            style={{ color: item.color }} />}
-                        <ProjectItem project={project} index={projectIndex} />
-                      </li>
-                    </React.Fragment>
+                      <ProjectItem key={'p' + pid} project={project} index={0} />
+                    </li>
                   ))}
                 </ul>
-              </li>
-            </React.Fragment>
-          ))}
-        </ul>
-      </section>
-    </MotionConfig>
-  );
+              )
+            })}
+          </li>
+        </React.Fragment>
+      ))
+      }
+    </ul >
+  )
 }
 
 function getData() {
@@ -115,7 +90,7 @@ function getData() {
 
   for (let i = 0; i < items.length; i++) {
     const current = items[i];
-    data.push({ ...current, projects: [] });
+    data.push({ ...current, projects: {} });
 
     if (i < items.length - 1) {
       const next = items[i + 1];
@@ -129,7 +104,7 @@ function getData() {
           year_end: current.year_start,
           month_start: next.month_end,
           month_end: current.month_start,
-          projects: [],
+          projects: {},
         });
       }
     }
@@ -143,7 +118,9 @@ function getData() {
       const ym = project.year_end + project.month_end;
       return ym >= timelineItem.year_start + timelineItem.month_start && ym <= timelineItem.year_end + timelineItem.month_end;
     });
-    if (timelineItem) timelineItem.projects.push(project);
+    if (timelineItem) {
+      (timelineItem.projects[project.year_end] ??= []).push(project);
+    }
   });
 
   return data.filter((v) => !!v.id || v.projects?.length);
@@ -151,57 +128,65 @@ function getData() {
 
 function TimelineItem({ item, className }: { item: TimelineProps, className?: string }) {
   const isPrint = useMediaQuery('print');
+  const [shown, setShown] = useState(false);
+  const [scope, animate] = useAnimate();
+
+  const show = function (value: boolean) {
+    if (scope.current) {
+      animate(scope.current, {
+        display: 'block',
+        opacity: value ? 1 : 0,
+        height: value ? ['0px', 'auto'] : ['auto', '0px'],
+      }, { duration: 0.3 })
+        .then(() => scope.current.classList.toggle('hidden', !value));
+    }
+    setShown(value);
+  }
 
   return (
-    <motion.div className={`print:block print:opacity-100 ${className}`}
-      initial={{ x: -8 }}
-      whileInView={{ x: 0 }}
-      viewport={{ once: true }}
-      whileHover={{ x: 4 }}
-      whileFocus={{ x: 4 }}
-    >
-      <h3>
-        <span
-          className="font-bold print:text-[var(--foreground)]"
-          style={isPrint ? {} : { color: item.color }}
-        >
-          {item.title}
-        </span>
-        <span className="inline-block text-sm opacity-50">&nbsp;- {item.entity}</span>
-      </h3>
-      <span className="text-sm">
-        <Moment parse="YYYYMM" format="MMM YYYY" date={item.year_start + item.month_start} />
-        &nbsp;-&nbsp;<Moment parse="YYYYMM" format="MMM YYYY" date={item.year_end + item.month_end} />
-      </span>
-      <ul className="flex flex-col gap-2 mt-2 opacity-75">
-        {item.description?.map((v, i) => <li key={i}>{v}</li>)}
-      </ul>
-      {item.tech && <Tags tags={item.tech} />}
-    </motion.div>
-  );
-}
-
-function ProjectItem({ project, className, index }: { project: ProjectProps, className?: string, index: number }) {
-  const startX = 8 * (1 - (index % 2) * 2);
-  return (
-    <motion.div className={`flex flex-col gap-1 print:gap-0 print:block print:opacity-100 ${className} ${!project.ref_id && 'md:-translate-x-4 print:translate-x-0'}`}
-      initial={{ x: startX }}
-      whileInView={{ x: 0 }}
-      viewport={{ once: false }}
-      whileHover={{ x: -4 }}
-      whileFocus={{ x: -4 }}
-    >
-      <h3 className={`font-bold ${!project.ref_id && 'italic'}`}>
-        {project.title}
-        {project.url && (
-          <a href={project.url} target="_blank" rel="noopener noreferrer" className="ml-2 text-sky-500 print:hidden">
-            <span className="sr-only">link to {project.title}</span>
-            <LinkIcon className="inline w-4 h-4" />
-          </a>
-        )}
-      </h3>
-      <p className="opacity-75">{project.description}</p>
-      {project.tech && <Tags tags={project.tech} />}
-    </motion.div>
+    <>
+      <AnimatePresence>
+        {shown && item.description && !isPrint &&
+          <motion.div className="fixed top-0 left-0 right-0 -bottom-8 translate-y-[-1.5rem] z-10 dot-blur"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          />}
+      </AnimatePresence>
+      <div className={[
+        'relative flex-col pt-2 rounded-md transition-all duration-300 pl-2 pr-4 print:px-0 print:break-inside-avoid',
+        (shown ? 'sm:pl-4 sm:pr-2 z-20' : ''),
+        className
+      ].join(' ')}
+        onMouseOver={() => show(true)}
+        onMouseLeave={() => show(false)}
+        onClick={() => show(!shown)}
+        tabIndex={0}
+        role="button"
+        aria-label={`More details about ${item.title}`}
+        aria-expanded={shown}
+      >
+        <div className="flex flex-row items-center justify-between">
+          <div>
+            <h3 className="text-lg font-bold"
+              style={{ color: item.color }}
+            >
+              {item.title}
+            </h3>
+            <div className="text-sm">
+              <Moment className="inline-block" parse="YYYYMM" format="MMM YYYY" date={item.year_start + item.month_start} />
+              &nbsp;-&nbsp;<Moment className="inline-block" parse="YYYYMM" format="MMM YYYY" date={item.year_end + item.month_end} />&nbsp;
+              <span className="inline-block">{item.entity}</span>
+            </div>
+          </div>
+          <BsChevronDown className={`w-5 h-5 sm:hidden transition-transform duration-300 ${shown ? 'rotate-180' : ''} ${item.description ? '' : 'hidden'}`} />
+        </div>
+        {item.description && <div ref={scope} className="z-30 mt-2 pl-2 sm:absolute sm:w-[200%] md:w-[300%] sm:left-[-2px] sm:pl-4 bg-background hidden overflow-hidden rounded-md shadow-lg dark:bg-gray-800 ring-1 ring-black ring-opacity-5 print:static print:block print:border-none">
+          <ul className="m-4 text-justify list-disc print:text-left">
+            {item.description?.map((v, i) => <li key={i}>{v}</li>)}
+          </ul>
+        </div>}
+      </div >
+    </>
   );
 }

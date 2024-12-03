@@ -1,32 +1,37 @@
 import { motion } from "motion/react";
 import ThemeSwitcher from "./theme-switcher";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-export default function Header() {
+export default function Header({ className }: { className?: string }) {
   return (
-    <>
-      <div className="fixed print:hidden top-0 z-10 h-[6em] w-full dot-blur">
-      </div>
-      <motion.div className="sticky top-0 z-20 flex flex-row justify-between mx-2 print:static" variants={{
+    <motion.div className={"sticky top-0 z-50 flex flex-row align-bottom print:static " + className} variants={{
         hidden: { opacity: 0, y: 20 },
         whileInView: { opacity: 1, y: 0 }
       }}>
-        <h1 className="pt-2 pb-8 text-3xl font-bold text-orange-600 print:py-0 dark:text-orange-400">
-          <span className="print:hidden"
-            style={{ textShadow: '3px 3px 0 var(--background),-1px -1px 0 var(--background),1px -1px 0 var(--background),-1px 1px 0 var(--background),1px 1px 0 var(--background)' }}
-          >
-            Jayc Santos
-          </span>
-          <span className="hidden print:block">
-            Jaycee Ross Santos
-          </span>
-        </h1>
-        <ThemeSwitcher className="print:hidden" />
-        <p className="hidden text-sm print:block">
-          <a href="mailto:hello@jaycsantos.com" className="text-blue-600 underline ">hello@jaycsantos.com</a><br />
-          <span>(+63) 977 2889397</span>
+      <div className="fixed top-0 left-0 right-0 h-16 dot-blur dot-blur-fade-b print:hidden" />
 
-        </p>
-      </motion.div>
-    </>
+      <h1 className="z-20 flex-1 gap-4 pt-2 pb-6 pl-8 text-4xl font-bold text-orange-600 print:py-6 print:pl-0 dark:text-orange-400">
+        <span className="print:hidden">
+          Jayc Santos
+        </span>
+        <span className="hidden print:block">
+          Jaycee Ross Santos
+        </span>
+      </h1>
+
+      <div className="fixed z-30 sm:grid-cols-3 sm:gap-1 top-2 right-2 sm:grid print:hidden">
+        <ThemeSwitcher />
+        <a href="https://github.com/jaycsantos" target="" className="items-center justify-center hidden w-10 h-10 transition-colors rounded-lg sm:flex hover:bg-gray-100 dark:hover:bg-gray-700" title="GitHub">
+          <FaGithub className="w-5 h-5" />
+        </a>
+        <a href="https://www.linkedin.com/in/jaycsantos/" target="_blank" className="items-center justify-center hidden w-10 h-10 transition-colors rounded-lg sm:flex hover:bg-gray-100 dark:hover:bg-gray-700" title="LinkedIn">
+          <FaLinkedin className="w-5 h-5" />
+        </a>
+      </div>
+      <p className="flex-col justify-center flex-none hidden text-sm text-right print:flex">
+        <span>Makati, Philippines &bull; (+63) 977 2889397</span>
+        <a href="mailto:hello@jaycsantos.com" className="text-blue-600 underline ">hello@jaycsantos.com</a>
+      </p>
+    </motion.div >
   );
 }
