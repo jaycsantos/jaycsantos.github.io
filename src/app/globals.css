@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, h6, .title {
   .timeline-grid {
     @apply flex flex-col sm:grid sm:grid-cols-3 md:grid-cols-4 print:grid-cols-5;
   }
+
+  .button-link {
+    @apply flex items-center justify-center min-w-10 min-h-10 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800;
+  }
 }
 
 .timeline-grid > :nth-child(odd) {

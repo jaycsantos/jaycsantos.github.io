@@ -52,14 +52,14 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
           <div className="absolute inset-0 w-full h-full -z-10 bg-cover bg-center grayscale opacity-15 blur-[2px] group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
             style={{ backgroundImage: `url(${project.img})` }}
           />}
-        <motion.h4 className={`text-center font-medium underline transition-opacity duration-300 underline-offset-4 print:text-left ${project.img && 'group-hover:opacity-0'}`}
+        <motion.h4 className={`text-center font-medium underline transition-opacity duration-500 ease-in-out underline-offset-4 print:text-left ${project.img && 'group-hover:opacity-0'}`}
           whileInView={{ scale: [0.9, 1.05, 1], dur: 0.1 }}
         >
           {project.title}
         </motion.h4>
         <p className="hidden print:block">{project.description}</p>
         {project.tech &&
-          <Tags tags={project.tech} className={`justify-center transition-opacity duration-300 ${project.img && 'group-hover:opacity-0'}`} />}
+          <Tags tags={project.tech} className={`justify-center transition-opacity duration-500 ease-in-out ${project.img && 'group-hover:opacity-0'}`} />}
       </motion.div>
 
       <AnimatePresence>
@@ -68,7 +68,7 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
             ref={overlayRef}
             onClick={(e) => overlayRef.current === e.target ? setShow(false) : null}
           >
-            <motion.div className="w-full max-w-screen-sm max-h-[80vh] rounded-lg bg-white dark:bg-gray-900 flex flex-col shadow-xl"
+            <motion.div className="w-full max-w-screen-sm max-h-[80vh] rounded-lg bg-gray-50 dark:bg-gray-900 flex flex-col shadow-xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
@@ -83,10 +83,13 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
                 </button>
               </div>
 
-              <div className="flex flex-col flex-1 gap-4 p-4 overflow-y-auto">
+              <div className="flex flex-col items-center flex-1 gap-4 p-4 overflow-y-auto">
                 {project.url &&
-                  <a href={project.url} target="_blank" rel="noopener noreferrer">
-                    {project.img && <img src={project.img} alt={project.title} className="w-full rounded-md shadow-sm" />}
+                  <a className="flex flex-col items-center" href={project.url} target="_blank" rel="noopener noreferrer">
+                    {project.img && <img src={project.img} alt={project.title} className="max-h-[50dvh] rounded-md shadow-sm" />}
+                    {project.url?.startsWith('http') && <span className="text-xs truncate max-w-[50%] opacity-35">
+                      {project.url}
+                    </span>}
                   </a>}
                 <p>{project.description}</p>
                 {project.tech && <Tags tags={project.tech} className="justify-center" />}

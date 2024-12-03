@@ -15,7 +15,7 @@ export default function Landing({ className }: { className?: string }) {
       <Header className="mt-[30vh] print:mt-0" />
       <Waves className="absolute top-0 left-0 w-full h-dvh bg-backgroundSky print:hidden" color="var(--background)" />
 
-      <main className={`container relative flex flex-col self-center max-w-screen-lg min-h-full mb-16 p-2 sm:p-4 md:p-8 lg:p-16 print:max-w-none print:p-0 ${className}`}>
+      <main className={`container relative flex flex-col self-center max-w-screen-lg min-h-full p-2 sm:p-4 md:p-8 lg:p-16 print:max-w-none print:p-0 ${className}`}>
         <Intro />
         <Timeline />
       </main >
