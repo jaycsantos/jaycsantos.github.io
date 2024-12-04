@@ -1,6 +1,6 @@
 # [jaycsantos.com](https://jaycsantos.com)
 
-<img src="./public/jaycsantos.com.jpg?raw=true" />
+<img src="./public/img/jaycsantos.com.jpg?raw=true" />
 
 ## Dev
 

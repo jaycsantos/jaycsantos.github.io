@@ -85,12 +85,14 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
 
               <div className="flex flex-col items-center flex-1 gap-4 p-4 overflow-y-auto">
                 {project.url &&
-                  <a className="flex flex-col items-center max-h-[50dvh] max-w-[100%]" href={project.url} target="_blank" rel="noopener noreferrer">
-                    {project.img && <img src={project.img} alt={project.title} className="rounded-md shadow-sm" />}
+                  <div className="text-center max-w-[100%]">
+                    <a href={project.url} target="_blank" rel="noopener noreferrer">
+                      {project.img && <img src={project.img} alt={project.title} className="max-h-[50dvh] rounded-md shadow-sm" />}
                     {project.url?.startsWith('http') && <span className="text-xs truncate max-w-[50%] opacity-35">
                       {project.url}
                     </span>}
-                  </a>}
+                    </a>
+                  </div>}
                 <p>{project.description}</p>
                 {project.tech && <Tags tags={project.tech} className="justify-center" />}
               </div>
