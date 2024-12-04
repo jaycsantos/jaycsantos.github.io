@@ -49,7 +49,7 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
         onClick={() => setShow(true)}
       >
         {project.img &&
-          <div className="absolute inset-0 w-full h-full z-0 bg-cover bg-center grayscale opacity-15 blur-[2px] group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+          <div className="absolute inset-0 w-full h-full z-0 bg-cover bg-top grayscale opacity-15 blur-[2px] group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
             style={{ backgroundImage: `url(${project.img})` }}
           />}
         <motion.h4 className={`text-center font-medium underline transition-opacity duration-500 ease-in-out underline-offset-4 print:text-left ${project.img && 'group-hover:opacity-0'}`}
@@ -85,8 +85,8 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
 
               <div className="flex flex-col items-center flex-1 gap-4 p-4 overflow-y-auto">
                 {project.url &&
-                  <a className="flex flex-col items-center" href={project.url} target="_blank" rel="noopener noreferrer">
-                    {project.img && <img src={project.img} alt={project.title} className="max-h-[50dvh] rounded-md shadow-sm" />}
+                  <a className="flex flex-col items-center max-h-[50dvh] max-w-[100%]" href={project.url} target="_blank" rel="noopener noreferrer">
+                    {project.img && <img src={project.img} alt={project.title} className="rounded-md shadow-sm" />}
                     {project.url?.startsWith('http') && <span className="text-xs truncate max-w-[50%] opacity-35">
                       {project.url}
                     </span>}

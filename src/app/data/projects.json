@@ -409,7 +409,7 @@
     "year_end": "2009",
     "month_end": "01",
     "ref_id": "jaycsantos",
-    "description": "clockworkmonster.com - arcade portal running arcadem pro. I applied client's requested design. Mostly did additional features and maintenance on and off within 4 years.",
+    "description": "clockworkmonster.com - arcade portal running arcadem pro. I applied client's requested design. Mostly did additional features and maintenance a couple of times.",
     "url": "javascript:void(0)",
     "img": "img/cwm.jpg",
     "tech": [
@@ -436,7 +436,20 @@
       "design",
       "UIUX",
       "PHP",
-      "DB mgmt",
+      "MYSQL"
+    ]
+  },
+  {
+    "title": "JCustom Mod",
+    "year_end": "2009",
+    "month_end": "01",
+    "ref_id": "jaycsantos",
+    "description": "This a mod for arcadem pro - arcade portal script in php. It added more features to better upload and manage flash games.",
+    "url": "javascript:void(0)",
+    "tech": [
+      "web",
+      "admin",
+      "php",
       "MYSQL"
     ]
   },

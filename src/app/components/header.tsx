@@ -29,7 +29,7 @@ export default function Header({ className }: { className?: string }) {
         </a>
       </div>
       <p className="flex-col justify-center flex-none hidden text-sm text-right print:flex">
-        <span>Makati, Philippines &bull; (+63) 977 2889397</span>
+        <span>Makati, Philippines</span>
         <a href="mailto:hello@jaycsantos.com" className="text-blue-600 underline ">hello@jaycsantos.com</a>
       </p>
     </motion.div >
