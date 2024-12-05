@@ -8,7 +8,7 @@ import { generateColors } from '../utils/color-generator'
 import Tags from './tags'
 import { BsChevronDown } from "react-icons/bs";
 import { AnimatePresence, motion, useAnimate } from 'motion/react'
-import ProjectItem, { ProjectProps } from './project_item'
+import ProjectItem, { ProjectContext, ProjectProps } from './project_item'
 
 export interface TimelineProps {
   id?: string;
@@ -25,11 +25,10 @@ export interface TimelineProps {
 }
 
 export default function Timeline() {
-  const isPrint = useMediaQuery('print');
+  const [project, setProject] = useState<ProjectProps | null>(null);
   const { resolvedTheme } = useTheme();
 
   const data = useMemo(() => getData(), []);
-  console.log('data', data);
 
   const coloredData = useMemo(() => {
     const colors = generateColors(data.length, resolvedTheme == 'dark');
@@ -40,8 +39,11 @@ export default function Timeline() {
 
   let lastYear: string | undefined;
 
+  // TODO: maybe use project context as background somehow
+
   return (
-    <ul className="flex-grow-0 timeline-grid">
+    <ProjectContext.Provider value={{ project, setProject }}>
+      <ul className="flex-grow-0 transition-all duration-500 delay-200 bg-fixed bg-center bg-no-repeat timeline-grid">
       {coloredData.map((item, index) => (
         <React.Fragment key={'d' + index}>
           <li key={'item' + index}
@@ -77,6 +79,7 @@ export default function Timeline() {
       ))
       }
     </ul >
+    </ProjectContext.Provider>
   )
 }
 

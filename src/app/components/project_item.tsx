@@ -2,8 +2,10 @@
 
 import { CgClose } from 'react-icons/cg';
 import { motion, AnimatePresence } from 'framer-motion';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, createContext, useContext } from 'react';
 import Tags from './tags';
+
+export const ProjectContext = createContext<{ project: ProjectProps | null, setProject: (value: ProjectProps) => void }>(null);
 
 export interface ProjectProps {
   title: string;
@@ -19,6 +21,7 @@ export interface ProjectProps {
 export default function ProjectItem({ project, index }: { project: ProjectProps, index: number }) {
   const [show, setShow] = useState(false);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const { setProject } = useContext(ProjectContext);
 
   useEffect(() => {
     if (show) {
@@ -47,12 +50,17 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
         aria-label={`More details about ${project.title}`}
         aria-expanded={false}
         onClick={() => setShow(true)}
+        // TODO: add delay to setProject
+        // onMouseEnter={() => setProject(project)}
+        // onMouseLeave={() => setProject(null)}
       >
         {project.img &&
-          <div className="absolute inset-0 w-full h-full z-0 bg-cover bg-top grayscale opacity-15 blur-[2px] group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-            style={{ backgroundImage: `url(${project.img})` }}
+          <div className="absolute inset-0 w-full h-full z-0 bg-cover bg-top grayscale opacity-10 blur-[2px] group-hover:blur-none group-hover:grayscale-0 transition-all group-hover:opacity-100 duration-300"
+            style={{
+              backgroundImage: `url(${project.img})`,
+            }}
           />}
-        <motion.h4 className={`text-center font-medium underline transition-opacity duration-500 ease-in-out underline-offset-4 print:text-left ${project.img && 'group-hover:opacity-0'}`}
+        <motion.h4 className={`text-center font-medium underline transition-opacity duration-500 ease-in-out underline-offset-4 print:text-left`}
           whileInView={{ scale: [0.9, 1.05, 1], dur: 0.1 }}
         >
           {project.title}
