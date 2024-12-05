@@ -1,4 +1,12 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
+
+const viewBox = {
+  x: 0,
+  y: 0,
+  width: 100,
+  height: 100,
+  toString: () => `${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`
+}
 
 function createSmoothPath(points: Array<[number, number]>): string {
   if (points.length < 2) return '';
@@ -30,39 +38,46 @@ function createSmoothPath(points: Array<[number, number]>): string {
   return path;
 }
 
-function createWave(ripples: number, delta: number, offset: number): string[] {
-  const gap = 100 / ripples
-  const points = [];
-  for (let i = 0; i <= ripples * 1.5; i++) {
-    let n = 1 - (i % 2 * 2);
-    points.push([i * gap, offset + delta * n]);
+function createWave(count: number, delta: number, offset: number): string[] {
+  // const yRatio = viewBox.height / 100;
+  const gap = 100 / count;
+  const points: Array<[number, number]> = [];
+  for (let i = 0; i <= count * 2; i++) {
+    // let n = 1 - (i % 2 * 2);
+    // points.push([i * gap, (offset + delta * n) * yRatio]);
+    points.push(
+      [i * gap, offset],
+      // [(i + 2 / 3) * gap, offset + delta * (i % 2)],
+    );
   }
 
-  const frames = [points];
-  for (let i = 0; i < 2; i++) {
-    frames.push(points.map(([x, y]) => [x - gap * (i + 1), y + (1 - i) * delta]));
-  }
+  const frames: Array<Array<[number, number]>> = [
+    points.flatMap(([x, y], i) => [[x, y - delta * (i % 2)], [x + 2 / 3 * gap, y + delta * (1 - i % 2)]]),
+    points.flatMap(([x, y], i) => [[x - gap, y - delta * (1 - i % 2)], [x - gap + 2 / 3 * gap, y + delta * (i % 2)]]),
+  ];
+  // for (let i = 0; i < 2; i++) {
+  //   frames.push(points.map(([x, y]) => [x - gap * (i + 1), y + (1 - i) * delta * yRatio]));
+  // }
 
   return frames.map((pts) => createSmoothPath(pts));
 }
 
-
 export default function Waves({ className, color = '#808080' }: { className?: string, color?: string }) {
-  const waves: string[][] = [
-    createWave(4, 1, 51),
-    createWave(5, 2, 53),
-    createWave(6, 1, 57),
-    createWave(10, .5, 63),
-    createWave(7, 1, 75),
-  ];
-  const stars: { x: number, y: number }[] = [];
-  for (let i = 0; i < 100; i++) {
-    stars.push({ x: Math.random() * 100, y: Math.random() * 45 });
-  }
+  const waves = useMemo(() => [
+    createWave(4, 1, 46),
+    createWave(4, 1.5, 48),
+    createWave(5, 2, 52),
+    createWave(4, 3, 58),
+    createWave(5, 2, 70),
+  ], []);
+  const stars = useMemo(() => Array.from({ length: 120 }, () => ({
+    x: Math.random() * viewBox.width,
+    y: Math.random() * viewBox.height * 0.45
+  })), []);
 
 
   return (
-    <svg className={className} preserveAspectRatio="xMidYMid slice" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} preserveAspectRatio="xMidYMid slice" viewBox={viewBox.toString()} xmlns="http://www.w3.org/2000/svg">
       <desc>This is a generated SVG from https://jaycsantos.com</desc>
       <defs>
         <filter id="blur">
@@ -74,7 +89,7 @@ export default function Waves({ className, color = '#808080' }: { className?: st
           <path key={i} opacity={1 / (waves.length - i)} fill={color} d={wave[0]}>
             <animate
               attributeName="d"
-              dur={(5 + (waves.length - i) * 4) + 's'}
+              dur={(3 + (waves.length - i) * 2) + 's'}
               repeatCount="indefinite"
               values={wave.join('; ')}
             />

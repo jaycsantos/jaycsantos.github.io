@@ -181,7 +181,7 @@ function TimelineItem({ item, className }: { item: TimelineProps, className?: st
           </div>
           <BsChevronDown className={`w-5 h-5 sm:hidden transition-transform duration-300 ${shown ? 'rotate-180' : ''} ${item.description ? '' : 'hidden'}`} />
         </div>
-        {item.description && <div ref={scope} className="z-30 mt-2 pl-2 sm:absolute sm:w-[200%] md:w-[300%] sm:left-[-2px] sm:pl-4 bg-background hidden overflow-hidden rounded-md shadow-lg dark:bg-gray-800 ring-1 ring-black ring-opacity-5 print:static print:block print:border-none">
+        {item.description && <div ref={scope} className="z-30 mt-2 pl-2 sm:absolute sm:w-[200%] md:w-[300%] sm:left-[-2px] sm:pl-4 bg-gray-100 hidden overflow-hidden rounded-md shadow-lg dark:bg-gray-800 ring-1 ring-black ring-opacity-5 print:static print:block print:border-none">
           <ul className="m-4 text-justify list-disc print:text-left">
             {item.description?.map((v, i) => <li key={i}>{v}</li>)}
           </ul>
