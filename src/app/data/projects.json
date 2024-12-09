@@ -10,8 +10,7 @@
       "typescript",
       "react",
       "nextjs",
-      "tailwindcss",
-      "framer-motion",
+      "tailwind",
       "github"
     ]
   },
@@ -34,17 +33,15 @@
       "json schema",
       "typescript",
       "gcp",
-      "docker",
       "giftbit api",
       "javascript",
-      "tinymce",
       "wcag",
       "github"
     ]
   },
   {
     "title": "\"Photo Sharing App\" (unpublished)",
-    "year_end": "2022",
+    "year_end": "2023",
     "month_end": "11",
     "ref_id": "maliksi",
     "description": "Fullstack research and development on a photo sharing app and separate web interface both with realtime sync. Spearheaded the project then later supervised migration to new stack with junior devs.",
@@ -54,7 +51,9 @@
       "flutter",
       "bloc",
       "react",
+      "redux",
       "nextjs",
+      "tailwind",
       "UIUX",
       "json schema",
       "couchbase/pouchDB → firestore",
@@ -86,7 +85,7 @@
   },
   {
     "title": "GradGuru/MyCoach App",
-    "year_end": "2022",
+    "year_end": "2023",
     "month_end": "09",
     "ref_id": "maliksi",
     "description": "Feature maintenance and bug fixes.",
@@ -104,7 +103,7 @@
   },
   {
     "title": "GradGuru/MyCoach Console V3",
-    "year_end": "2022",
+    "year_end": "2023",
     "month_end": "09",
     "ref_id": "maliksi",
     "description": "Redesigned and maintained the console app. Added new features, functions and integrations.",
