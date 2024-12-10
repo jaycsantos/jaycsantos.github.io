@@ -1,4 +1,7 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
+import gen from 'random-seed';
+
+const rng = gen.create('jaycsantos');
 
 const viewBox = {
   x: 0,
@@ -62,7 +65,7 @@ function createWave(count: number, delta: number, offset: number): string[] {
   return frames.map((pts) => createSmoothPath(pts));
 }
 
-export default function Waves({ className, color = '#808080' }: { className?: string, color?: string }) {
+export function Waves({ className, color = '#808080' }: { className?: string, color?: string }) {
   const waves = useMemo(() => [
     createWave(4, 1, 46),
     createWave(4, 1.5, 48),
@@ -71,8 +74,8 @@ export default function Waves({ className, color = '#808080' }: { className?: st
     createWave(5, 2, 70),
   ], []);
   const stars = useMemo(() => Array.from({ length: 120 }, () => ({
-    x: Math.random() * viewBox.width,
-    y: Math.random() * viewBox.height * 0.45
+    x: rng.range(viewBox.width),
+    y: rng.range(viewBox.height * 0.45)
   })), []);
 
 

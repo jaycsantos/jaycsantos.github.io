@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-export default function Tags({ tags, className, children }: { tags: string[], className?: string, children?: React.ReactNode }) {
+export function Tags({ tags, className, children }: { tags: string[], className?: string, children?: React.ReactNode }) {
   return (
     <motion.ul className={"inline-flex flex-wrap gap-1 print:gap-0 print:block " + className}
       initial="hidden"
@@ -12,7 +12,7 @@ export default function Tags({ tags, className, children }: { tags: string[], cl
       {children}
       {tags.map((tag, tagIndex) => (
         <motion.li key={tagIndex}
-          className="relative flex flex-row gap-0 text-xs print:inline"
+          className="flex relative flex-row gap-0 text-xs print:inline"
           variants={{
             hidden: { opacity: 0, x: -20 },
             visible: { opacity: 1, x: 0 },

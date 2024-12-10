@@ -1,9 +1,7 @@
-'use client';
-
 import { CgClose } from 'react-icons/cg';
 import { motion, AnimatePresence } from 'framer-motion';
-import React, { useState, useEffect, useRef, createContext, useContext } from 'react';
-import Tags from './tags';
+import { useState, useEffect, useRef, createContext, useContext } from 'react';
+import { Tags } from './Tags';
 
 export const ProjectContext = createContext<{ project: ProjectProps | null, setProject: (value: ProjectProps) => void }>(null);
 
@@ -18,10 +16,10 @@ export interface ProjectProps {
   img?: string;
 }
 
-export default function ProjectItem({ project, index }: { project: ProjectProps, index: number }) {
+export function ProjectItem({ project, index }: { project: ProjectProps, index: number }) {
   const [show, setShow] = useState(false);
   const overlayRef = useRef<HTMLDivElement>(null);
-  const { setProject } = useContext(ProjectContext);
+  // const { setProject } = useContext(ProjectContext);
 
   useEffect(() => {
     if (show) {
@@ -44,26 +42,27 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
 
   return (
     <>
-      <motion.div className="relative flex flex-col items-stretch gap-4 p-3 transition-all duration-300 bg-gray-200 border rounded-md dark:bg-gray-800/20 group print:border-0 border-gray-600/10 dark:border-gray-400/10 hover:border-gray-400 dark:hover:border-gray-400 print:gap-0 print:p-0 print:break-inside-avoid sm:h-full"
+      <motion.div className="flex relative flex-col gap-4 items-stretch p-3 bg-gray-200 rounded-md border transition-all duration-300 dark:bg-gray-800/20 group print:border-0 border-gray-600/10 dark:border-gray-400/10 hover:border-gray-400 dark:hover:border-gray-400 print:gap-0 print:p-0 print:break-inside-avoid sm:h-full"
         tabIndex={0}
         role="button"
         aria-label={`More details about ${project.title}`}
         aria-expanded={false}
         onClick={() => setShow(true)}
-        // TODO: add delay to setProject
-        // onMouseEnter={() => setProject(project)}
-        // onMouseLeave={() => setProject(null)}
+      // TODO: add delay to setProject
+      // onMouseEnter={() => setProject(project)}
+      // onMouseLeave={() => setProject(null)}
       >
         {project.img &&
-          <div className="absolute inset-0 w-full h-full z-0 bg-cover bg-top grayscale opacity-10 blur-[2px] group-hover:blur-none group-hover:grayscale-0 transition-all group-hover:opacity-100 duration-300"
+          <div className="absolute inset-0 w-full h-full z-0 bg-cover bg-top grayscale opacity-10 blur-[2px] group-hover:blur-none group-hover:rounded-md group-hover:grayscale-0 transition-all group-hover:opacity-100 duration-300"
             style={{
               backgroundImage: `url(${project.img})`,
             }}
           />}
-        <motion.h4 className={`text-center font-medium underline transition-opacity duration-500 ease-in-out underline-offset-4 print:text-left`}
-          whileInView={{ scale: [0.9, 1.05, 1], dur: 0.1 }}
-        >
-          {project.title}
+        <motion.h4 className="font-medium text-center underline transition-opacity duration-500 ease-in-out underline-offset-4 print:text-left">
+          <motion.span className="print:hidden" whileInView={{ scale: [0.9, 1.05, 1], dur: 0.1 }}>
+            {project.title}
+          </motion.span>
+          <span className="hidden print:block">{project.title}</span>
         </motion.h4>
         <p className="hidden print:block">{project.description}</p>
         {project.tech &&
@@ -72,7 +71,7 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
 
       <AnimatePresence>
         {show && (
-          <div className="fixed inset-0 z-10 flex items-center justify-center p-4 dot-blur"
+          <div className="flex fixed inset-0 z-10 justify-center items-center p-4 dot-blur"
             ref={overlayRef}
             onClick={(e) => overlayRef.current === e.target ? setShow(false) : null}
           >
@@ -81,9 +80,9 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
             >
-              <div className="flex flex-row items-center flex-none py-2 pl-4 pr-2 border-b">
+              <div className="flex flex-row flex-none items-center py-2 pr-2 pl-4 border-b">
                 <h3 className="flex-1 text-xl font-bold">{project.title}</h3>
-                <button className="p-2 transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
+                <button className="p-2 rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-gray-700"
                   onClick={() => setShow(false)}
                   aria-label="Close overlay"
                 >
@@ -91,14 +90,14 @@ export default function ProjectItem({ project, index }: { project: ProjectProps,
                 </button>
               </div>
 
-              <div className="flex flex-col items-center flex-1 gap-4 p-4 overflow-y-auto">
+              <div className="flex overflow-y-auto flex-col flex-1 gap-4 items-center p-4">
                 {project.url &&
                   <div className="text-center max-w-[100%]">
                     <a href={project.url} target="_blank" rel="noopener noreferrer">
                       {project.img && <img src={project.img} alt={project.title} className="max-h-[50dvh] rounded-md shadow-sm" />}
-                    {project.url?.startsWith('http') && <span className="text-xs truncate max-w-[50%] opacity-35">
-                      {project.url}
-                    </span>}
+                      {project.url?.startsWith('http') && <span className="text-xs truncate max-w-[50%] opacity-35">
+                        {project.url}
+                      </span>}
                     </a>
                   </div>}
                 <p>{project.description}</p>

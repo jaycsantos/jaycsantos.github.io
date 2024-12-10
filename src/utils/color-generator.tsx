@@ -5,7 +5,7 @@ export function generateColors(numColors: number, dark: boolean): string[] {
   for (let i = 0; i < numColors; i++) {
     const hue = i * step + 60;
     const h = hue / 360;
-    let [r, g, b] = hslToRgb(h, 0.90, dark ? 0.70 : 0.40);
+    let [r, g, b] = hslToRgb(h, 0.90, dark ? 0.70 : 0.34);
 
     colors.push(`rgb(${r * 255 >> 0}, ${g * 255 >> 0}, ${b * 255 >> 0})`);
   }
