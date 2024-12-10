@@ -125,7 +125,7 @@ function Intro({ className }: { className?: string }) {
       </div>
       <div className="flex-1 pl-4 sm:px-8">
         <h4 className="md:w-[400px]">
-          Seasoned software engineer since 2007, specializing in JavaScript and its ecosystem. Solving tomorrow's problems.
+          {'Seasoned software engineer since 2007, specializing in JavaScript and its ecosystem. Solving tomorrow\'s problems.'}
         </h4>
         <p className="hidden mt-4 print:block">
           {'With almost 2 decades of development experience, I\'ve honed my skills as a software engineer. From my early days in indie game development to today\'s sophisticated web applications, I\'ve consistently delivered innovative solutions. I\'m committed to creating user-centric experiences, employing best practices, and leveraging modern development tools and techniques.'}
