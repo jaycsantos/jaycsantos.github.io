@@ -1,14 +1,14 @@
 'use client';
 
+import { cl } from '@/utils/cl';
 import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
 import { HiSun, HiMoon, HiDesktopComputer } from 'react-icons/hi';
 
 export function ThemeSwitcher({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={cl('relative', className)}>
       <button
         onClick={() => setTheme(theme != 'light' ? 'light' : 'dark')}
         className="flex justify-center items-center w-10 h-10 rounded-lg transition-colors hover:bg-gray-100 dark:hover:bg-gray-700"

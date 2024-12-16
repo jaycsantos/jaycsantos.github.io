@@ -11,7 +11,7 @@
 [data-mode='dark'] {
   --background: #101010;
   --background-sky: #1f1f26;
-  --foreground: #efefef;
+  --foreground: #ffffff;
 }
 
 html {
@@ -31,22 +31,52 @@ h1, h2, h3, h4, h5, h6, .title {
 
 @layer components {
   .timeline-grid {
-    @apply flex flex-col sm:grid sm:grid-cols-3 md:grid-cols-4 print:grid-cols-5;
+    @apply flex flex-col sm:grid sm:grid-cols-3 md:grid-cols-4 print:grid-cols-2;
+
+    
+    & > :nth-child(odd) {
+      @apply border-0 sm:pl-0 sm:pr-6 sm:border-r-2 print:border-none print:pr-0;
+      border-image: linear-gradient(to bottom, var(--border-start) 90%, var(--border-end)) 1;
+    }
+    & > :nth-child(even) {
+      @apply mx-2 sm:mx-0;
+    }
   }
 
   .button-link {
     @apply flex items-center justify-center min-w-10 min-h-10 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800;
   }
-}
 
-.timeline-grid > :nth-child(odd) {
-  @apply border-0 sm:pl-0 sm:pr-6 sm:border-r-2 print:border-none print:col-span-2 print:pr-0;
-  border-image: linear-gradient(to bottom, var(--border-start) 90%, var(--border-end)) 1;
-}
-.timeline-grid > :nth-child(even) {
-  @apply sm:col-span-2 md:col-span-3 mx-2 sm:mx-0 print:col-span-3 print:pl-1;
-}
+  .tech-tag {
+    @apply relative;
 
+    code {
+      @apply flex flex-row gap-0 px-1 py-1 lowercase ml-[.25rem] opacity-75 bg-gray-100/70 dark:bg-gray-800/70 print:px-0 print:py-0 print:bg-transparent print:inline-block;
+      
+      &::before {
+        @apply block absolute left-0 top-0 w-0 h-[1rem] print:hidden border-t-[.75rem] border-t-transparent border-r-[.25rem] border-r-gray-100/70 dark:border-r-gray-800/70 border-b-[.75rem] border-b-transparent;
+        content: '';
+      }
+      &::after {
+        @apply block absolute right-[-.25rem] top-0 w-0 h-[1rem] print:hidden border-t-[.75rem] border-t-gray-100/70 dark:border-t-gray-800/70 border-r-[.25rem] border-transparent border-b-[.75rem] border-b-gray-100/70 dark:border-b-gray-800/70;
+        content: '';
+      }
+    }
+
+    & + .tech-tag {
+      @media print {
+        &::before {
+          display: inline;
+          content: ',';
+        }
+        
+        &:last-child::before {
+          content: ', &'
+        }
+      }
+    }
+  }
+}
 
 .dot-blur {
   background-color: transparent;
@@ -59,15 +89,17 @@ h1, h2, h3, h4, h5, h6, .title {
     -3px 3px 2px var(--background),
     -3px -3px 0 var(--background),
     3px -3px 0 var(--background);
-}
-.dot-blur > :not(h1, h2, h3, h4, h5, h6) {
-  text-shadow: none;
-}
-.dot-blur.dot-blur-fade-t {
-  mask: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 1.5rem);
-}
-.dot-blur.dot-blur-fade-b {
-  mask: linear-gradient(rgb(0, 0, 0) calc(100% - 1.5rem), rgba(0, 0, 0, 0) 100%);
+  
+    
+  & > :not(h1, h2, h3, h4, h5, h6) {
+    text-shadow: none;
+  }
+  &.dot-blur-fade-t {
+    mask: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 1.5rem);
+  }
+  &.dot-blur-fade-b {
+    mask: linear-gradient(rgb(0, 0, 0) calc(100% - 1.5rem), rgba(0, 0, 0, 0) 100%);
+  }
 }
 
 

@@ -8,10 +8,9 @@
     "month_start": "11",
     "month_end": "11",
     "description": [
-      "Architected, designed, and prototyped research, development, and proof-of-concept applications while ensuring the highest quality of code and user experience with accessibility in mind.",
-      "Guide and mentor junior developers in technical skills and best practices through code reviews.",
-      "Participated in decision-making processes related to product roadmap, feature prioritization, and design guidelines.",
-      "Drove the technical vision and development of our flagship product."
+      "Drove the technical vision and development of flagship product inlcuding product demos and proof-of-concept apps. Ensuring the highest quality of code and user experience with accessibility in mind.",
+      "Fostered the growth of junior developers by sharing best practices, constructive feedbacks and code reviews.",
+      "Participated in decision-making processes related to product roadmap, feature prioritization, and design guidelines."
     ]
   },
   {
@@ -23,8 +22,8 @@
     "month_start": "11",
     "month_end": "11",
     "description": [
-      "Developed and maintained front-end components for a multi-app system for its V2 release.",
-      "Integrated and customized third-party apps and libraries."
+      "Engineered and supported front-end components for a multi-app system's V2 release, adhering to best practices and industry standards.",
+      "Seamlessly integrated with backend RESTful APIs, employing JWT-based authentication to guarantee secure and private data exchange"
     ]
   },
   {
@@ -36,12 +35,12 @@
     "month_start": "07",
     "month_end": "12",
     "description": [
-      "Specialized in developing web applications, ranging from client-facing products, internal tools to demos and concept prototypes.",
-      "This involved translating design specifications and technical requirements into functional solutions, including UI/UX design, algorithm implementation, and visual interaction."
+      "Under shared services department: Specialized in developing web applications, ranging from client-facing products, internal tools to product demos and concept prototypes.",
+      "Translated design specifications and technical requirements into functional solutions, including UI/UX design, algorithm implementation, and interactive visual modeling."
     ]
   },
   {
-    "title": "Freelance Interactive Developer",
+    "title": "Freelance Flash/Web Developer",
     "entity": "jaycsantos.com",
     "id": "jaycsantos",
     "year_start": "2007",
@@ -49,8 +48,9 @@
     "month_start": "03",
     "month_end": "05",
     "description": [
-      "Designed and developed interactive media, including casual games and web applications, focusing on accessibility, user experience, and visual design.",
-      "Created engaging digital experiences through casual games and web applications, emphasizing accessibility, user experience, and robust programming."
+      "I made interactive casual flash games, focusing on game play, user experience and visual design.",
+      "Also designed and developed web sites and apps.",
+      "Made custom templates, plugins and other functionalities like integrating with external RSS feeds for wordpress and other PHP libraries."
     ]
   }
 ]

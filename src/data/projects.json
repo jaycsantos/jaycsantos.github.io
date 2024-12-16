@@ -6,270 +6,232 @@
     "description": "V4 of personal website. Best viewed in dark mode.",
     "url": "https://github.com/jaycsantos/jaycsantos.github.io",
     "img": "img/jaycsantos.com.jpg",
-    "tech": [
-      "typescript",
-      "react",
-      "nextjs",
-      "tailwind",
-      "github"
-    ]
+    "tech": { "": ["typescript", "react", "nextjs", "tailwind", "github"] }
   },
   {
     "title": "\"Colaboration App\"",
     "year_end": "2024",
     "month_end": "11",
     "ref_id": "maliksi",
-    "description": "Spearheaded fullstack development on a white label mobile app for collaboration and information sharing in realtime and offline. Wrote and maintained the firestore rules. Also co-designed the json schema.",
-    "tech": [
-      "mobile",
-      "web",
-      "UIUX",
-      "flutter",
-      "gorouter → autorouter",
-      "bloc",
-      "firestore",
-      "firebase auth",
-      "cloud functions",
-      "json schema",
-      "typescript",
-      "gcp",
-      "giftbit api",
-      "javascript",
-      "wcag",
-      "github"
-    ]
+    "description": [
+      "Spearheaded fullstack development on a white label mobile app for collaboration and information sharing in realtime and offline.",
+      "Co-designed the json schema and wrote and maintained the firestore rules with an efficiently designed access control.",
+      "Integrated with 3rd party services like giftbit API to provide rewards to users.",
+      "Ensured flutter web performed efficiently by developing direct integrations to web libraries."
+    ],
+    "tech": {
+      "mobile": ["flutter", "bloc", "gorouter → autorouter"],
+      "backend": ["firebase", "GCP", "typescript"],
+      "web": ["javascript"],
+      "other": ["wcag", "github", "giftbit API"]
+    }
   },
   {
     "title": "\"Photo Sharing App\" (unpublished)",
     "year_end": "2023",
     "month_end": "11",
     "ref_id": "maliksi",
-    "description": "Fullstack research and development on a photo sharing app and separate web interface both with realtime sync. Spearheaded the project then later supervised migration to new stack with junior devs.",
-    "tech": [
-      "mobile",
-      "web",
-      "flutter",
-      "bloc",
-      "react",
-      "redux",
-      "nextjs",
-      "tailwind",
-      "UIUX",
-      "json schema",
-      "couchbase/pouchDB → firestore",
-      "s3 → firebase storage",
-      "docker",
-      "nginx → firebase",
-      "google maps",
-      "github",
-      "jira",
-      "wcag"
-    ]
+    "description": [
+      "Fullstack mobile and web research and development on a \"photo sharing app\" with realtime sync.",
+      "Experimented with an algorithm that automatically group photos from a specific period of time and location.",
+      "Spearheaded the project then later supervised the migration to new stack with junior devs."
+    ],
+    "tech": {
+      "mobile": ["flutter", "bloc"],
+      "web": ["react", "redux", "nextjs", "tailwind"],
+      "backend": [
+        "couchbase → firestore",
+        "backblaze → firebase storage",
+        "nginx → firebase"
+      ],
+      "other": ["docker", "google maps", "github", "jira", "wcag"]
+    }
   },
   {
     "title": "\"Inventory App\" (unpublished)",
     "year_end": "2022",
     "month_end": "04",
     "ref_id": "maliksi",
-    "description": "Spearheaded research and development on an inventory app with offline and realtime sync capabilities. Later supervised for junior devs.",
-    "tech": [
-      "mobile",
-      "flutter",
-      "bloc",
-      "couchbase/pouchDB",
-      "json schema",
-      "github",
-      "jira",
-      "wcag"
-    ]
-  },
-  {
-    "title": "GradGuru/MyCoach App",
-    "year_end": "2023",
-    "month_end": "09",
-    "ref_id": "maliksi",
-    "description": "Feature maintenance and bug fixes.",
-    "url": "https://play.google.com/store/apps/details?id=com.expansionbridge.gradguru",
-    "img": "img/mycoach.app.jpg",
-    "tech": [
-      "flutter",
-      "mobile",
-      "rest API",
-      "wcag",
-      "jenkins",
-      "github",
-      "jira"
-    ]
+    "description": [
+      "Spearheaded research and development on an inventory app with offline and realtime sync capabilities. ",
+      "Worked closely with UX designers to greatly improve user flow in asset management by streamlining the workflow."
+    ],
+    "tech": {
+      "": ["flutter", "bloc", "couchbase", "github", "jira", "wcag"]
+    }
   },
   {
     "title": "GradGuru/MyCoach Console V3",
     "year_end": "2023",
     "month_end": "09",
     "ref_id": "maliksi",
-    "description": "Redesigned and maintained the console app. Added new features, functions and integrations.",
+    "description": [
+      "Rebranded and redesigned the console web app.",
+      "Made user experience improvements to list filtering, infinite scrolling, drag-n-drop features, batch upload processing, parsing and validations and WCAG compliance.",
+      "Added integrations to Salesforce API and Okta 2FA.",
+      "Designed reports dashboard and pages with interactive charts."
+    ],
     "url": "javascript:void(0)",
     "img": "img/mycoach.console.jpg",
-    "tech": [
-      "web",
-      "angularjs",
-      "bootstrap",
-      "UIUX design",
-      "scss",
-      "jenkins",
-      "rest API",
-      "mxGraph",
-      "highchart",
-      "salesforce API",
-      "2fa",
-      "docker",
-      "wcag",
-      "gitlab → github",
-      "jira → github"
-    ]
+    "tech": {
+      "": [
+        "angularjs",
+        "material ui",
+        "scss",
+        "jenkins",
+        "rest API",
+        "mxGraph",
+        "highchart",
+        "salesforce API",
+        "2fa",
+        "docker",
+        "wcag",
+        "gitlab → github",
+        "jira → github"
+      ]
+    }
   },
   {
     "title": "GradGuru Console V2",
     "year_end": "2020",
     "month_end": "10",
     "ref_id": "gradguru",
-    "description": "Rewrote and maintained the console app in AngularJs from PHP. Added new features, functions and integrations.",
+    "description": [
+      "Rewrote and maintained the console app in AngularJs from PHP while adding new features, functions and integrations.",
+      "Developed a custom date picker with a heatmap view for dates with significant targeted content.",
+      "Created an interactive flowchart editor that allows users to design chatbot flows and also simulate it within a mobile preview.",
+      "Configured jenkins to run the unit test before redeploying.",
+      "Documented user flows and features and how to use them."
+    ],
     "url": "javascript:void(0)",
     "img": "img/gradguru.console.jpg",
-    "tech": [
-      "web",
-      "angularjs",
-      "bootstrap",
-      "less/sass",
-      "jenkins",
-      "rest API",
-      "mxGraph",
-      "docker",
-      "gitlab",
-      "jira"
-    ]
+    "tech": {
+      "": [
+        "angularjs",
+        "bootstrap",
+        "less/sass",
+        "jenkins",
+        "rest API",
+        "mxGraph",
+        "docker",
+        "gitlab",
+        "jira"
+      ]
+    }
   },
   {
-    "title": "The H Hub (contract)",
+    "title": "The H Hub (freelance)",
     "year_end": "2017",
     "month_end": "11",
-    "description": "Commision work to add new features, functions and api integrations.",
+    "description": "Commision work to add new features, functions and integrate new api end points.",
     "url": "javascript:void(0)",
     "img": "img/thehhub.jpg",
-    "tech": [
-      "web",
-      "angular",
-      "scss",
-      "rest API",
-      "php",
-      "github",
-      "pivotal",
-      "docker"
-    ]
+    "tech": {
+      "": [
+        "web",
+        "angular",
+        "scss",
+        "rest API",
+        "php",
+        "github",
+        "pivotal",
+        "docker"
+      ]
+    }
   },
   {
     "title": "Omnifi-Modeler",
     "year_end": "2017",
     "month_end": "10",
     "ref_id": "247ai",
-    "description": "Part of a collection of tools: a web based editor for state machine flow w/c includes a synced interactive visual diagram.",
-    "tech": [
-      "web",
-      "js",
-      "prototypejs",
-      "gojs",
-      "gitlab"
-    ]
+    "description": [
+      "A web based visual model editor for state machine flow which is synced across multiple users.",
+      "Paired with the senior architect, developed the front-end of the app."
+    ],
+    "tech": { "": ["web", "prototypejs", "gojs", "web sockets", "gitlab"] }
   },
   {
-    "title": "Pumba", 
+    "title": "Pumba",
     "year_end": "2017",
     "month_end": "04",
     "ref_id": "247ai",
-    "description": "Internal web tool that queries redmine tickets via rest API & displays a dynamic data table & visual trend graph.",
-    "tech": [
-      "web",
-      "redmine API",
-      "VueJs",
-      "bootstrap",
-      "d3",
-      "nodejs",
-      "gitlab"
-    ]
-  },
-  {
-    "title": "Vivid Speech Apps",
-    "year_end": "2017",
-    "month_end": "06",
-    "ref_id": "247ai",
-    "description": "Developed the visual web of IVR.",
-    "tech": [
-      "web",
-      "jquery",
-      "AngularJS",
-      "perforce",
-      "redmine"
-    ]
+    "description": [
+      "Solo project: An internal web tool that queries redmine tickets via rest API & displays a dynamic data table & visual trend graph on metrics.",
+      "Product was used by QA team to analyze their performance."
+    ],
+    "tech": {
+      "": ["redmine API", "VueJs", "bootstrap", "d3", "nodejs", "gitlab"]
+    }
   },
   {
     "title": "Web Soundboard",
     "year_end": "2016",
     "month_end": "11",
     "ref_id": "247ai",
-    "description": "A soundboard UI. Used in a live presentation that needed on-the-fly sound effects and background music.",
-    "tech": [
-      "web",
-      "VueJs",
-      "bootstrap",
-      "github"
-    ]
+    "description": [
+      "A soundboard UI. Used in a holiday live presentation that needed on-the-fly sound effects and background music."
+    ],
+    "tech": { "": ["javascript", "VueJs", "bootstrap", "github"] }
   },
   {
     "title": "Prudle",
     "year_end": "2016",
     "month_end": "11",
     "ref_id": "247ai",
-    "description": "Internal web tool that parses possible grammars from a GRXML/VGSL value set.",
-    "tech": [
-      "web",
-      "VueJs",
-      "bootstrap",
-      "github"
-    ]
+    "description": [
+      "Solo Project: An internal web tool that parses possible grammars from a GRXML/VGSL value set.",
+      "Product was used by the QA team to assist with the generated grammar models during testing."
+    ],
+    "tech": { "": ["javascript", "VueJs", "bootstrap", "github"] }
   },
   {
-    "title": "24HourAsnwers (contract)",
+    "title": "24HourAsnwers (freelance)",
     "year_end": "2016",
     "month_end": "07",
     "description": "Comissioned to co-develop a mobile app using phonegap.",
-    "tech": [
-      "mobile",
-      "android",
-      "ios",
-      "Angular",
-      "bootstrap",
-      "cordova",
-      "phonegap",
-      "paypal api",
-      "rest API"
-    ]
+    "tech": {
+      "": [
+        "Angular",
+        "bootstrap",
+        "cordova",
+        "phonegap",
+        "paypal api",
+        "rest API"
+      ]
+    }
+  },
+  {
+    "title": "\"Chat App\" Sales Demo",
+    "year_end": "2016",
+    "month_end": "02",
+    "description": "Made a demo page for a sales presentation that shows an expanded chat feature that allows users to have interactions on a embeded product.",
+    "tech": {
+      "": ["javascript", "css"]
+    }
   },
   {
     "title": "ScoutJS",
     "year_end": "2015",
     "month_end": "11",
     "ref_id": "247ai",
-    "description": "Brainchild project: an internal telemetry service that enables to capture front-end logs & able to notify & display history, trends, pattern flow, errors & data object parsing.",
-    "tech": [
-      "web",
-      "service",
-      "mongoDB",
-      "express",
-      "AngularJS",
-      "expressJs",
-      "d3",
-      "bootstrap",
-      "openshift"
-    ]
+    "description": [
+      "Brainchild full stack project: an internal telemetry service that enables capturing front-end logs & able to notify & display history, trends, pattern flow, errors & data object parsing.",
+      "Did project proposal, documentation and presentation across department executives."
+    ],
+    "tech": {
+      "": [
+        "web",
+        "service",
+        "mongoDB",
+        "nodejs",
+        "express",
+        "AngularJS",
+        "expressJs",
+        "d3",
+        "bootstrap",
+        "openshift"
+      ]
+    }
   },
   {
     "title": "Wack-a-Mole Game",
@@ -277,11 +239,7 @@
     "month_end": "09",
     "ref_id": "247ai",
     "description": "A multiplayer wack-a-mole game. Used as a proof of concept using web sockets in node. Tested with coworkers over WIFI.",
-    "tech": [
-      "web",
-      "nodejs",
-      "socket.io"
-    ]
+    "tech": { "": ["web", "nodejs", "socket.io"] }
   },
   {
     "title": "Flowmulate",
@@ -289,18 +247,20 @@
     "month_end": "05",
     "ref_id": "btit",
     "description": "[Best Thesis, IT 2015] Flowchart algorithm design, simulation and code generation. Can design algorithms using flowchart which can be simulated and code generated to different languages.",
-    "tech": [
-      "web",
-      "admin",
-      "typescript",
-      "AngularJS",
-      "jsep",
-      "UX/UI",
-      "CSS/LESS",
-      "bootstrap",
-      "PHP/Laravel",
-      "MYSQL"
-    ]
+    "tech": {
+      "": [
+        "web",
+        "admin",
+        "typescript",
+        "AngularJS",
+        "jsep",
+        "UX/UI",
+        "CSS/LESS",
+        "bootstrap",
+        "PHP/Laravel",
+        "MYSQL"
+      ]
+    }
   },
   {
     "title": "Generic Service Mgmt System",
@@ -308,24 +268,15 @@
     "month_end": "12",
     "ref_id": "btit",
     "description": "A general use management system for most kinds of service provider.",
-    "tech": [
-      "windows",
-      "UIUX",
-      "crystal report",
-      "mysql",
-      "vb.net"
-    ]
+    "tech": { "": ["windows", "UIUX", "crystal report", "mysql", "vb.net"] }
   },
   {
     "title": "Tic Tac Toe vs Bot",
     "year_end": "2014",
     "month_end": "12",
     "ref_id": "btit",
-    "description": "A small tic tac toe game project using Java which can be played against the computer. A project for java programming class.",
-    "tech": [
-      "java",
-      "decision tree"
-    ]
+    "description": "A small tic tac toe game project using Java which can be played against the computer. Project for java programming class.",
+    "tech": { "": ["java", "decision tree"] }
   },
   {
     "title": "jaycsantos.com v3 (self)",
@@ -334,44 +285,40 @@
     "description": "V3 of personal website and blog archive",
     "url": "javascript:void(0)",
     "img": "img/jaycsantos.v3.jpg",
-    "tech": [
-      "web",
-      "design",
-      "UIUX",
-      "php/wp"
-    ]
+    "tech": { "": ["web", "design", "UIUX", "php/wordpress"] }
   },
   {
     "title": "Putt More Base",
     "year_end": "2012",
     "month_end": "01",
     "ref_id": "jaycsantos",
-    "description": "Puzzle physics mini-golf game sequel. Clients include TurboNuke.com, Andkon.com, IPC Media (mousebreaker.com).",
+    "description": [
+      "Puzzle physics mini-golf game sequel. Clients include TurboNuke.com, Andkon.com, IPC Media (mousebreaker.com).",
+      "Implemented a realistic physics engine using Box2D.",
+      "Features include leaderboards, shareable solutions, and user-created levels from level editor."
+    ],
     "url": "https://www.kongregate.com/games/jaycsantos/putt-more-base",
     "img": "img/puttmorebase.jpg",
-    "tech": [
-      "game",
-      "design",
-      "UIUX",
-      "AS3",
-      "box2d",
-      "flash",
-      "gamersafe api"
-    ]
+    "tech": {
+      "": [
+        "game",
+        "design",
+        "UIUX",
+        "actionscript 3",
+        "box2d",
+        "flash",
+        "gamersafe api"
+      ]
+    }
   },
   {
     "title": "jaycsantos.com v2 (self)",
     "year_end": "2009",
     "month_end": "03",
-    "description": "V2 of personal website and blog",
+    "description": "V2 of personal website and blog.",
     "url": "javascript:void(0)",
     "img": "img/jaycsantos.v2.jpg",
-    "tech": [
-      "web",
-      "design",
-      "UIUX",
-      "php/wp"
-    ]
+    "tech": { "": ["web", "design", "UIUX", "php/wordpress"] }
   },
   {
     "title": "Chris Jeff v2",
@@ -381,12 +328,7 @@
     "description": "chris-jeff.com - personal website",
     "url": "javascript:void(0)",
     "img": "img/chrisjeff.v2.jpg",
-    "tech": [
-      "web",
-      "design",
-      "UIUX",
-      "PHP/wp"
-    ]
+    "tech": { "": ["web", "design", "UIUX", "PHP/wordpress"] }
   },
   {
     "title": "Chris Jeff v1",
@@ -396,171 +338,127 @@
     "description": "chris-jeff.com - personal website",
     "url": "javascript:void(0)",
     "img": "img/chrisjeff.v1.jpg",
-    "tech": [
-      "web",
-      "logo",
-      "design",
-      "UIUX",
-      "PHP/wp",
-      "MYSQL"
-    ]
+    "tech": { "": ["web", "logo", "design", "UIUX", "PHP/wordpress", "MYSQL"] }
   },
   {
     "title": "Clock Work Monster",
     "year_end": "2009",
     "month_end": "01",
     "ref_id": "jaycsantos",
-    "description": "clockworkmonster.com - arcade portal running arcadem pro. I applied client's requested design. Mostly did additional features and maintenance a couple of times.",
+    "description": [
+      "clockworkmonster.com - arcade portal running arcadem pro.",
+      "Applied client's requested design and mostly did additional features and regular maintenance for some time."
+    ],
     "url": "javascript:void(0)",
     "img": "img/cwm.jpg",
-    "tech": [
-      "web",
-      "admin",
-      "design",
-      "UIUX",
-      "PHP",
-      "MYSQL"
-    ]
+    "tech": { "": ["web", "admin", "design", "UIUX", "PHP", "MYSQL"] }
   },
   {
     "title": "Hidden Ninja Games",
     "year_end": "2009",
     "month_end": "01",
     "ref_id": "jaycsantos",
-    "description": "hiddenninjagames.com - arcade portal running arcadem pro. I redesigned the site and added additional features using JCustom Mod.",
+    "description": [
+      "hiddenninjagames.com - arcade portal running arcadem pro.",
+      "Visual redesign and added additional features using JCustom Mod."
+    ],
     "url": "javascript:void(0)",
     "img": "img/hng.jpg",
-    "tech": [
-      "web",
-      "admin",
-      "logo",
-      "design",
-      "UIUX",
-      "PHP",
-      "MYSQL"
-    ]
+    "tech": { "": ["web", "admin", "logo", "design", "UIUX", "PHP", "MYSQL"] }
   },
   {
     "title": "JCustom Mod",
     "year_end": "2009",
     "month_end": "01",
     "ref_id": "jaycsantos",
-    "description": "This a mod for arcadem pro - arcade portal script in php. It added more features to better upload and manage flash games.",
+    "description": [
+      "This a mod for arcadem pro - arcade portal script in PHP.",
+      "It added more features to better upload and manage flash games.",
+      "Got massive interest in the community and the owner."
+    ],
     "url": "javascript:void(0)",
-    "tech": [
-      "web",
-      "admin",
-      "php",
-      "MYSQL"
-    ]
+    "tech": { "": ["web", "admin", "php", "MYSQL"] }
   },
   {
     "title": "jaycsantos.com (self)",
     "year_end": "2008",
     "month_end": "10",
     "description": "personal website and blog",
-    "tech": [
-      "web",
-      "design",
-      "UIUX",
-      "php/wp"
-    ]
+    "tech": { "": ["web", "design", "UIUX", "PHP/wordpress"] }
   },
   {
     "title": "Stomp Tomato",
     "year_end": "2008",
     "month_end": "09",
     "ref_id": "jaycsantos",
-    "description": "Jumping reflex mini-game. Clients include Donnewood Media (meez.com), ItsNotBadAtAll.com",
+    "description": [
+      "Jumping reflex mini-game. Clients include Donnewood Media (meez.com), ItsNotBadAtAll.com",
+      "This was an entry into the game development contest to integrate with Meez assets. Won 3rd place!"
+    ],
     "url": "https://www.kongregate.com/games/jaycsantos/stomp-tomato",
     "img": "img/stomptomato.jpg",
-    "tech": [
-      "game",
-      "design",
-      "meez api",
-      "UIUX",
-      "AS2",
-      "flash"
-    ]
+    "tech": {
+      "": ["game", "design", "meez api", "UIUX", "actionscript 2", "flash"]
+    }
   },
   {
     "title": "Putt Base",
     "year_end": "2008",
     "month_end": "01",
     "ref_id": "jaycsantos",
-    "description": "Puzzle physics mini-golf game. Clients include UGO Ent. Inc., Walt Disney Internet Group, BigFishGames, Armor Games Inc, Sega Europe, Atom Ent. Inc (addictinggames.com), Andkon.com",
+    "description": [
+      "Puzzle physics mini-golf game. Clients include UGO Ent. Inc., Walt Disney Internet Group, BigFishGames, Armor Games Inc, Sega Europe, Atom Ent. Inc (addictinggames.com), Andkon.com"
+    ],
     "url": "https://www.kongregate.com/games/UGOP/putt-base",
     "img": "img/puttbase.jpg",
-    "tech": [
-      "game",
-      "design",
-      "UIUX",
-      "AS2",
-      "flash"
-    ]
+    "tech": { "": ["game", "design", "UIUX", "actionscript 2", "flash"] }
   },
   {
     "title": "All Games All Free",
     "year_end": "2008",
     "month_end": "01",
     "ref_id": "jaycsantos",
-    "description": "allgamesallfree.com - arcade portal. Redesigned and added features to existing arcade script. Also added features like ratings, comments, online presence, achievements, scoring and seasonal leaderboards.",
+    "description": [
+      "allgamesallfree.com - commisioned rework of an arcade portal.",
+      "Visual redesign and modified functionality to existing arcade script.",
+      "Added features like ratings, comments, challenges, online presence, achievements, scoring and seasonal leaderboards."
+    ],
     "url": "http://allgamesallfree.com/",
     "img": "img/agaf.jpg",
-    "tech": [
-      "web",
-      "admin",
-      "logo",
-      "design",
-      "UIUX",
-      "PHP",
-      "MYSQL"
-    ]
+    "tech": { "": ["web", "admin", "logo", "design", "UIUX", "PHP", "MYSQL"] }
   },
   {
     "title": "Loboloon",
     "year_end": "2007",
     "month_end": "12",
     "ref_id": "jaycsantos",
-    "description": "Puzzle maze game. Client Mofunzone.com",
+    "description": [
+      "Puzzle maze game. Client Mofunzone.com",
+      "First take on a puzzle game and level design."
+    ],
     "url": "https://www.newgrounds.com/portal/view/427327",
     "img": "img/loboloon.jpg",
-    "tech": [
-      "game",
-      "design",
-      "UIUX",
-      "AS2",
-      "flash"
-    ]
+    "tech": { "": ["game", "design", "UIUX", "actionscript 2", "flash"] }
   },
   {
     "title": "Hard Court",
     "year_end": "2007",
     "month_end": "07",
     "ref_id": "jaycsantos",
-    "description": "Fighting basketball game. Client Westech Media LLC (crazymonkeygames.com)",
+    "description": [
+      "1-on-1 Fighting basketball game against basic bot. Client: Westech Media LLC (crazymonkeygames.com)",
+      "This is my first flash game. Started as an exploratory project into programming game loops, turned into a school demo, and later redesigned."
+    ],
     "url": "https://www.crazymonkeygames.com/Hardcourt.html",
     "img": "img/hardcourt.jpg",
-    "tech": [
-      "game",
-      "design",
-      "AS2",
-      "flash"
-    ]
+    "tech": { "": ["game", "design", "actionscript 2", "flash"] }
   },
   {
     "title": "MTICS Inventory System",
     "year_end": "2006",
     "month_end": "03",
     "ref_id": "comtec",
-    "description": "Group thesis lead programmer for inventory system development.",
-    "tech": [
-      "windows",
-      "data flow",
-      "msAccess",
-      "SQL",
-      "UIUX",
-      "VB6"
-    ]
+    "description": "Group thesis, lead programmer for inventory system development.",
+    "tech": { "": ["windows", "data flow", "msAccess", "SQL", "UIUX", "VB6"] }
   }
 ]
