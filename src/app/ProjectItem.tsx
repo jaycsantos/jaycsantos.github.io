@@ -52,10 +52,10 @@ export function ProjectItem({
   return (
     <>
       <motion.div
-        className='flex relative flex-col gap-4 items-stretch p-3 bg-gray-200 rounded-md border transition-all duration-300 dark:bg-gray-800/20 group print:border-0 border-gray-600/10 dark:border-gray-400/10 hover:border-gray-400 dark:hover:border-gray-400 print:gap-0 print:p-0 print:break-inside-avoid sm:h-full'
+        className='flex relative flex-col gap-4 items-stretch p-3 overflow-clip bg-gray-200 rounded-md border transition-all duration-300 dark:bg-gray-800/20 group print:border-0 border-gray-600/10 dark:border-gray-400/10 hover:border-gray-400 dark:hover:border-gray-400 print:gap-0 print:p-0 print:break-inside-avoid sm:h-full'
         tabIndex={0}
         role='button'
-        aria-label={`More details about ${project.title}`}
+        aria-label={project.title}
         aria-expanded={false}
         onClick={() => setShow(true)}
         // TODO: add delay to setProject
@@ -64,7 +64,7 @@ export function ProjectItem({
       >
         {project.img && (
           <div
-            className='absolute inset-0 w-full h-full z-0 bg-cover bg-top grayscale opacity-10 blur-[2px] group-hover:blur-none group-hover:rounded-md group-hover:grayscale-0 transition-all group-hover:opacity-100 duration-300'
+            className='absolute inset-0 w-full h-full z-0 bg-cover bg-bottom grayscale opacity-5 blur-[2px] group-hover:blur-none group-hover:bg-top group-hover:grayscale-0 transition-all group-hover:opacity-100 duration-300'
             style={{
               backgroundImage: `url(${project.img})`,
             }}
@@ -136,9 +136,9 @@ export function ProjectItem({
                 </button>
               </div>
 
-              <div className='flex overflow-y-auto flex-col flex-1 gap-4 items-center p-4'>
+              <div className='flex overflow-y-auto flex-col flex-1 gap-1 items-center p-4'>
                 {project.url && (
-                  <div className='text-center max-w-[100%]'>
+                  <div className='text-center mb-3 max-w-[100%]'>
                     <a
                       href={project.url}
                       target='_blank'

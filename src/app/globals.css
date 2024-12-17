@@ -76,6 +76,10 @@ h1, h2, h3, h4, h5, h6, .title {
       }
     }
   }
+
+  .content-visibility {
+    content-visibility: auto;
+  }
 }
 
 .dot-blur {
@@ -99,6 +103,9 @@ h1, h2, h3, h4, h5, h6, .title {
   }
   &.dot-blur-fade-b {
     mask: linear-gradient(rgb(0, 0, 0) calc(100% - 1.5rem), rgba(0, 0, 0, 0) 100%);
+  }
+  &.dot-blur-faded {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5) 1px, var(--background) 1px);
   }
 }
 

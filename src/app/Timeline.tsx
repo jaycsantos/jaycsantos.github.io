@@ -21,6 +21,8 @@ export default function Timeline() {
 
   let lastYear: string | undefined;
 
+  console.log('coloredData', coloredData);
+
   // TODO: maybe use project context as background somehow
 
   return (
@@ -29,7 +31,7 @@ export default function Timeline() {
         Experience / Notable Projects
         <hr />
       </h2>
-      <ul className='flex-grow-0 bg-fixed bg-center bg-no-repeat transition-all duration-500 delay-200 timeline-grid'>
+      <ul className='flex-grow-0 bg-fixed bg-center bg-no-repeat transition-all duration-500 delay-200 content-visibility timeline-grid'>
         {coloredData.map((item, index) => (
           <React.Fragment key={'d' + index}>
             <li

@@ -13,7 +13,7 @@ import Intro from './Intro';
 
 export default function Home(): JSX.Element {
   return (
-    <MotionConfig reducedMotion='user'>
+    <MotionConfig reducedMotion='always'>
       <Header className='mt-[30vh] print:mt-0' />
       <Waves
         className='absolute top-0 left-0 w-full h-dvh bg-backgroundSky print:hidden'

@@ -171,7 +171,7 @@
     "description": [
       "A soundboard UI. Used in a holiday live presentation that needed on-the-fly sound effects and background music."
     ],
-    "tech": { "": ["javascript", "VueJs", "bootstrap", "github"] }
+    "tech": { "": ["javascript", "VueJs", "material", "pwa", "github"] }
   },
   {
     "title": "Prudle",
@@ -196,7 +196,8 @@
         "cordova",
         "phonegap",
         "paypal api",
-        "rest API"
+        "rest API",
+        "bitbucket"
       ]
     }
   },

@@ -1,4 +1,5 @@
 import { Tags } from '@/components/Tags';
+import { cl } from '@/utils/cl';
 import { motion } from 'motion/react';
 import {
   PiStarBold,
@@ -131,7 +132,6 @@ export default function Intro({ className }: { className?: string }) {
           },
         },
       }}
-      viewport={{ once: true }}
       style={{
         '--border-start': '#fb923c',
         '--border-end': '#fb923c',
@@ -161,11 +161,17 @@ export default function Intro({ className }: { className?: string }) {
         </motion.span>
       </div>
       <div className='flex-1 pl-4 sm:px-8 sm:col-span-2 md:col-span-3 print:px-0 print:col-span-2'>
-        <h4 className='md:w-[400px]'>
+        <motion.h4
+          className='md:w-[400px]'
+          variants={{
+            hidden: { x: -10, opacity: 0 },
+            visible: { x: 0, opacity: 1 },
+          }}
+        >
           {
             'Seasoned software engineer since 2007, specializing in Javascript and its ecosystem.'
           }
-        </h4>
+        </motion.h4>
         <p className='hidden mt-4 print:block'>
           {
             "With almost 2 decades of development experience, I've honed my skills as a software engineer. From my early days in indie game development to today's sophisticated web applications, I've consistently delivered innovative solutions. I'm committed to creating user-centric experiences, employing best practices, and leveraging modern development tools and techniques."
@@ -173,10 +179,16 @@ export default function Intro({ className }: { className?: string }) {
         </p>
       </div>
       <div className='print:hidden' />
-      <ul className='flex flex-col flex-1 gap-2 pl-4 text-sm lowercase sm:px-8 sm:col-span-2 md:col-span-3 print:ml-0 print:px-0 print:gap-0 print:col-span-1'>
+      <ul
+        className={cl(
+          'flex flex-col flex-1 gap-2 pl-4 text-sm lowercase',
+          'sm:px-8 sm:col-span-2 md:col-span-3',
+          'print:ml-0 print:px-0 print:gap-0 print:col-span-1'
+        )}
+      >
         {Object.entries(devConcepts).map(([key, value]) => (
           <li key={key}>
-            <Tags tags={value} className='justify-end print:ml-2'>
+            <Tags tags={value} className='print:ml-2'>
               <motion.li
                 className='print:inline'
                 variants={{
@@ -191,10 +203,16 @@ export default function Intro({ className }: { className?: string }) {
           </li>
         ))}
       </ul>
-      <div className='flex flex-col gap-2 items-end pl-4 mx-2 text-sm lowercase sm:mx-0 sm:pl-0 sm:px-8 print:gap-0 print:hidden'>
+      <div
+        className={cl(
+          'flex flex-col gap-2 pl-4 mx-2 text-sm lowercase',
+          'sm:mx-0 sm:pl-0 sm:px-8 sm:items-end',
+          'print:gap-0 print:hidden'
+        )}
+      >
         <Tags
           tags={['typescript', 'react']}
-          className='justify-end print:ml-8 print:hidden'
+          className='print:ml-8 print:hidden'
         >
           <motion.li
             className='print:inline'
@@ -211,10 +229,16 @@ export default function Intro({ className }: { className?: string }) {
           </motion.li>
         </Tags>
       </div>
-      <ul className='flex flex-col flex-1 gap-2 pl-4 text-sm lowercase sm:px-8 sm:col-span-2 md:col-span-3 print:ml-0 print:px-0 print:justify-end print:gap-0 print:col-span-1'>
+      <ul
+        className={cl(
+          'flex flex-col flex-1 gap-2 pl-4 text-sm lowercase',
+          'sm:px-8 sm:col-span-2 md:col-span-3',
+          'print:ml-0 print:px-0 print:justify-end print:gap-0 print:col-span-1'
+        )}
+      >
         {Object.entries(techStacks).map(([key, value]) => (
           <li key={key}>
-            <Tags tags={value} className='justify-end print:ml-2'>
+            <Tags tags={value} className='print:ml-2'>
               <motion.li
                 className='print:inline'
                 variants={{
