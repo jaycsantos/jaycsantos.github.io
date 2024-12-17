@@ -1,10 +1,7 @@
 import { ProjectProps } from '@/app/ProjectItem';
-import { cl } from '@/utils/cl';
-import { useMediaQuery } from '@uidotdev/usehooks';
-import { useAnimate, AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
-import { BsChevronDown } from 'react-icons/bs';
-import Moment from 'react-moment';
+import { ExperienceItem } from './ExperienceItem';
+import { cl } from '@/utils/cl';
 
 export interface TimelineProps {
   id?: string;
@@ -15,6 +12,7 @@ export interface TimelineProps {
   year_end: string;
   month_start: string;
   month_end: string;
+  type?: 'work' | 'study';
   projects?: { [key: string]: ProjectProps[] };
   color?: string;
   tech?: string[] | { [key: string]: string[] };
@@ -22,99 +20,86 @@ export interface TimelineProps {
 
 export function TimelineItem({
   item,
-  className,
+  index,
+  list,
+  showYear,
 }: {
   item: TimelineProps;
-  className?: string;
+  index: number;
+  list: TimelineProps[];
+  showYear: (year: string) => JSX.Element;
 }) {
-  const isPrint = useMediaQuery('print');
-  const [shown, setShown] = useState(false);
-  const [scope, animate] = useAnimate();
+  const [showAll, setShowAll] = useState(false);
 
-  const show = function (value: boolean) {
-    if (scope.current) {
-      animate(
-        scope.current,
-        {
-          display: 'block',
-          opacity: value ? 1 : 0,
-          height: value ? ['0px', 'auto'] : ['auto', '0px'],
-        },
-        { duration: 0.3 }
-      ).then(() => scope.current.classList.toggle('hidden', !value));
-    }
-    setShown(value);
-  };
+  let hasLowPrio = false;
 
   return (
     <>
-      <AnimatePresence>
-        {shown && item.description && !isPrint && (
-          <motion.div
-            className='fixed top-0 left-0 right-0 -bottom-8 translate-y-[-1.5rem] z-10 dot-blur'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          />
-        )}
-      </AnimatePresence>
-      <div
+      <li
+        key={'item' + index}
         className={cl(
-          'relative flex-col pt-2 pr-4 pl-2 rounded-md transition-all duration-300 print:px-0 print:break-inside-avoid',
-          shown && 'z-20 sm:pl-4 sm:pr-2',
-          className
+          'relative pb-4 bg-clip-border sm:pr-8 sm:border-r print:p-0 print:col-span-2',
+          item.type == 'work' ? 'print:order-1' : 'print:order-2',
+          item.type
         )}
-        onMouseOver={() => show(true)}
-        onMouseLeave={() => show(false)}
-        onClick={() => show(!shown)}
-        tabIndex={0}
-        role='button'
-        aria-label={`More details about ${item.title}`}
-        aria-expanded={shown}
+        style={{
+          '--border-start': item.color ?? '#808080',
+          '--border-end': list[index + 1]?.color ?? '#808080',
+        }}
       >
-        <div className='flex flex-row justify-between items-center'>
-          <div>
-            <h3 className='text-lg font-bold' style={{ color: item.color }}>
-              {item.title}
-            </h3>
-            <div className='text-sm'>
-              <Moment
-                className='inline-block'
-                parse='YYYYMM'
-                format='MMM YYYY'
-                date={item.year_start + item.month_start}
-              />
-              &nbsp;-&nbsp;
-              <Moment
-                className='inline-block'
-                parse='YYYYMM'
-                format='MMM YYYY'
-                date={item.year_end + item.month_end}
-              />
-              &nbsp;
-              <em className='inline-block'>{item.entity}</em>
-            </div>
-          </div>
-          <BsChevronDown
-            className={cl(
-              'w-5 h-5 sm:hidden transition-transform duration-300',
-              shown && 'rotate-180',
-              item.description ? '' : 'hidden'
-            )}
-          />
-        </div>
-        {item.description && (
-          <div
-            ref={scope}
-            className='z-30 mt-2 pl-2 sm:absolute sm:w-[200%] md:w-[300%] sm:left-[-2px] sm:pl-4 bg-gray-100 hidden overflow-hidden rounded-md shadow-lg dark:bg-gray-800 ring-1 ring-black ring-opacity-5 print:static print:block print:border-none'
-          >
-            <ul className='m-4 text-justify list-square print:text-left print:my-0'>
-              {item.description &&
-                [item.description].flat().map((v, i) => <li key={i}>{v}</li>)}
-            </ul>
+        <ExperienceItem
+          key={item.id}
+          item={item}
+          className='sticky top-24 pb-4 print:static print:pt-0 print:pb-2 print:pr-4'
+        />
+      </li>
+      <li
+        className={cl(
+          'flex relative flex-col gap-2 pb-4 pl-4 sm:col-span-2 md:col-span-3 sm:px-8',
+          'print:px-0 print:col-span-2 print:order-3',
+          index == 0 && 'print:mt-6'
+        )}
+      >
+        {Object.keys(item.projects ?? {})
+          .toReversed()
+          .map(year => {
+            hasLowPrio =
+              hasLowPrio ||
+              item.projects[year].find(p => p.priority == 'low') != null;
+            const projects = item.projects[year].filter(
+              project => project.priority != 'low' || showAll
+            );
+
+            return (
+              projects.length > 0 && (
+                <ul
+                  key={year}
+                  className='grid grid-cols-1 gap-2 md:grid-cols-2 print:flex print:flex-col print:gap-3'
+                >
+                  {projects.map((project, pid) => (
+                    <li
+                      key={'project' + pid}
+                      className={project.priority == 'low' && 'print:hidden'}
+                    >
+                      {showYear(project.year_end)}
+                      {project.element}
+                    </li>
+                  ))}
+                </ul>
+              )
+            );
+          })}
+        {hasLowPrio && (
+          <div className='flex justify-center print:hidden'>
+            <button
+              className='px-4 py-1 text-sm text-gray-700 rounded-md border transition-all duration-300 border-gray-600/10 hover:border-gray-400 dark:text-gray-300 dark:border-gray-400/10 dark:hover:border-gray-400'
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? 'hide some' : 'show more'}
+            </button>
           </div>
         )}
-      </div>
+      </li>
     </>
   );
 }

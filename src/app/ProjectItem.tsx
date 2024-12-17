@@ -1,6 +1,14 @@
 import { CgClose } from 'react-icons/cg';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect, useRef, createContext, useContext } from 'react';
+import {
+  JSX,
+  useState,
+  useEffect,
+  useRef,
+  createContext,
+  useContext,
+} from 'react';
+import { createPortal } from 'react-dom';
 import { Tags } from '../components/Tags';
 import { cl } from '@/utils/cl';
 
@@ -18,25 +26,20 @@ export interface ProjectProps {
   tech?: { [key: string]: string[] };
   url?: string;
   img?: string;
+  priority?: 'low' | 'normal' | 'high';
+  element?: JSX.Element;
 }
 
-export function ProjectItem({
-  project,
-  index,
-}: {
-  project: ProjectProps;
-  index: number;
-}) {
-  const [show, setShow] = useState(false);
+export function ProjectItem({ project }: { project: ProjectProps }) {
+  const [showModal, setShowModal] = useState(false);
   const overlayRef = useRef<HTMLDivElement>(null);
-  // const { setProject } = useContext(ProjectContext);
 
   useEffect(() => {
-    if (show) {
+    if (showModal) {
       document.body.style.overflow = 'hidden';
 
       const handleEscape = (e: KeyboardEvent) => {
-        if (e.key === 'Escape') setShow(false);
+        if (e.key === 'Escape') setShowModal(false);
       };
       document.addEventListener('keydown', handleEscape);
 
@@ -47,17 +50,21 @@ export function ProjectItem({
     } else {
       document.body.style.overflow = 'unset';
     }
-  }, [show]);
+  }, [showModal]);
 
   return (
     <>
       <motion.div
-        className='flex relative flex-col gap-4 items-stretch p-3 overflow-clip bg-gray-200 rounded-md border transition-all duration-300 dark:bg-gray-800/20 group print:border-0 border-gray-600/10 dark:border-gray-400/10 hover:border-gray-400 dark:hover:border-gray-400 print:gap-0 print:p-0 print:break-inside-avoid sm:h-full'
+        className={cl(
+          'flex relative flex-col gap-4 items-stretch p-3 overflow-clip bg-gray-200 rounded-md border transition-all duration-300 border-gray-600/10 sm:h-full hover:border-gray-400',
+          'dark:bg-gray-800/20 group dark:border-gray-400/10 dark:hover:border-gray-400',
+          'print:border-0 print:gap-0 print:p-0 print:break-inside-avoid'
+        )}
         tabIndex={0}
         role='button'
         aria-label={project.title}
         aria-expanded={false}
-        onClick={() => setShow(true)}
+        onClick={() => setShowModal(true)}
         // TODO: add delay to setProject
         // onMouseEnter={() => setProject(project)}
         // onMouseLeave={() => setProject(null)}
@@ -67,12 +74,10 @@ export function ProjectItem({
             loading='lazy'
             className={cl(
               'object-cover object-bottom absolute inset-0 z-0 w-full h-full opacity-5 grayscale transition-all duration-300 blur-[2px]',
-              'group-hover:blur-none group-hover:object-top group-hover:grayscale-0 group-hover:opacity-100'
+              'group-hover:blur-none group-hover:object-top group-hover:grayscale-0 group-hover:opacity-100 print:hidden'
             )}
             src={project.img}
-            // style={{
-            //   backgroundImage: `url(${project.img})`,
-            // }}
+            alt={project.title}
           />
         )}
         <motion.h4 className='font-medium text-center underline transition-opacity duration-500 ease-in-out underline-offset-4 print:text-left print:font-bold print:no-underline print:flex print:flex-row print:items-center print:gap-2'>
@@ -114,73 +119,74 @@ export function ProjectItem({
           )}
         </div>
       </motion.div>
-
-      <AnimatePresence>
-        {show && (
-          <div
-            className='flex fixed inset-0 z-10 justify-center items-center p-4 dot-blur'
-            ref={overlayRef}
-            onClick={e =>
-              overlayRef.current === e.target ? setShow(false) : null
-            }
-          >
-            <motion.div
-              className='w-full max-w-screen-sm max-h-[80vh] rounded-lg bg-gray-50 dark:bg-gray-900 flex flex-col shadow-xl'
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
+      {showModal &&
+        createPortal(
+          <AnimatePresence>
+            <div
+              className='flex fixed inset-0 z-10 justify-center items-center p-4 dot-blur'
+              ref={overlayRef}
+              onClick={e =>
+                overlayRef.current == e.target ? setShowModal(false) : null
+              }
             >
-              <div className='flex flex-row flex-none items-center py-2 pr-2 pl-4 border-b'>
-                <h3 className='flex-1 text-xl font-bold'>{project.title}</h3>
-                <button
-                  className='p-2 rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-gray-700'
-                  onClick={() => setShow(false)}
-                  aria-label='Close overlay'
-                >
-                  <CgClose className='w-5 h-5' />
-                </button>
-              </div>
+              <motion.div
+                className='w-full max-w-screen-sm max-h-[80vh] rounded-lg bg-gray-50 dark:bg-gray-900 flex flex-col shadow-xl'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+              >
+                <div className='flex flex-row flex-none items-center py-2 pr-2 pl-4 border-b'>
+                  <h3 className='flex-1 text-xl font-bold'>{project.title}</h3>
+                  <button
+                    className='p-2 rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-gray-700'
+                    onClick={() => setShowModal(false)}
+                    aria-label='Close overlay'
+                  >
+                    <CgClose className='w-5 h-5' />
+                  </button>
+                </div>
 
-              <div className='flex overflow-y-auto flex-col flex-1 gap-1 items-center p-4'>
-                {project.url && (
-                  <div className='text-center mb-3 max-w-[100%]'>
-                    <a
-                      href={project.url}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      {project.img && (
-                        <img
-                          src={project.img}
-                          alt={project.title}
-                          className='max-h-[50dvh] rounded-md shadow-sm'
-                        />
-                      )}
-                      {project.url?.startsWith('http') && (
-                        <span className='text-xs truncate max-w-[50%] opacity-35'>
-                          {project.url}
-                        </span>
-                      )}
-                    </a>
-                  </div>
-                )}
-                <ul className='px-8 list-circle'>
-                  {[project.description]
-                    .flat()
-                    .map((description: string, i: number) => (
-                      <li key={i}>{description}</li>
-                    ))}
-                </ul>
-                {Object.values(project.tech ?? {}).map(
-                  (tech: string[], i: number) => (
-                    <Tags key={i} tags={tech} className='justify-center' />
-                  )
-                )}
-              </div>
-            </motion.div>
-          </div>
+                <div className='flex overflow-y-auto flex-col flex-1 gap-1 items-center p-4'>
+                  {project.url && (
+                    <div className='text-center mb-3 max-w-[100%]'>
+                      <a
+                        href={project.url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        {project.img && (
+                          <img
+                            src={project.img}
+                            alt={project.title}
+                            className='max-h-[50dvh] rounded-md shadow-sm'
+                          />
+                        )}
+                        {project.url?.startsWith('http') && (
+                          <span className='text-xs truncate max-w-[50%] opacity-35'>
+                            {project.url}
+                          </span>
+                        )}
+                      </a>
+                    </div>
+                  )}
+                  <ul className='px-8 list-circle'>
+                    {[project.description]
+                      .flat()
+                      .map((description: string, i: number) => (
+                        <li key={i}>{description}</li>
+                      ))}
+                  </ul>
+                  {Object.values(project.tech ?? {}).map(
+                    (tech: string[], i: number) => (
+                      <Tags key={i} tags={tech} className='justify-center' />
+                    )
+                  )}
+                </div>
+              </motion.div>
+            </div>
+          </AnimatePresence>,
+          document.body
         )}
-      </AnimatePresence>
     </>
   );
 }

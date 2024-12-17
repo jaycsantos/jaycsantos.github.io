@@ -1,4 +1,4 @@
-import { Tags } from '@/components/Tags';
+import { tagListItemVariant, Tags } from '@/components/Tags';
 import { cl } from '@/utils/cl';
 import { motion } from 'motion/react';
 import {
@@ -138,41 +138,19 @@ export default function Intro({ className }: { className?: string }) {
       }}
     >
       <div className='flex flex-row gap-1 items-start pl-4 mx-2 sm:justify-end sm:mx-0 sm:pl-0 sm:px-8 print:hidden'>
-        <motion.span
-          variants={{
-            hidden: { x: -10, opacity: 0 },
-            visible: { x: 0, opacity: 1 },
-          }}
-        >
-          <PiGlobeHemisphereEast
-            className='inline mt-1 w-5 h-5 text-orange-500 print:hidden'
-            title='Location'
-          />
-        </motion.span>
-        <motion.span
-          variants={{
-            hidden: { x: -10, opacity: 0 },
-            visible: { x: 0, opacity: 1 },
-          }}
-        >
-          <sub className='text-sm text-right opacity-50'>
-            Makati, Philippines
-          </sub>
-        </motion.span>
+        <PiGlobeHemisphereEast
+          className='inline mt-1 w-5 h-5 text-orange-500 print:hidden'
+          title='Location'
+        />
+        <sub className='text-sm text-right opacity-50'>Makati, Philippines</sub>
       </div>
       <div className='flex-1 pl-4 sm:px-8 sm:col-span-2 md:col-span-3 print:px-0 print:col-span-2'>
-        <motion.h4
-          className='md:w-[400px]'
-          variants={{
-            hidden: { x: -10, opacity: 0 },
-            visible: { x: 0, opacity: 1 },
-          }}
-        >
+        <h4 className='md:w-[400px] print:hidden'>
           {
             'Seasoned software engineer since 2007, specializing in Javascript and its ecosystem.'
           }
-        </motion.h4>
-        <p className='hidden mt-4 print:block'>
+        </h4>
+        <p className='hidden mt-4 print:block print:mt-0'>
           {
             "With almost 2 decades of development experience, I've honed my skills as a software engineer. From my early days in indie game development to today's sophisticated web applications, I've consistently delivered innovative solutions. I'm committed to creating user-centric experiences, employing best practices, and leveraging modern development tools and techniques."
           }
@@ -189,13 +167,7 @@ export default function Intro({ className }: { className?: string }) {
         {Object.entries(devConcepts).map(([key, value]) => (
           <li key={key}>
             <Tags tags={value} className='print:ml-2'>
-              <motion.li
-                className='print:inline'
-                variants={{
-                  hidden: { x: -10, opacity: 0 },
-                  visible: { x: 0, opacity: 1 },
-                }}
-              >
+              <motion.li className='print:inline' variants={tagListItemVariant}>
                 {Icons[key as keyof typeof Icons]}
                 <span className='hidden print:inline'>{key}: </span>
               </motion.li>

@@ -1,7 +1,7 @@
 [
   {
     "title": "Lead Front-end / Web Developer",
-    "entity": "Maliksi Creative Technologies",
+    "entity": "Maliksi Creative Technologies (full-time)",
     "id": "maliksi",
     "year_start": "2020",
     "year_end": "2024",
@@ -23,6 +23,7 @@
     "month_end": "11",
     "description": [
       "Engineered and supported front-end components for a multi-app system's V2 release, adhering to best practices and industry standards.",
+      "Created a high-performance CSV parser for batch data processing operations.",
       "Seamlessly integrated with backend RESTful APIs, employing JWT-based authentication to guarantee secure and private data exchange"
     ]
   },
@@ -48,9 +49,10 @@
     "month_start": "03",
     "month_end": "05",
     "description": [
-      "I made interactive casual flash games, focusing on game play, user experience and visual design.",
-      "Also designed and developed web sites and apps.",
-      "Made custom templates, plugins and other functionalities like integrating with external RSS feeds for wordpress and other PHP libraries."
+      "Developed interactive casual flash games, focused on fun experience and visual design. Was able to work with big clients like Sega UK, DisneyXD, and BigFishGames among others.",
+      "Collaborated with clients to understand their unique needs and designed and developed custom websites and web applications, such as content management systems and personal websites.",
+      "Tailored WordPress templates and plugins, and integrated external RSS feeds and PHP libraries to meet specific client needs.",
+      "Created a highly-regarded mod for the Arcadem Pro arcade script, resulting in significant community interest and subsequent commission opportunities."
     ]
   }
 ]
