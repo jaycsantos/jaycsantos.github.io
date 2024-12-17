@@ -63,11 +63,16 @@ export function ProjectItem({
         // onMouseLeave={() => setProject(null)}
       >
         {project.img && (
-          <div
-            className='absolute inset-0 w-full h-full z-0 bg-cover bg-bottom grayscale opacity-5 blur-[2px] group-hover:blur-none group-hover:bg-top group-hover:grayscale-0 transition-all group-hover:opacity-100 duration-300'
-            style={{
-              backgroundImage: `url(${project.img})`,
-            }}
+          <img
+            loading='lazy'
+            className={cl(
+              'object-cover object-bottom absolute inset-0 z-0 w-full h-full opacity-5 grayscale transition-all duration-300 blur-[2px]',
+              'group-hover:blur-none group-hover:object-top group-hover:grayscale-0 group-hover:opacity-100'
+            )}
+            src={project.img}
+            // style={{
+            //   backgroundImage: `url(${project.img})`,
+            // }}
           />
         )}
         <motion.h4 className='font-medium text-center underline transition-opacity duration-500 ease-in-out underline-offset-4 print:text-left print:font-bold print:no-underline print:flex print:flex-row print:items-center print:gap-2'>

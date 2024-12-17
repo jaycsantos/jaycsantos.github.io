@@ -169,7 +169,8 @@
     "month_end": "11",
     "ref_id": "247ai",
     "description": [
-      "A soundboard UI. Used in a holiday live presentation that needed on-the-fly sound effects and background music."
+      "A soundboard UI. Used in a holiday live presentation that needed on-the-fly sound effects and background music.",
+      "https://github.com/jaycsantos/mario-soundboard"
     ],
     "tech": { "": ["javascript", "VueJs", "material", "pwa", "github"] }
   },
