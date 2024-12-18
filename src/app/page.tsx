@@ -3,7 +3,7 @@
 import { ClientOnly } from '@/components/ClientOnly';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { Waves } from '@/components/Waves';
-import { cl } from '@/utils/cl';
+import { cn } from '@/utils/cl';
 import { MotionConfig } from 'motion/react';
 import { Suspense } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -34,7 +34,7 @@ export default function Home(): JSX.Element {
 function Header({ className }: { className?: string }) {
   return (
     <div
-      className={cl(
+      className={cn(
         'flex sticky top-0 z-50 flex-row align-bottom print:static',
         className
       )}

@@ -10,7 +10,7 @@ import {
 } from 'react';
 import { createPortal } from 'react-dom';
 import { Tags } from '../components/Tags';
-import { cl } from '@/utils/cl';
+import { cn } from '@/utils/cl';
 
 export const ProjectContext = createContext<{
   project: ProjectProps | null;
@@ -55,7 +55,7 @@ export function ProjectItem({ project }: { project: ProjectProps }) {
   return (
     <>
       <motion.div
-        className={cl(
+        className={cn(
           'flex relative flex-col gap-4 items-stretch p-3 overflow-clip bg-gray-200 rounded-md border transition-all duration-300 border-gray-600/10 sm:h-full hover:border-gray-400',
           'dark:bg-gray-800/20 group dark:border-gray-400/10 dark:hover:border-gray-400',
           'print:border-0 print:gap-0 print:p-0 print:break-inside-avoid'
@@ -72,7 +72,7 @@ export function ProjectItem({ project }: { project: ProjectProps }) {
         {project.img && (
           <img
             loading='lazy'
-            className={cl(
+            className={cn(
               'object-cover object-bottom absolute inset-0 z-0 w-full h-full opacity-5 grayscale transition-all duration-300 blur-[2px]',
               'group-hover:blur-none group-hover:object-top group-hover:grayscale-0 group-hover:opacity-100 print:hidden'
             )}
@@ -110,7 +110,7 @@ export function ProjectItem({ project }: { project: ProjectProps }) {
               <Tags
                 key={i}
                 tags={tech}
-                className={cl(
+                className={cn(
                   'justify-center transition-opacity duration-500 ease-in-out',
                   project.img && 'group-hover:opacity-0'
                 )}

@@ -1,4 +1,4 @@
-import { cl } from '@/utils/cl';
+import { cn } from '@/utils/cl';
 import { motion } from 'motion/react';
 
 export const tagListItemVariant = {
@@ -17,7 +17,7 @@ export function Tags({
 }) {
   return (
     <motion.ul
-      className={cl(
+      className={cn(
         'inline-flex flex-wrap gap-1 print:gap-0 print:block',
         className
       )}

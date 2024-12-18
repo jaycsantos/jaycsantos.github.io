@@ -1,16 +1,16 @@
 import { ProjectProps } from '@/app/ProjectItem';
 import { useState } from 'react';
 import { ExperienceItem } from './ExperienceItem';
-import { cl } from '@/utils/cl';
+import { cn } from '@/utils/cl';
 
 export interface TimelineProps {
   id?: string;
   title?: string;
   description?: string | string[];
   entity?: string;
-  year_start: string;
+  year_start?: string;
   year_end: string;
-  month_start: string;
+  month_start?: string;
   month_end: string;
   type?: 'work' | 'study';
   projects?: { [key: string]: ProjectProps[] };
@@ -37,7 +37,7 @@ export function TimelineItem({
     <>
       <li
         key={'item' + index}
-        className={cl(
+        className={cn(
           'relative pb-4 bg-clip-border sm:pr-8 sm:border-r print:p-0 print:col-span-2',
           item.type == 'work' ? 'print:order-1' : 'print:order-2',
           item.type
@@ -54,12 +54,18 @@ export function TimelineItem({
         />
       </li>
       <li
-        className={cl(
+        className={cn(
           'flex relative flex-col gap-2 pb-4 pl-4 sm:col-span-2 md:col-span-3 sm:px-8',
-          'print:px-0 print:col-span-2 print:order-3',
+          'print:px-0 print:col-span-2 print:order-3 print:empty:hidden print:break-inside-avoid',
           index == 0 && 'print:mt-6'
         )}
       >
+        {index == 0 && (
+          <h2 className='hidden mb-4 text-xl font-medium print:block'>
+            Notable Projects
+            <hr />
+          </h2>
+        )}
         {Object.keys(item.projects ?? {})
           .toReversed()
           .map(year => {
@@ -78,8 +84,10 @@ export function TimelineItem({
                 >
                   {projects.map((project, pid) => (
                     <li
-                      key={'project' + pid}
-                      className={project.priority == 'low' && 'print:hidden'}
+                      key={project.title}
+                      className={
+                        project.priority == 'low' ? 'print:hidden' : undefined
+                      }
                     >
                       {showYear(project.year_end)}
                       {project.element}
@@ -90,7 +98,7 @@ export function TimelineItem({
             );
           })}
         {hasLowPrio && (
-          <div className='flex justify-center print:hidden'>
+          <div className='flex justify-start print:hidden'>
             <button
               className='px-4 py-1 text-sm text-gray-700 rounded-md border transition-all duration-300 border-gray-600/10 hover:border-gray-400 dark:text-gray-300 dark:border-gray-400/10 dark:hover:border-gray-400'
               onClick={() => setShowAll(!showAll)}

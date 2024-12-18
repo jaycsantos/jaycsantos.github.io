@@ -42,7 +42,7 @@ export default function Timeline() {
   return (
     <>
       <h2 className='hidden mb-4 text-xl font-medium print:block'>
-        Experience / Education / Notable Projects
+        Experience / Education
         <hr />
       </h2>
       <ul className='flex-grow-0 bg-fixed bg-center bg-no-repeat transition-all duration-500 delay-200 timeline-grid'>
@@ -72,7 +72,7 @@ function getData() {
       type: 'study',
     })
   );
-  const items: TimelineProps[] = [...employments, ...studies];
+  const items: TimelineProps[] = [...studies, ...employments];
   items.sort(
     (a, b) =>
       parseInt(b.year_end + b.month_end) - parseInt(a.year_end + a.month_end)

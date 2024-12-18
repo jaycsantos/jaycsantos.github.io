@@ -1,5 +1,26 @@
 [
   {
+    "title": "AWS Summit Manila 2017",
+    "entity": "Manila",
+    "id": "aws2017",
+    "year_end": "2017",
+    "month_end": "04"
+  },
+  {
+    "title": "JS/CSS Conf 2016",
+    "entity": "Singapore",
+    "id": "jscssconf2016",
+    "year_end": "2016",
+    "month_end": "11"
+  },
+  {
+    "title": "PWA Dev Summit 2016",
+    "entity": "Manila",
+    "id": "pwa2016",
+    "year_end": "2016",
+    "month_end": "11"
+  },
+  {
     "title": "Bachelor of Technology in IT",
     "entity": "Technological University of the Philippines Taguig",
     "id": "btit",

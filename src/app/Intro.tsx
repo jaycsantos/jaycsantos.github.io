@@ -1,5 +1,5 @@
 import { tagListItemVariant, Tags } from '@/components/Tags';
-import { cl } from '@/utils/cl';
+import { cn } from '@/utils/cl';
 import { motion } from 'motion/react';
 import {
   PiStarBold,
@@ -158,7 +158,7 @@ export default function Intro({ className }: { className?: string }) {
       </div>
       <div className='print:hidden' />
       <ul
-        className={cl(
+        className={cn(
           'flex flex-col flex-1 gap-2 pl-4 text-sm lowercase',
           'sm:px-8 sm:col-span-2 md:col-span-3',
           'print:ml-0 print:px-0 print:gap-0 print:col-span-1'
@@ -176,7 +176,7 @@ export default function Intro({ className }: { className?: string }) {
         ))}
       </ul>
       <div
-        className={cl(
+        className={cn(
           'flex flex-col gap-2 pl-4 mx-2 text-sm lowercase',
           'sm:mx-0 sm:pl-0 sm:px-8 sm:items-end',
           'print:gap-0 print:hidden'
@@ -202,7 +202,7 @@ export default function Intro({ className }: { className?: string }) {
         </Tags>
       </div>
       <ul
-        className={cl(
+        className={cn(
           'flex flex-col flex-1 gap-2 pl-4 text-sm lowercase',
           'sm:px-8 sm:col-span-2 md:col-span-3',
           'print:ml-0 print:px-0 print:justify-end print:gap-0 print:col-span-1'
