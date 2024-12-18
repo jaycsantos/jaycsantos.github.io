@@ -20,7 +20,7 @@ export default function Home(): JSX.Element {
         color='var(--background)'
       />
 
-      <main className='container flex relative flex-col self-center p-2 max-w-screen-lg min-h-full sm:p-4 md:p-8 lg:p-16 print:max-w-none print:p-0'>
+      <main className='container flex relative flex-col self-center p-2 max-w-full min-h-full sm:p-4 md:p-8 lg:p-16 print:max-w-none print:p-0'>
         <Intro />
         <ClientOnly>
           <Timeline />

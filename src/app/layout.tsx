@@ -26,7 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <ThemeClient>
-          <div className='self-center max-w-screen-lg'>{children}</div>
+          <div className='self-center max-w-screen-xl'>{children}</div>
         </ThemeClient>
       </body>
       <GoogleAnalytics gaId='G-R2N300KGRV' />
