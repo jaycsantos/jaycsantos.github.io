@@ -119,7 +119,7 @@ function Footer(): JSX.Element {
         </a>
       </div>
       <div className='hidden text-xs text-right text-gray-400 print:block'>
-        cv printed from jaycsantos.com
+        cv print from jaycsantos.com, visit for more project list
       </div>
     </>
   );

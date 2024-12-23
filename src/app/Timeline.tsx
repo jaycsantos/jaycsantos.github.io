@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
-import { useTheme } from 'next-themes'
-import { Fragment, useMemo } from 'react';
+import { useTheme } from 'next-themes';
+import { useMemo } from 'react';
 import { generateColors } from '../utils/color-generator';
 import { ProjectItem, ProjectProps } from './ProjectItem';
 import { TimelineItem, TimelineProps } from './TimelineItem';
-import { ExperienceItem } from './ExperienceItem';
+import { TimelineYearProvider } from '@/components/TimelineYear';
 
 export default function Timeline() {
   const { resolvedTheme } = useTheme();
@@ -19,26 +19,6 @@ export default function Timeline() {
     return coloredData;
   }, [data, resolvedTheme]);
 
-  let lastYear: string | undefined;
-
-  console.log('coloredData', coloredData);
-
-  // TODO: maybe use project context as background somehow
-
-  const showYear = (year: string) => {
-    return (
-      year != lastYear &&
-      (lastYear = year) && (
-        <h5
-          className='px-2 inline-block font-bold border mb-2 text-sm sm:pb-0 rounded-full sm:absolute sm:left-0 -translate-x-4 sm:translate-x-[-50%] bg-background print:hidden'
-          style={{ borderColor: '#808080' }}
-        >
-          {year}
-        </h5>
-      )
-    );
-  };
-
   return (
     <>
       <h2 className='hidden mb-4 text-xl font-medium print:block'>
@@ -46,15 +26,16 @@ export default function Timeline() {
         <hr />
       </h2>
       <ul className='flex-grow-0 bg-fixed bg-center bg-no-repeat transition-all duration-500 delay-200 timeline-grid'>
-        {coloredData.map((item, index) => (
-          <TimelineItem
-            key={index}
-            item={item}
-            index={index}
-            list={coloredData}
-            showYear={showYear}
-          />
-        ))}
+        <TimelineYearProvider>
+          {coloredData.map((item, index) => (
+            <TimelineItem
+              key={index}
+              item={item}
+              index={index}
+              list={coloredData}
+            />
+          ))}
+        </TimelineYearProvider>
       </ul>
     </>
   );
@@ -108,7 +89,7 @@ function getData() {
 
   projects.forEach((project: ProjectProps) => {
     project.element = <ProjectItem key={project.title} project={project} />;
-    const timelineItem = data.find(timelineItem => {
+    const timelineItem = data.find((timelineItem) => {
       const ym = project.year_end + project.month_end;
       return (
         ym >= timelineItem.year_start + timelineItem.month_start &&
@@ -120,5 +101,5 @@ function getData() {
     }
   });
 
-  return data.filter(v => !!v.id || v.projects?.length);
+  return data.filter((v) => !!v.id || v.projects?.length);
 }

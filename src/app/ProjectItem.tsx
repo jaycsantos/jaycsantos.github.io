@@ -123,9 +123,9 @@ export function ProjectItem({ project }: { project: ProjectProps }) {
         createPortal(
           <AnimatePresence>
             <div
-              className='flex fixed inset-0 z-10 justify-center items-center p-4 dot-blur'
+              className='grid fixed inset-0 z-10 place-items-center p-4 dot-blur'
               ref={overlayRef}
-              onClick={e =>
+              onClick={(e) =>
                 overlayRef.current == e.target ? setShowModal(false) : null
               }
             >
