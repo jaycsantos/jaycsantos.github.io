@@ -119,7 +119,7 @@ const Icons = {
 export default function Intro({ className }: { className?: string }) {
   return (
     <motion.div
-      className='min-h-[calc(70vh)] print:min-h-min print:mb-4 print:h-auto print:my-0 -mt-2 sm:-mt-4 md:-mt-8 lg:-mt-16 bg-cover bg-center timeline-grid gap-2 sm:gap-0 print:gap-3 print:grid-cols-2'
+      className='min-h-[calc(70vh)] mb-4 sm:mb-0 print:min-h-min print:mb-4 print:h-auto print:my-0 -mt-2 sm:-mt-4 md:-mt-8 lg:-mt-16 bg-cover bg-center timeline-grid gap-2 sm:gap-0 print:gap-3 print:grid-cols-2'
       initial='hidden'
       animate='visible'
       variants={{
