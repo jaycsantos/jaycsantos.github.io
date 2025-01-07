@@ -16,41 +16,17 @@ import {
 } from 'react-icons/pi';
 
 const techStacks = {
-  Front: [
-    'react',
-    'redux',
-    'nextjs',
-    'vue',
-    'angular',
-    'flutter',
-    'tailwind',
-    'bootstrap',
-    'material',
-  ],
-  Back: ['node', 'express', 'php', 'nginx', 'docker'],
+  Front: ['react', 'redux', 'nextjs', 'tailwind', 'material'],
+  Back: ['nextjs', 'node', 'express', 'nginx', 'docker'],
   Data: ['mongodb', 'mysql', 'firestore', 'couchdb'],
   Cloud: ['firebase', 'GCP', 'rest API'],
   Test: ['jest', 'mocha', 'chai'],
 };
 const devConcepts = {
   Engineering: ['oop', 'functional', 'async', 'realtime', 'offline', 'TDD/BDD'],
-  Security: [
-    'jwt',
-    'sso',
-    'auth',
-    'validation',
-    'encryption',
-    'access control',
-  ],
+  Security: ['sso', 'auth', 'validation', 'encryption', 'access control'],
   UX: ['Analytics', 'User Research', 'Wireframing', 'Prototyping'],
-  Optimization: [
-    'Compression',
-    'Cache',
-    'SSR',
-    'SSG',
-    'Responsive Mobile First',
-    'WCAG',
-  ],
+  Optimization: ['Cache', 'SSR', 'SSG', 'Responsive Mobile First', 'a11y/WCAG'],
 };
 
 const Icons = {
