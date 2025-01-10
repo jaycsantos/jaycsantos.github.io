@@ -6,7 +6,7 @@ import { Waves } from '@/components/Waves';
 import { cn } from '@/utils/cl';
 import { MotionConfig } from 'motion/react';
 import { Suspense } from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { HiOutlineMail, HiOutlinePrinter } from 'react-icons/hi';
 import Timeline from './Timeline';
 import Intro from './Intro';
@@ -73,6 +73,14 @@ function Header({ className }: { className?: string }) {
         >
           hello@jaycsantos.com
         </a>
+        <span>
+          <FaGithub className='w-4 h-4 inline' />
+          &nbsp;
+          <FaLinkedin className='w-4 h-4 inline' />
+          &nbsp;
+          <FaTwitter className='w-4 h-4 inline' />
+          &nbsp; jaycsantos
+        </span>
       </p>
     </div>
   );

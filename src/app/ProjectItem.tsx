@@ -7,6 +7,7 @@ import {
   useRef,
   createContext,
   useContext,
+  memo,
 } from 'react';
 import { createPortal } from 'react-dom';
 import { Tags } from '../components/Tags';
@@ -30,7 +31,11 @@ export interface ProjectProps {
   element?: JSX.Element;
 }
 
-export function ProjectItem({ project }: { project: ProjectProps }) {
+export const ProjectItem = memo(function ProjectItem({
+  project,
+}: {
+  project: ProjectProps;
+}) {
   const [showModal, setShowModal] = useState(false);
   const overlayRef = useRef<HTMLDivElement>(null);
 
@@ -82,15 +87,15 @@ export function ProjectItem({ project }: { project: ProjectProps }) {
         )}
         <motion.h4 className='font-medium text-center underline transition-opacity duration-500 ease-in-out underline-offset-4 print:text-left print:font-bold print:no-underline print:flex print:flex-row print:items-center print:gap-2'>
           <motion.span
-            className='print:hidden'
+            className='print:!transform-none shrink-0'
             whileInView={{ scale: [0.9, 1.05, 1], dur: 0.1 }}
           >
             {project.title}
+            <span className='font-light'>
+              &nbsp;&bull; {project.year_end} &bull;
+            </span>
           </motion.span>
-          <span className='hidden print:flex print:flex-none'>
-            {project.title}
-          </span>
-          <span className='hidden print:flex print:leading-none'>
+          <span className='hidden print:flex print:leading-none font-light'>
             <Tags
               tags={Object.values(project.tech).flat()}
               className='print:inline'
@@ -189,4 +194,4 @@ export function ProjectItem({ project }: { project: ProjectProps }) {
         )}
     </>
   );
-}
+});

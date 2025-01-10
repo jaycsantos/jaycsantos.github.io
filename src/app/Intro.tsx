@@ -16,11 +16,11 @@ import {
 } from 'react-icons/pi';
 
 const techStacks = {
-  Front: ['react', 'redux', 'nextjs', 'tailwind', 'material'],
+  Front: ['HTML5', 'CSS3', 'react', 'redux', 'nextjs', 'tailwind', 'material'],
   Back: ['nextjs', 'node', 'express', 'nginx', 'docker'],
   Data: ['mongodb', 'mysql', 'firestore', 'couchdb'],
   Cloud: ['firebase', 'GCP', 'rest API'],
-  Test: ['jest', 'mocha', 'chai'],
+  Test: ['jest', 'mocha', 'chai', 'vitest'],
 };
 const devConcepts = {
   Engineering: ['oop', 'functional', 'async', 'realtime', 'offline', 'TDD/BDD'],

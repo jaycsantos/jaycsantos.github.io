@@ -58,7 +58,7 @@ export function TimelineItem({
       >
         {index == 0 && (
           <h2 className='hidden mb-4 text-xl font-medium print:block'>
-            Notable Projects
+            Selected Notable Projects
             <hr />
           </h2>
         )}

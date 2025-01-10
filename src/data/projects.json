@@ -7,7 +7,7 @@
     "description": "V4 of personal website. Best viewed in dark mode.",
     "url": "https://github.com/jaycsantos/jaycsantos.github.io",
     "img": "img/jaycsantos.com.jpg",
-    "tech": { "": ["typescript", "react", "nextjs", "tailwind", "github"] }
+    "tech": { "": ["typescript", "react", "nextjs", "tailwindcss", "github"] }
   },
   {
     "title": "\"Colaboration App\"",
@@ -15,15 +15,16 @@
     "month_end": "11",
     "ref_id": "maliksi",
     "description": [
-      "Spearheaded fullstack development on a white label mobile app for collaboration and information sharing in realtime and offline.",
+      "Spearheaded fullstack development on a white label app for collaboration and information publishing in realtime and offline.",
       "Co-designed the json schema and wrote and maintained the firestore rules with a securely designed access control.",
-      "Integrated with 3rd party services like giftbit API to provide rewards to users.",
-      "Ensured flutter web performed efficiently by developing direct integrations to web libraries."
+      "Integrated with 3rd party services like giftbit API to provide user rewards.",
+      "Ensured flutter web performed efficiently by developing direct integrations to web libraries.",
+      "Implemented UI components with accessibility compliance from ground up."
     ],
     "tech": {
+      "backend": ["firebase", "GCP", "node", "typescript"],
       "mobile": ["flutter", "bloc", "gorouter → autorouter"],
-      "backend": ["firebase", "GCP", "nodejs", "typescript"],
-      "other": ["wcag", "github", "giftbit API"]
+      "other": ["wcag/a11y", "github", "giftbit API"]
     }
   },
   {
@@ -32,19 +33,19 @@
     "month_end": "11",
     "ref_id": "maliksi",
     "description": [
-      "Fullstack mobile and web research and development on a \"photo sharing app\" with realtime sync.",
-      "Experimented with an algorithm that automatically group photos from a specific period of time and location.",
-      "Spearheaded the project then later supervised the migration to new stack with junior devs."
+      "Fullstack mobile/web research and development on a \"photo sharing app\" with realtime sync.",
+      "Experimented with an algorithm that automatically grouped photos from a specific time and location.",
+      "Spearheaded the project MVP then later supervised the migration to new stack with junior devs."
     ],
     "tech": {
+      "web": ["react", "redux", "nextjs", "tailwindcss"],
       "mobile": ["flutter", "bloc"],
-      "web": ["react", "redux", "nextjs", "tailwind"],
       "backend": [
         "couchbase → firestore",
         "backblaze → firebase storage",
         "nginx → firebase"
       ],
-      "other": ["docker", "google maps", "github", "jira", "wcag"]
+      "other": ["docker", "google maps", "github", "jira", "a11y/wcag"]
     }
   },
   {
@@ -57,7 +58,7 @@
       "Worked closely with UX designers to greatly improve user flow in asset management by streamlining the workflow."
     ],
     "tech": {
-      "": ["flutter", "bloc", "couchbase", "github", "jira", "wcag"]
+      "": ["flutter", "bloc", "couchbase", "github", "jira", "a11y/wcag"]
     }
   },
   {
@@ -66,8 +67,8 @@
     "month_end": "09",
     "ref_id": "maliksi",
     "description": [
-      "Rebranded and redesigned the console web app.",
-      "Made user experience improvements to list filtering, infinite scrolling, drag-n-drop features, batch upload processing, parsing and validations and WCAG compliance.",
+      "Rebranded and redesigned the console web app to use Material UI.",
+      "Made user experience revamps like list filtering, infinite scrolling, scroll states, drag-n-drop features, batch data processing/parsing/validations and WCAG AA compliance.",
       "Added integrations to Salesforce API and Okta 2FA.",
       "Designed reports dashboard and pages with interactive charts."
     ],
@@ -75,7 +76,7 @@
     "img": "img/mycoach.console.jpg",
     "tech": {
       "": [
-        "angularjs",
+        "angular",
         "material ui",
         "scss",
         "jenkins",
@@ -85,7 +86,7 @@
         "salesforce API",
         "2fa",
         "docker",
-        "wcag",
+        "a11y/wcag",
         "gitlab → github",
         "jira → github"
       ]
@@ -97,10 +98,9 @@
     "month_end": "10",
     "ref_id": "gradguru",
     "description": [
-      "Rewrote and maintained the console app in AngularJs from PHP while adding new features and integrations.",
+      "Continued migration on the web console from PHP to angular while adding new features and integrations.",
       "Developed a custom date picker with a heatmap view for dates with significant targeted content.",
       "Created an interactive flowchart editor that allows users to design chatbot flows and also simulate it within.",
-      "Configured jenkins to run the unit test before redeploying.",
       "Documented user flows and features and how to use them."
     ],
     "url": "javascript:void(0)",
@@ -128,13 +128,12 @@
     "img": "img/thehhub.jpg",
     "tech": {
       "": [
-        "web",
         "angular",
         "scss",
         "rest API",
         "php",
-        "github",
         "pivotal",
+        "github",
         "docker"
       ]
     }
@@ -146,9 +145,10 @@
     "ref_id": "247ai",
     "description": [
       "A web based visual model editor for state machine flow which is synced across multiple users.",
+      "Developed interactions like drag-and-drop and inline editing also did data parsing from/to data model.",
       "Paired with the senior architect, developed the front-end of the app."
     ],
-    "tech": { "": ["web", "prototypejs", "gojs", "web sockets", "gitlab"] }
+    "tech": { "": ["html/css", "prototypejs", "gojs", "web sockets", "gitlab"] }
   },
   {
     "title": "Pumba",
@@ -161,7 +161,7 @@
       "Product was used by QA team to analyze their performance."
     ],
     "tech": {
-      "": ["redmine API", "VueJs", "bootstrap", "d3", "nodejs", "gitlab"]
+      "": ["VueJs", "bootstrap", "d3", "redmine API", "node", "gitlab"]
     }
   },
   {
@@ -171,10 +171,10 @@
     "priority": "low",
     "ref_id": "247ai",
     "description": [
-      "A soundboard UI. Used in a holiday live presentation that needed on-the-fly sound effects and background music.",
+      "A soundboard PWA. Used in a holiday live presentation that needed on-the-fly sound effects and background music.",
       "https://github.com/jaycsantos/mario-soundboard"
     ],
-    "tech": { "": ["javascript", "VueJs", "material", "pwa", "github"] }
+    "tech": { "": ["VueJs", "material", "pwa", "github"] }
   },
   {
     "title": "Prudle",
@@ -186,16 +186,16 @@
       "Solo Project: An internal web tool that parses possible grammars from a GRXML/VGSL value set.",
       "Product was used by the QA team to assist with the generated grammar models during testing."
     ],
-    "tech": { "": ["javascript", "VueJs", "bootstrap", "github"] }
+    "tech": { "": ["VueJs", "bootstrap", "github"] }
   },
   {
     "title": "24HourAsnwers (freelance)",
     "year_end": "2016",
     "month_end": "07",
-    "description": "Comissioned to co-develop a mobile app using phonegap.",
+    "description": ["Comissioned to co-develop a mobile app using phonegap/cordova.", "The app enables users to manage tutoring, requests and payments."],
     "tech": {
       "": [
-        "Angular",
+        "angularjs",
         "bootstrap",
         "cordova",
         "phonegap",
@@ -212,7 +212,7 @@
     "priority": "low",
     "description": "Made a demo page for a sales presentation that shows an upgraded chat feature that allows users to have interactions on a embeded product.",
     "tech": {
-      "": ["html", "javascript", "css"]
+      "": ["html/css", "javascript"]
     }
   },
   {
@@ -226,13 +226,11 @@
     ],
     "tech": {
       "": [
-        "web",
         "service",
         "mongoDB",
-        "nodejs",
+        "node",
         "express",
-        "AngularJS",
-        "expressJs",
+        "angularjs",
         "d3",
         "bootstrap",
         "openshift"
@@ -246,7 +244,7 @@
     "priority": "low",
     "ref_id": "247ai",
     "description": "A multiplayer wack-a-mole game. Used as a proof of concept using web sockets in node. Tested with coworkers over WIFI.",
-    "tech": { "": ["web", "nodejs", "socket.io"] }
+    "tech": { "": ["web", "node", "socket.io"] }
   },
   {
     "title": "Flowmulate",
@@ -259,15 +257,15 @@
     ],
     "tech": {
       "": [
-        "web",
         "admin",
         "typescript",
         "AngularJS",
+        "easeljs",
         "jsep",
         "UX/UI",
-        "CSS/LESS",
+        "LESS",
         "bootstrap",
-        "PHP/Laravel",
+        "Laravel/PHP",
         "MYSQL"
       ]
     }

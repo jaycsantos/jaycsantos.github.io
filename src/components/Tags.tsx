@@ -38,7 +38,7 @@ export function Tags({
       {tags.map((tag, tagIndex) => (
         <motion.li
           key={tagIndex}
-          className='text-xs tech-tag print:inline'
+          className='text-xs tech-tag print:inline lowercase'
           variants={tagListItemVariant}
         >
           <code>{tag}</code>

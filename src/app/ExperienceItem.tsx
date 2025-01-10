@@ -60,7 +60,10 @@ export function ExperienceItem({
       >
         <div className='flex flex-row justify-between items-center'>
           <div className='flex flex-col print:flex-row print:items-center print:gap-2'>
-            <h3 className='text-lg font-bold' style={{ color: item.color }}>
+            <h3
+              className='text-lg font-bold shrink-0'
+              style={{ color: item.color }}
+            >
               {item.title}
             </h3>
             <div className='text-sm'>
