@@ -91,8 +91,8 @@ export const ProjectItem = memo(function ProjectItem({
             whileInView={{ scale: [0.9, 1.05, 1], dur: 0.1 }}
           >
             {project.title}
-            <span className='font-light'>
-              &nbsp;&bull; {project.year_end} &bull;
+            <span className='font-light hidden print:inline'>
+              &nbsp;{project.year_end}
             </span>
           </motion.span>
           <span className='hidden print:flex print:leading-none font-light'>

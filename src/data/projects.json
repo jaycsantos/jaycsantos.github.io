@@ -15,8 +15,8 @@
     "month_end": "11",
     "ref_id": "maliksi",
     "description": [
-      "Spearheaded fullstack development on a white label app for collaboration and information publishing in realtime and offline.",
-      "Co-designed the json schema and wrote and maintained the firestore rules with a securely designed access control.",
+      "Spearheaded fullstack dev on a white label app for collaboration and publishing in realtime and offline.",
+      "Co-designed the json schema; wrote and maintained the firestore rules with minimal yet secure access control.",
       "Integrated with 3rd party services like giftbit API to provide user rewards.",
       "Ensured flutter web performed efficiently by developing direct integrations to web libraries.",
       "Implemented UI components with accessibility compliance from ground up."
@@ -43,7 +43,7 @@
       "backend": [
         "couchbase → firestore",
         "backblaze → firebase storage",
-        "nginx → firebase"
+        "firebase"
       ],
       "other": ["docker", "google maps", "github", "jira", "a11y/wcag"]
     }
@@ -227,13 +227,13 @@
     "tech": {
       "": [
         "service",
-        "mongoDB",
+        "typescript",
+        "angularjs",
+        "bootstrap",
+        "d3",
         "node",
         "express",
-        "angularjs",
-        "typescript",
-        "d3",
-        "bootstrap",
+        "mongoDB",
         "openshift"
       ]
     }

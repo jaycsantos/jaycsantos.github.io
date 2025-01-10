@@ -69,8 +69,8 @@ h6,
       --dark-bg-color: var(--bg-color);
     }
 
-    span {
-      @apply flex flex-row gap-0 px-1 py-1 lowercase ml-[.25rem] opacity-75 bg-[var(--bg-color)] dark:bg-[var(--dark-bg-color)] print:px-0 print:py-0 print:bg-transparent print:inline-block;
+    code {
+      @apply flex flex-row gap-0 px-1 py-1 lowercase ml-[.25rem] opacity-75 bg-[var(--bg-color)] dark:bg-[var(--dark-bg-color)] print:px-0 print:py-0 print:bg-transparent print:inline-block print:ml-0;
 
       &::before {
         @apply block absolute left-0 top-0 w-0 h-[1rem] print:hidden border-t-[.75rem] border-t-transparent border-r-[.25rem] border-r-[var(--bg-color)] dark:border-r-[var(--dark-bg-color)] border-b-[.75rem] border-b-transparent;
