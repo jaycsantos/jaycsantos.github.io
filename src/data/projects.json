@@ -231,6 +231,7 @@
         "node",
         "express",
         "angularjs",
+        "typescript",
         "d3",
         "bootstrap",
         "openshift"
