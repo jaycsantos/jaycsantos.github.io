@@ -123,12 +123,12 @@ export default function Intro({ className }: { className?: string }) {
       <div className='flex-1 pl-4 sm:px-8 sm:col-span-2 md:col-span-3 print:px-0 print:col-span-2'>
         <h4 className='md:w-[400px] print:hidden'>
           {
-            'Seasoned software engineer since 2007, specializing in Javascript and its ecosystem.'
+            'Adept software engineer since 2007, specializing in Javascript and its ecosystem.'
           }
         </h4>
         <p className='hidden mt-4 print:block print:mt-0'>
           {
-            "With almost 2 decades of development experience, I've honed my skills as a software engineer. From my early days in indie game development to today's sophisticated web applications, I've consistently delivered innovative solutions. I'm committed to creating user-centric experiences, employing best practices, and leveraging modern development tools and techniques."
+            "With almost 2 decades of development experience, I've honed my skills as a software engineer. From my early days in flash game development to today's sophisticated web apps, I've consistently delivered innovative solutions. My commitment is to create user-centric experiences and design reusable units of code with minimal boilerplate and simplified interfaces."
           }
         </p>
       </div>

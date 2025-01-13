@@ -15,11 +15,10 @@
     "month_end": "11",
     "ref_id": "maliksi",
     "description": [
-      "Spearheaded fullstack dev on a white label app for collaboration and publishing in realtime and offline.",
-      "Co-designed the json schema; wrote and maintained the firestore rules with minimal yet secure access control.",
-      "Integrated with 3rd party services like giftbit API to provide user rewards.",
-      "Ensured flutter web performed efficiently by developing direct integrations to web libraries.",
-      "Implemented UI components with accessibility compliance from ground up."
+      "Spearheaded the development of a full-stack mobile/web application for collaboration and publishing, enabling real-time and offline functionality for a white-label solution.",
+      "Co-designed the database schema and rewrote the Firestore security rules, significantly reducing code to under 150 lines while maintaining robust and secure access control.",
+      "Designed reusable components with minimal boilerplate and interface complexity, enabling junior developers to efficiently integrate new features.",
+      "Optimized Flutter web performance by developing direct integrations with web libraries."
     ],
     "tech": {
       "backend": ["firebase", "GCP", "node", "typescript"],
@@ -33,9 +32,8 @@
     "month_end": "11",
     "ref_id": "maliksi",
     "description": [
-      "Fullstack mobile/web research and development on a \"photo sharing app\" with realtime sync.",
-      "Experimented with an algorithm that automatically grouped photos from a specific time and location.",
-      "Spearheaded the project MVP then later supervised the migration to new stack with junior devs."
+      "Led the full-stack mobile/web development for a \"photo sharing app\" with real-time synchronization and reverse geolocation capabilities.",
+      "Developed an initial solution for automatically grouping photos based on specific time and location before exploring AI-powered approaches."
     ],
     "tech": {
       "web": ["react", "redux", "nextjs", "tailwindcss"],
@@ -54,8 +52,8 @@
     "month_end": "04",
     "ref_id": "maliksi",
     "description": [
-      "Spearheaded research and development on an inventory app with offline and realtime sync capabilities. ",
-      "Worked closely with UX designers to greatly improve user flow in asset management by streamlining the workflow."
+      "Led the research and development of an inventory mobile app with offline and real-time synchronization capabilities.",
+      "Collaborated closely with UX designers to significantly enhance user experience in asset management by streamlining the workflow."
     ],
     "tech": {
       "": ["flutter", "bloc", "couchbase", "github", "jira", "a11y/wcag"]
@@ -67,10 +65,9 @@
     "month_end": "09",
     "ref_id": "maliksi",
     "description": [
-      "Rebranded and redesigned the console web app to use Material UI.",
-      "Made user experience revamps like list filtering, infinite scrolling, scroll states, drag-n-drop features, batch data processing/parsing/validations and WCAG AA compliance.",
-      "Added integrations to Salesforce API and Okta 2FA.",
-      "Designed reports dashboard and pages with interactive charts."
+      "Rebranded and redesigned the console web application using Material UI and ensuring compliance with WCAG AA.",
+      "Revamped user experience with key features such as list filtering, infinite scrolling, scroll state retention, drag-and-drop, and efficient batch processing, parsing, and validation of data.",
+      "Developed visually engaging report dashboards and pages incorporating interactive charts and diagrams."
     ],
     "url": "javascript:void(0)",
     "img": "img/mycoach.console.jpg",
@@ -98,10 +95,8 @@
     "month_end": "10",
     "ref_id": "gradguru",
     "description": [
-      "Continued migration on the web console from PHP to angular while adding new features and integrations.",
-      "Developed a custom date picker with a heatmap view for dates with significant targeted content.",
-      "Created an interactive flowchart editor that allows users to design chatbot flows and also simulate it within.",
-      "Documented user flows and features and how to use them."
+      "Successfully continued the migration of the web console from PHP to Angular, concurrently adding new features and integrations.",
+      "Developed an interactive flowchart editor that enables users to design chatbot flows and immediately simulate and test."
     ],
     "url": "javascript:void(0)",
     "img": "img/gradguru.console.jpg",
@@ -144,9 +139,8 @@
     "month_end": "10",
     "ref_id": "247ai",
     "description": [
-      "A web based visual model editor for state machine flow which is synced across multiple users.",
-      "Developed interactions like drag-and-drop and inline editing also did data parsing from/to data model.",
-      "Paired with the senior architect, developed the front-end of the app."
+      "A web-based visual model editor for state machine flows enabling real-time collaboration among multiple users.",
+      "Developed interactive features such as drag-and-drop, connection constraints and inline editing, and implemented data parsing functionality from/to the data model."
     ],
     "tech": { "": ["html/css", "prototypejs", "gojs", "web sockets", "gitlab"] }
   },
@@ -157,8 +151,7 @@
     "priority": "low",
     "ref_id": "247ai",
     "description": [
-      "Solo project: An internal web tool that queries redmine tickets via rest API & displays a dynamic data table & visual trend graph on metrics.",
-      "Product was used by QA team to analyze their performance."
+      "Developed an internal web tool that leverages the Redmine REST API to query ticket data and generate dynamic data tables and visually compelling trend graphs. This tool empowered the QA team to effectively analyze their performance and identify areas for improvement."
     ],
     "tech": {
       "": ["VueJs", "bootstrap", "d3", "redmine API", "node", "gitlab"]
@@ -183,8 +176,7 @@
     "priority": "low",
     "ref_id": "247ai",
     "description": [
-      "Solo Project: An internal web tool that parses possible grammars from a GRXML/VGSL value set.",
-      "Product was used by the QA team to assist with the generated grammar models during testing."
+      "Developed an internal web tool that effectively parses possible grammars from GRXML/VGSL value sets. This tool significantly assisted the QA team in their evaluation and testing of generated grammar models."
     ],
     "tech": { "": ["VueJs", "bootstrap", "github"] }
   },
@@ -192,7 +184,7 @@
     "title": "24HourAsnwers (freelance)",
     "year_end": "2016",
     "month_end": "07",
-    "description": ["Comissioned to co-develop a mobile app using phonegap/cordova.", "The app enables users to manage tutoring, requests and payments."],
+    "description": ["Successfully co-developed a mobile application using the PhoneGap/Cordova framework, empowering users to seamlessly manage tutoring requests, schedule sessions, and facilitate secure online payments."],
     "tech": {
       "": [
         "angularjs",
@@ -239,22 +231,13 @@
     }
   },
   {
-    "title": "Wack-a-Mole Game",
-    "year_end": "2015",
-    "month_end": "09",
-    "priority": "low",
-    "ref_id": "247ai",
-    "description": "A multiplayer wack-a-mole game. Used as a proof of concept using web sockets in node. Tested with coworkers over WIFI.",
-    "tech": { "": ["web", "node", "socket.io"] }
-  },
-  {
     "title": "Flowmulate",
     "year_end": "2015",
     "month_end": "05",
     "ref_id": "btit",
     "description": [
-      "[Best Thesis, IT 2015]  a flowchart algorithm design, simulation and code generation web app. It was initially designed for programming professors to assist students in learning.",
-      "Able to design logics blocks through flowcharts, run and simulate it, export into different programming languages and even have examinations scored automatically."
+      "[Best Thesis, IT 2015] An innovative web application for flowchart algorithm design, simulation, and code translations, designed to facilitate effective learning for programming students.",
+      "This project empowered users to design logic blocks through an intuitive flowchart interface, execute and simulate their designs, generate code in various programming languages, and even automate the scoring of examinations, providing a valuable learning tool for students."
     ],
     "tech": {
       "": [

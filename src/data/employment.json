@@ -8,9 +8,10 @@
     "month_start": "11",
     "month_end": "11",
     "description": [
-      "Drove the technical vision and development of flagship product inlcuding product demos and proof-of-concept apps. Ensuring the highest quality of code and user experience with accessibility in mind.",
-      "Fostered the growth of junior developers by sharing best practices, constructive feedbacks and code reviews.",
-      "Participated in decision-making processes related to product roadmap, feature prioritization, design guidelines, and hiring/interview."
+      "Drove the technical vision and development of the company's flagship app, including prototypes, product/concept demos and MVPs.",
+      "Adapted and learned Dart/Flutter to assist and lead in mobile and web app development.",
+      "Participated in key decision-making processes related to product roadmap, feature prioritization, design guidelines, and hiring/interviews.",
+      "Fostered the growth of junior developers by providing mentorship, constructive feedback, and code reviews, ensuring the highest quality, scalability, and reusability of code."
     ]
   },
   {
@@ -22,9 +23,9 @@
     "month_start": "11",
     "month_end": "11",
     "description": [
-      "Engineered and supported front-end components for a multi-app system's V2 release, adhering to best practices and industry standards.",
-      "Created a high-performance CSV parser for batch data processing operations.",
-      "Seamlessly integrated with backend RESTful APIs, employing JWT-based authentication to guarantee secure and private data exchange"
+      "Engineered and supported front-end components for the V2 release of a multi-app system.",
+      "Created a high-performance CSV parser for batch data processing operations, leading to a significant improvement in user experience for those handling bulk data.",
+      "Seamlessly integrated with backend RESTful APIs, employing JWT-based authentication to ensure secure and private data exchange."
     ]
   },
   {
@@ -36,8 +37,8 @@
     "month_start": "07",
     "month_end": "12",
     "description": [
-      "Under shared services department: Specialized in developing web applications, ranging from client-facing products, internal tools to product demos and concept prototypes.",
-      "Translated design specifications and technical requirements into functional solutions, including UI/UX design, algorithm implementation, and interactive visual modeling."
+      "Within the shared services department, I specialized in developing web applications, ranging from client-facing products and internal tools to product demos and concept prototypes.",
+      "Translated design specifications and technical requirements into functional solutions, encompassing UI/UX design, algorithm implementation, and interactive visual modeling."
     ]
   },
   {
@@ -49,10 +50,10 @@
     "month_start": "03",
     "month_end": "05",
     "description": [
-      "Developed interactive casual flash games, focused on fun experience and visual design. Was able to work with big clients like Sega UK, DisneyXD, and BigFishGames among others.",
-      "Collaborated with clients to understand their unique needs and designed and developed custom websites and web applications, such as content management systems and personal websites.",
-      "Tailored WordPress templates and plugins, and integrated external RSS feeds and PHP libraries to meet specific client needs.",
-      "Created a highly-regarded mod for the Arcadem Pro arcade script, resulting in significant community interest and subsequent commission opportunities."
+      "Developed interactive casual Flash games with a strong focus on fun gameplay experiences and engaging visual design. Collaborated with prominent clients such as Sega UK, Disney XD, Big Fish Games, and more.",
+      "Collaborated with clients to understand their unique needs and designed and developed custom websites and web applications, including content management systems and personal websites.",
+      "Customized WordPress templates and plugins, and integrated external RSS feeds and PHP libraries to fulfill specific client requirements.",
+      "Developed a highly-regarded mod for the Arcadem Pro arcade script, garnering significant community interest and leading to subsequent commission opportunities."
     ]
   }
 ]
