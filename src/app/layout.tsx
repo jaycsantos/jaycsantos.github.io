@@ -1,14 +1,15 @@
-import "./globals.css";
-import {Metadata} from "next";
-import React from "react";
-import ThemeClient from "../components/theme-client";
-import { GoogleAnalytics } from '@next/third-parties/google'
-import { fontTitle, fontBody } from "../fonts/fonts";
 import { cn } from '@/utils/cl';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { Metadata } from 'next';
+import React from 'react';
+import ThemeClient from '../components/theme-client';
+import { fontBody, fontTitle } from '../fonts/fonts';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "jayc santos",
-  description: "Seasoned software engineer since 2007, specializing in JavaScript and its ecosystem.",
+  title: 'jayc santos',
+  description:
+    'Seasoned software engineer since 2007, specializing in JavaScript and its ecosystem.',
 };
 
 interface RootLayoutProps {

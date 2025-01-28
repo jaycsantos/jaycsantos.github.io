@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { CgClose } from 'react-icons/cg';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -12,6 +13,7 @@ import {
 import { createPortal } from 'react-dom';
 import { Tags } from '../components/Tags';
 import { cn } from '@/utils/cl';
+import Image from 'next/image';
 
 export const ProjectContext = createContext<{
   project: ProjectProps | null;
@@ -152,10 +154,10 @@ export const ProjectItem = memo(function ProjectItem({
                 </div>
 
                 <div className='flex overflow-y-auto flex-col flex-1 gap-1 items-center p-4'>
-                  {project.url && (
+                  {project.url || project.img ? (
                     <div className='text-center mb-3 max-w-[100%]'>
                       <a
-                        href={project.url}
+                        href={project.url || null}
                         target='_blank'
                         rel='noopener noreferrer'
                       >
@@ -173,7 +175,7 @@ export const ProjectItem = memo(function ProjectItem({
                         )}
                       </a>
                     </div>
-                  )}
+                  ) : null}
                   <ul className='px-8 list-circle'>
                     {[project.description]
                       .flat()

@@ -10,10 +10,12 @@
     "tech": { "": ["typescript", "react", "nextjs", "tailwindcss", "github"] }
   },
   {
-    "title": "\"Colaboration App\"",
+    "title": "\"White Label App\"",
     "year_end": "2024",
     "month_end": "11",
     "ref_id": "maliksi",
+    "url": "https://studentsquad.com/",
+    "img": "img/studentsquad.jpg",
     "description": [
       "Spearheaded the development of a full-stack mobile/web application for collaboration and publishing, enabling real-time and offline functionality for a white-label solution.",
       "Co-designed the database schema and rewrote the Firestore security rules, significantly reducing code to under 150 lines while maintaining robust and secure access control.",
@@ -64,12 +66,12 @@
     "year_end": "2023",
     "month_end": "09",
     "ref_id": "maliksi",
+    "url": "https://mycoachapp.org/",
     "description": [
       "Rebranded and redesigned the console web application using Material UI and ensuring compliance with WCAG AA.",
       "Revamped user experience with key features such as list filtering, infinite scrolling, scroll state retention, drag-and-drop, and efficient batch processing, parsing, and validation of data.",
       "Developed visually engaging report dashboards and pages incorporating interactive charts and diagrams."
     ],
-    "url": "javascript:void(0)",
     "img": "img/mycoach.console.jpg",
     "tech": {
       "": [
@@ -83,9 +85,9 @@
         "salesforce API",
         "2fa",
         "docker",
-        "a11y/wcag",
         "gitlab → github",
-        "jira → github"
+        "jira → github",
+        "a11y/wcag"
       ]
     }
   },
@@ -98,7 +100,7 @@
       "Successfully continued the migration of the web console from PHP to Angular, concurrently adding new features and integrations.",
       "Developed an interactive flowchart editor that enables users to design chatbot flows and immediately simulate and test."
     ],
-    "url": "javascript:void(0)",
+    "url": "",
     "img": "img/gradguru.console.jpg",
     "tech": {
       "": [
@@ -119,18 +121,10 @@
     "year_end": "2017",
     "month_end": "11",
     "description": "Commision work to add new features, functions and integrate new api end points.",
-    "url": "javascript:void(0)",
+    "url": "",
     "img": "img/thehhub.jpg",
     "tech": {
-      "": [
-        "angular",
-        "scss",
-        "rest API",
-        "php",
-        "pivotal",
-        "github",
-        "docker"
-      ]
+      "": ["angular", "scss", "rest API", "php", "pivotal", "github", "docker"]
     }
   },
   {
@@ -184,7 +178,9 @@
     "title": "24HourAsnwers (freelance)",
     "year_end": "2016",
     "month_end": "07",
-    "description": ["Successfully co-developed a mobile application using the PhoneGap/Cordova framework, empowering users to seamlessly manage tutoring requests, schedule sessions, and facilitate secure online payments."],
+    "description": [
+      "Successfully co-developed a mobile application using the PhoneGap/Cordova framework, empowering users to seamlessly manage tutoring requests, schedule sessions, and facilitate secure online payments."
+    ],
     "tech": {
       "": [
         "angularjs",
@@ -279,7 +275,7 @@
     "ref_id": "jaycsantos",
     "priority": "low",
     "description": "V3 of personal website and blog archive",
-    "url": "javascript:void(0)",
+    "url": "",
     "img": "img/jaycsantos.v3.jpg",
     "tech": { "": ["web", "design", "UIUX", "php/wordpress"] }
   },
@@ -315,7 +311,7 @@
     "priority": "low",
     "ref_id": "jaycsantos",
     "description": "V2 of personal website and blog.",
-    "url": "javascript:void(0)",
+    "url": "",
     "img": "img/jaycsantos.v2.jpg",
     "tech": { "": ["web", "design", "UIUX", "php/wordpress"] }
   },
@@ -326,7 +322,7 @@
     "priority": "low",
     "ref_id": "jaycsantos",
     "description": "chris-jeff.com - personal website",
-    "url": "javascript:void(0)",
+    "url": "",
     "img": "img/chrisjeff.v2.jpg",
     "tech": { "": ["web", "design", "UIUX", "PHP/wordpress"] }
   },
@@ -337,7 +333,7 @@
     "priority": "low",
     "ref_id": "jaycsantos",
     "description": "chris-jeff.com - personal website",
-    "url": "javascript:void(0)",
+    "url": "",
     "img": "img/chrisjeff.v1.jpg",
     "tech": { "": ["web", "logo", "design", "UIUX", "PHP/wordpress", "MYSQL"] }
   },
@@ -351,7 +347,7 @@
       "clockworkmonster.com - arcade portal running arcadem pro.",
       "Applied client's requested design and mostly did additional features and regular maintenance for some time."
     ],
-    "url": "javascript:void(0)",
+    "url": "",
     "img": "img/cwm.jpg",
     "tech": { "": ["web", "admin", "design", "UIUX", "PHP", "MYSQL"] }
   },
@@ -365,7 +361,7 @@
       "hiddenninjagames.com - arcade portal running arcadem pro.",
       "Visual redesign and added additional features using JCustom Mod."
     ],
-    "url": "javascript:void(0)",
+    "url": "",
     "img": "img/hng.jpg",
     "tech": { "": ["web", "admin", "logo", "design", "UIUX", "PHP", "MYSQL"] }
   },
@@ -380,7 +376,7 @@
       "It added more features to better upload and manage flash games.",
       "Got massive interest in the community and the owner."
     ],
-    "url": "javascript:void(0)",
+    "url": "",
     "tech": { "": ["web", "admin", "php", "MYSQL"] }
   },
   {
