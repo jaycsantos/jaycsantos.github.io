@@ -21,7 +21,7 @@ export default function Timeline() {
 
   return (
     <>
-      <h2 className='hidden mb-4 text-xl font-medium print:block'>
+      <h2 className='hidden mb-4 text-xl font-medium print:block print:mb-1'>
         Experience / Education
         <hr />
       </h2>

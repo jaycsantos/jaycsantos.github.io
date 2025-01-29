@@ -101,10 +101,10 @@ export function ExperienceItem({
             ref={scope}
             className={cn(
               'z-30 mt-2 pl-2 sm:absolute sm:w-[200%] md:w-[300%] sm:left-[-2px] sm:pl-4 bg-gray-100 hidden overflow-hidden rounded-md shadow-lg dark:bg-gray-800 ring-1 ring-black ring-opacity-5',
-              'print:m-0 print:static print:block print:border-none'
+              'print:m-0 print:static print:block print:border-none print:pl-0'
             )}
           >
-            <ul className='m-4 text-justify list-square print:text-left print:my-0'>
+            <ul className='m-4 text-justify list-square print:list-inside print:text-left print:m-0 print:pl-4'>
               {item.description &&
                 [item.description].flat().map((v, i) => <li key={i}>{v}</li>)}
             </ul>

@@ -65,7 +65,7 @@ export const ProjectItem = memo(function ProjectItem({
         className={cn(
           'flex relative flex-col gap-4 items-stretch p-3 overflow-clip bg-gray-200 rounded-md border transition-all duration-300 border-gray-600/10 sm:h-full hover:border-gray-400',
           'dark:bg-gray-800/20 group dark:border-gray-400/10 dark:hover:border-gray-400',
-          'print:border-0 print:gap-0 print:p-0 print:break-inside-avoid'
+          'print:border-0 print:gap-0 print:p-0'
         )}
         tabIndex={0}
         role='button'
@@ -104,7 +104,7 @@ export const ProjectItem = memo(function ProjectItem({
             />
           </span>
         </motion.h4>
-        <ul className='hidden pl-6 list-circle print:block'>
+        <ul className='hidden pl-6 list-circle print:block print:list-inside print:pl-4'>
           {[project.description]
             .flat()
             .map((description: string, i: number) => (

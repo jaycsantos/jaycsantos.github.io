@@ -16,10 +16,18 @@ import {
 } from 'react-icons/pi';
 
 const techStacks = {
-  Front: ['HTML5', 'CSS3', 'react', 'redux', 'nextjs', 'tailwind', 'material'],
-  Back: ['nextjs', 'node', 'express', 'nginx', 'docker'],
-  Data: ['mongodb', 'mysql', 'firestore', 'couchdb'],
-  Cloud: ['firebase', 'GCP', 'rest API'],
+  Front: [
+    'HTML/CSS',
+    'react',
+    'redux',
+    'nextjs',
+    'angular',
+    'tailwind',
+    'material',
+  ],
+  Back: ['nextjs', 'node', 'express', 'nest'],
+  DB: ['mongodb', 'mysql', 'firestore', 'couchdb'],
+  Cloud: ['firebase', 'GCP', 'nginx', 'docker'],
   Test: ['jest', 'mocha', 'chai', 'vitest'],
 };
 const devConcepts = {
@@ -48,7 +56,7 @@ const Icons = {
       title='Back-end'
     />
   ),
-  Data: (
+  DB: (
     <PiDatabase
       className='inline w-5 h-5 text-green-500 print:hidden'
       title='Database'
@@ -95,7 +103,7 @@ const Icons = {
 export default function Intro({ className }: { className?: string }) {
   return (
     <motion.div
-      className='min-h-[calc(70vh)] mb-4 sm:mb-0 print:min-h-min print:mb-4 print:h-auto print:my-0 -mt-2 sm:-mt-4 md:-mt-8 lg:-mt-16 bg-cover bg-center timeline-grid gap-2 sm:gap-0 print:gap-3 print:grid-cols-2'
+      className='min-h-[calc(70vh)] mb-4 sm:mb-0 print:min-h-min print:mb-0 print:h-auto print:my-0 -mt-2 sm:-mt-4 md:-mt-8 lg:-mt-16 bg-cover bg-center timeline-grid gap-2 sm:gap-0 print:gap-3 print:grid-cols-2'
       initial='hidden'
       animate='visible'
       variants={{
@@ -123,7 +131,7 @@ export default function Intro({ className }: { className?: string }) {
       <div className='flex-1 pl-4 sm:px-8 sm:col-span-2 md:col-span-3 print:px-0 print:col-span-2'>
         <h4 className='md:w-[400px] print:hidden'>
           {
-            'Adept software engineer since 2007, specializing in Javascript and its ecosystem.'
+            'Adept software engineer since 2007, specializing in Typescript and its ecosystem.'
           }
         </h4>
         <p className='hidden mt-4 print:block print:mt-0'>

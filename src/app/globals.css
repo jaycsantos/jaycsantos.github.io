@@ -158,6 +158,6 @@ h6,
   h5,
   h6 {
     color: var(--foreground) !important;
-    font-size: 12px;
+    /* font-size: 9px; */
   }
 }

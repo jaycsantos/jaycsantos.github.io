@@ -45,20 +45,23 @@ export function TimelineItem({
         <ExperienceItem
           key={item.id}
           item={item}
-          className='sticky top-24 pb-4 print:static print:pt-0 print:pb-2 print:pr-4'
+          className='sticky top-24 pb-4 print:static print:pt-0 print:pb-3 print:pr-4'
         />
       </li>
       <li
         key={'projects' + index}
         className={cn(
           'flex relative flex-col gap-2 pb-4 pl-4 sm:col-span-2 md:col-span-3 sm:px-8',
-          'print:px-0 print:col-span-2 print:order-3 print:empty:hidden print:break-inside-avoid',
-          index == 0 && 'print:mt-6'
+          'print:px-0 print:col-span-2 print:order-3 print:empty:hidden print:gap-1 print:pb-1 break-inside-avoid',
+          index == 0 && 'print:mt-2'
         )}
       >
         {index == 0 && (
-          <h2 className='hidden mb-4 text-xl font-medium print:block'>
+          <h2 className='hidden mb-4 text-xl font-medium print:block print:mb-0'>
             Selected Notable Projects
+            <small className='float-right text-xs text-gray-300 font-sans italic font-light'>
+              extensive project list on jaycsantos.com
+            </small>
             <hr />
           </h2>
         )}
@@ -92,7 +95,7 @@ function Projects({
             projects.length > 0 && (
               <ul
                 key={year}
-                className='grid grid-cols-1 gap-2 md:grid-cols-2 print:flex print:flex-col print:gap-3'
+                className='grid grid-cols-1 gap-2 md:grid-cols-2 print:flex print:flex-col print:gap-1'
               >
                 {projects.map((project, pidx) => (
                   <li

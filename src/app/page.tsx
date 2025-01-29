@@ -41,7 +41,7 @@ function Header({ className }: { className?: string }) {
     >
       <div className='fixed top-0 right-0 left-0 h-16 dot-blur dot-blur-fade-b print:hidden' />
 
-      <h1 className='z-20 flex-1 gap-4 pt-2 pb-6 pl-8 text-4xl font-bold text-orange-600 print:py-6 print:pl-0 dark:text-orange-400'>
+      <h1 className='z-20 flex-1 gap-4 pt-2 pb-6 pl-8 text-4xl font-bold text-orange-600 print:py-4 print:pl-0 dark:text-orange-400'>
         <span className='print:hidden'>Jayc Santos</span>
         <span className='hidden print:block'>Jaycee Ross Santos</span>
       </h1>
@@ -125,9 +125,6 @@ function Footer(): JSX.Element {
         >
           <FaLinkedin className='w-5 h-5' title='LinkedIn' />
         </a>
-      </div>
-      <div className='hidden text-xs text-right text-gray-400 print:block'>
-        cv print from jaycsantos.com, visit for more project list
       </div>
     </>
   );

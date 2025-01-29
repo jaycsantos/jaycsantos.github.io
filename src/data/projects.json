@@ -10,7 +10,7 @@
     "tech": { "": ["typescript", "react", "nextjs", "tailwindcss", "github"] }
   },
   {
-    "title": "\"White Label App\"",
+    "title": "\"White Label App\" / StudentSquad",
     "year_end": "2024",
     "month_end": "11",
     "ref_id": "maliksi",
@@ -34,11 +34,11 @@
     "month_end": "11",
     "ref_id": "maliksi",
     "description": [
-      "Led the full-stack mobile/web development for a \"photo sharing app\" with real-time synchronization and reverse geolocation capabilities.",
+      "Led the full-stack mobile/web development mobile app with separate web interface. Features real-time photo sync and reverse geolocation capabilities.",
       "Developed an initial solution for automatically grouping photos based on specific time and location before exploring AI-powered approaches."
     ],
     "tech": {
-      "web": ["react", "redux", "nextjs", "tailwindcss"],
+      "web": ["typescript", "react", "redux", "nextjs", "tailwindcss"],
       "mobile": ["flutter", "bloc"],
       "backend": [
         "couchbase → firestore",
@@ -53,24 +53,24 @@
     "year_end": "2022",
     "month_end": "04",
     "ref_id": "maliksi",
+    "priority": "low",
     "description": [
       "Led the research and development of an inventory mobile app with offline and real-time synchronization capabilities.",
-      "Collaborated closely with UX designers to significantly enhance user experience in asset management by streamlining the workflow."
+      "Collaborated closely with UX designers to significantly enhance UX in asset management by streamlining the workflow."
     ],
     "tech": {
       "": ["flutter", "bloc", "couchbase", "github", "jira", "a11y/wcag"]
     }
   },
   {
-    "title": "GradGuru/MyCoach Console V3",
+    "title": "MyCoach/GradGuru Console v3",
     "year_end": "2023",
     "month_end": "09",
     "ref_id": "maliksi",
     "url": "https://mycoachapp.org/",
     "description": [
-      "Rebranded and redesigned the console web application using Material UI and ensuring compliance with WCAG AA.",
-      "Revamped user experience with key features such as list filtering, infinite scrolling, scroll state retention, drag-and-drop, and efficient batch processing, parsing, and validation of data.",
-      "Developed visually engaging report dashboards and pages incorporating interactive charts and diagrams."
+      "Rebranded and redesigned the console web app using Material UI and ensuring compliance with WCAG AA. Secured authentication with Okta MFA.",
+      "Redesigned user experience with key features such as faster list filtering, infinite scrolling, scroll state retention, drag-and-drop, and efficient batch processing, parsing, and validation of data."
     ],
     "img": "img/mycoach.console.jpg",
     "tech": {
@@ -92,13 +92,56 @@
     }
   },
   {
-    "title": "GradGuru Console V2",
+    "title": "MyCoach/GradGuru Mobile App",
+    "year_end": "2023",
+    "month_end": "09",
+    "ref_id": "maliksi",
+    "priority": "low",
+    "url": "https://mycoachapp.org/",
+    "description": [
+      "Fast-tracked mobile app development to achieve WCAG AA compliance."
+    ],
+    "img": "img/mycoach.app.jpg",
+    "tech": {
+      "": ["flutter", "dart", "github", "a11y/wcag"]
+    }
+  },
+  {
+    "title": "MyCoach/GradGuru Chat",
+    "year_end": "2022",
+    "month_end": "10",
+    "ref_id": "maliksi",
+    "description": [
+      "Rebrand and maintainance of web chat interface for MyCoach, keeping UX consistency with the other apps.",
+      "Secured with okta MFA and compliance with WCAG AA accessibility standards."
+    ],
+    "url": "",
+    "img": "img/mycoach.chat.jpg",
+    "tech": {
+      "": [
+        "react",
+        "flux redux",
+        "sass",
+        "rest API",
+        "mocha",
+        "karma",
+        "okta MFA",
+        "docker",
+        "jenkins",
+        "gitlab → github",
+        "jira → github",
+        "a11y/wcag"
+      ]
+    }
+  },
+  {
+    "title": "GradGuru Console v2",
     "year_end": "2020",
     "month_end": "10",
     "ref_id": "gradguru",
     "description": [
-      "Successfully continued the migration of the web console from PHP to Angular, concurrently adding new features and integrations.",
-      "Developed an interactive flowchart editor that enables users to design chatbot flows and immediately simulate and test."
+      "Continued the migration of the web console from PHP to Angular, concurrently adding new features and integrations.",
+      "Developed an interactive flowchart editor that enables users to design chatbot flows that can be simulated and tested."
     ],
     "url": "",
     "img": "img/gradguru.console.jpg",
@@ -113,6 +156,58 @@
         "docker",
         "gitlab",
         "jira"
+      ]
+    }
+  },
+  {
+    "title": "GradGuru Chat",
+    "year_end": "2020",
+    "month_end": "10",
+    "ref_id": "gradguru",
+    "description": [
+      "Forked riot.im as matrix client and customized it to be a chat interface for GradGuru.",
+      "Added and maintained new features, custom message types and API integrations."
+    ],
+    "url": "",
+    "img": "img/gradguru.console.jpg",
+    "tech": {
+      "": [
+        "react",
+        "flux redux",
+        "sass",
+        "rest API",
+        "mocha",
+        "karma",
+        "docker",
+        "jenkins",
+        "gitlab",
+        "jira"
+      ]
+    }
+  },
+  {
+    "title": "GoLearn (freelance consultant)",
+    "year_end": "2020",
+    "month_end": "7",
+    "year_start": "2020",
+    "month_start": "5",
+    "description": [
+      "Consulted on the development of a web app for a learning platform, providing guidance on the architecture, design, and implementation of the app's features and functionalities.",
+      "Documented MVP requirements, timeline estimates, technical specifications, and best practices."
+    ],
+    "url": "https://golearn.com.ph",
+    "img": "img/golearn.jpg",
+    "tech": {
+      "": [
+        "typescript",
+        "angular",
+        "ngrx",
+        "rxjs",
+        "bootstrap",
+        "graphql",
+        "php/laravel",
+        "MYSQL",
+        "bitbucket"
       ]
     }
   },
